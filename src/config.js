@@ -1,32 +1,57 @@
 export const navConfig = [
   {
     id: 1,
-    title: "КАТАЛОГ",
+    title: {
+      am: "Մեր մասին",
+      ru: "О нас",
+      en: "About us",
+    },
+
     link: "/",
   },
   {
     id: 2,
-    title: "ТЕХНОЛОГИИ",
+    title: {
+      am: "Տեսականի ",
+      ru: "Продукция",
+      en: "Products",
+    },
     link: "/",
   },
   {
     id: 3,
-    title: "ГДЕ КУПИТЬ",
+    title: {
+      am: "Ծառայություններ",
+      ru: "Услуги",
+      en: "Services",
+    },
     link: "/",
   },
   {
     id: 4,
-    title: "СЕРВИСНЫЙ ЦЕНТР",
+    title: {
+      am: "Գործընկերներ",
+      ru: "Партнеры",
+      en: "Partners",
+    },
     link: "/",
   },
   {
     id: 5,
-    title: "О КОНЦЕРНЕ",
+    title: {
+      am: "Ապառիկ վաճառք",
+      ru: "Продажа в кредит",
+      en: "Sale on credit",
+    },
     link: "/",
   },
   {
     id: 6,
-    title: "ПРОЕКТЫ",
+    title: {
+      am: "Տեսանյութեր",
+      ru: "Медиа",
+      en: "Media",
+    },
     link: "/",
   },
 ];

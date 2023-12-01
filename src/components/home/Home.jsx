@@ -1,10 +1,11 @@
+import Container from "../common/container/Container";
+
 import "./Home.scss";
 
 const Home = () => {
   return (
     <div className="home">
-      <h1>Homeeee</h1>
-      text
+      <Container>{/* SECTIONNERY SARQVUM A STEX */}</Container>
     </div>
   );
 };
