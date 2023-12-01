@@ -1,0 +1,23 @@
+.nav-bar {
+  &-links {
+    display: flex;
+    list-style-type: none;
+
+    &-link {
+      padding: 0 13px;
+
+      > a {
+        font-size: 18px;
+        cursor: pointer;
+        color: #3a3939;
+        transition: all 0.2s;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+          color: #44a326;
+        }
+      }
+    }
+  }
+}
