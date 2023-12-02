@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import HeaderAuthPanelLangSelect from "./header-auth-panel-lang-select/HeaderAuthPanelLangSelect";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import useOutsideClick from "../../../../utils/hooks/useOutsideClick";
 
 const HeaderAuthPanelLang = () => {
   const [lang, setLang] = useState("Eng");
@@ -8,14 +9,22 @@ const HeaderAuthPanelLang = () => {
 
   const chooseLang = (evt) => {
     setLang(evt.target.textContent);
+    setShowLangs(false);
   };
 
   const handleShowLangs = () => {
     setShowLangs((prev) => !prev);
   };
 
+  const handleOutsideClick = () => {
+    setShowLangs(false);
+  };
+
+  const languageRef = useRef(null);
+  useOutsideClick(languageRef, handleOutsideClick);
+
   return (
-    <div className="header-inner-auth-panel-lang">
+    <div className="header-inner-auth-panel-lang" ref={languageRef}>
       <div
         className="header-inner-auth-panel-lang-title"
         onClick={handleShowLangs}
@@ -24,8 +33,9 @@ const HeaderAuthPanelLang = () => {
         <p className="header-inner-auth-panel-lang-title-icon">
           {showLangs ? <FaCaretUp /> : <FaCaretDown />}
         </p>
-        {showLangs && <HeaderAuthPanelLangSelect chooseLang={chooseLang} />}
       </div>
+
+      {showLangs && <HeaderAuthPanelLangSelect chooseLang={chooseLang} />}
     </div>
   );
 };

@@ -7,7 +7,6 @@
 
   &-logo {
     height: 70px;
-    border: solid;
 
     > img {
       height: 100%;
@@ -15,10 +14,10 @@
   }
 
   &-search {
-    width: 60%;
     display: flex;
     cursor: pointer;
     align-items: center;
+    transition: all 0.2s;
 
     &-title {
       display: flex;
@@ -100,13 +99,36 @@
     }
   }
 
+  &-mobile-menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  &-mobile-close-menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  &-mobile-search-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  &-mobile-close-search-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
   &-auth-panel {
     width: 15%;
     display: flex;
     cursor: pointer;
     align-items: center;
     justify-content: space-around;
-    border: solid;
 
     &-signIn {
       cursor: pointer;
@@ -118,6 +140,7 @@
 
         > p {
           padding: 10px;
+          text-align: center;
           color: #3a3939;
           transition: all 0.2s;
         }
@@ -141,6 +164,7 @@
       width: 100px;
       display: flex;
       color: #3a3939;
+      position: relative;
       align-items: center;
       flex-direction: column;
 
@@ -168,6 +192,9 @@
       &-select {
         width: 100%;
         margin-top: 10px;
+        position: absolute;
+        z-index: 2;
+        top: 15px;
         border-radius: 10px;
         list-style-type: none;
         border: solid 1px #3a3939;

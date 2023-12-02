@@ -1,0 +1,78 @@
+.header-mobile-search {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-name: mobile_search;
+  animation-timing-function: linear;
+
+  > form {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+
+    > button {
+      height: 40px;
+      border: none;
+      outline: none;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      animation-duration: 0.2s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-name: mobile_search_items;
+
+      > svg {
+        font-size: 24px;
+        transition: all 0.2s;
+      }
+
+      &:hover > svg {
+        color: #44a326;
+      }
+    }
+
+    > input {
+      width: 100%;
+      height: 40px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #3a3939;
+      padding-left: 20px;
+      background-color: #fff;
+      animation-duration: 0.2s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-name: mobile_search_items;
+    }
+  }
+
+  @keyframes mobile_search {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 60px;
+    }
+  }
+
+  @keyframes mobile_search_items {
+    from {
+      height: 0px;
+    }
+
+    to {
+      height: 40px;
+    }
+  }
+}
