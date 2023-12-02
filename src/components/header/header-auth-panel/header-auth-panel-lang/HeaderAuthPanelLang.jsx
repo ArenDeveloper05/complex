@@ -24,9 +24,8 @@ const HeaderAuthPanelLang = () => {
         <p className="header-inner-auth-panel-lang-title-icon">
           {showLangs ? <FaCaretUp /> : <FaCaretDown />}
         </p>
+        {showLangs && <HeaderAuthPanelLangSelect chooseLang={chooseLang} />}
       </div>
-
-      {showLangs && <HeaderAuthPanelLangSelect chooseLang={chooseLang} />}
     </div>
   );
 };
