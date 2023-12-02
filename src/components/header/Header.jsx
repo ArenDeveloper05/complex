@@ -4,9 +4,14 @@ import "./Header.scss";
 import HeaderLogo from "./header-logo/HeaderLogo";
 import HeaderSearch from "./header-search/HeaderSearch";
 import Nav from "./nav/Nav";
+import HeaderAuthPanel from "./header-auth-panel/HeaderAuthPanel";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(true);
+
+  const handleChangeShowNav = () => {
+    setShowNav((prev) => (prev = !prev));
+  };
 
   return (
     <header>
@@ -16,7 +21,12 @@ const Header = () => {
 
           {showNav && <Nav />}
 
-          <HeaderSearch showNav={showNav} setShowNav={setShowNav} />
+          <HeaderSearch
+            showNav={showNav}
+            handleChangeShowNav={handleChangeShowNav}
+          />
+
+          <HeaderAuthPanel />
         </div>
       </Container>
     </header>

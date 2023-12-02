@@ -3,7 +3,7 @@
   display: flex;
   padding: 30px 0;
   align-items: center;
-  background-color: green;
+  justify-content: space-between;
 
   &-logo {
     height: 70px;
@@ -15,6 +15,7 @@
   }
 
   &-search {
+    width: 60%;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -43,14 +44,13 @@
     }
 
     &-form {
-      width: 800px;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border: solid red;
 
       > form {
-        flex-grow: 1;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -58,6 +58,7 @@
         > svg {
           font-size: 30px;
           color: #3a3939;
+          margin-right: 6px;
           transition: all 0.2s;
 
           &:hover {
@@ -84,6 +85,7 @@
         > svg {
           font-size: 34px;
           color: #3a3939;
+          transition: all 0.2s;
 
           &:hover {
             color: #44a326;
@@ -94,7 +96,93 @@
 
     &:hover &-title svg,
     &:hover &-title p {
-      color: #44a326 !important;
+      color: #44a326;
+    }
+  }
+
+  &-auth-panel {
+    width: 15%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+    border: solid;
+
+    &-signIn {
+      cursor: pointer;
+
+      > a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        > p {
+          padding: 10px;
+          color: #3a3939;
+          transition: all 0.2s;
+        }
+
+        > svg {
+          display: flex;
+          font-size: 24px;
+          color: #3a3939;
+          align-items: center;
+          transition: all 0.2s;
+        }
+      }
+
+      &:hover > a > p,
+      &:hover > a > svg {
+        color: #44a326;
+      }
+    }
+
+    &-lang {
+      width: 100px;
+      display: flex;
+      color: #3a3939;
+      align-items: center;
+      flex-direction: column;
+
+      &-title {
+        display: flex;
+        align-items: center;
+
+        &-txt {
+          transition: all 0.2s;
+        }
+
+        &-icon {
+          display: flex;
+          margin-left: 10px;
+          align-items: center;
+          transition: all 0.2s;
+        }
+
+        &:hover &-txt,
+        &:hover &-icon {
+          color: #44a326;
+        }
+      }
+
+      &-select {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px;
+        list-style-type: none;
+        border: solid 1px #3a3939;
+        box-shadow: 1px 1px 5px 1px #3a3939;
+
+        &-option {
+          padding: 4px;
+          text-align: center;
+          transition: all 0.2s;
+
+          &:hover {
+            color: #44a326;
+          }
+        }
+      }
     }
   }
 }

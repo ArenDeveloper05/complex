@@ -1,15 +1,25 @@
 .nav-bar {
+  width: 60%;
+  border: solid green;
+
   &-links {
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
 
     &-link {
+      display: flex;
+      flex-grow: 1;
       padding: 0 13px;
+      align-items: center;
 
       > a {
-        font-size: 18px;
+        font-size: 17px;
         cursor: pointer;
         color: #3a3939;
+        text-align: center;
         transition: all 0.2s;
         text-decoration: none;
         text-transform: uppercase;

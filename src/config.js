@@ -30,3 +30,9 @@ export const navConfig = [
     link: "/",
   },
 ];
+
+export const langsConfig = [
+  { id: 1, title: "Eng" },
+  { id: 2, title: "Rus" },
+  { id: 3, title: "Arm" },
+];

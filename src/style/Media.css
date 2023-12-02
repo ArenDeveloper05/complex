@@ -1,0 +1,25 @@
+@media only screen and (max-width: 1030px) {
+  .nav-bar {
+    display: none;
+  }
+
+  header {
+    background-color: brown;
+  }
+
+  .header-inner-search {
+    display: none;
+  }
+
+  .header-inner-auth-panel {
+    width: 240px;
+  }
+
+  .header-inner-auth-panel-signIn {
+    width: 50%;
+  }
+
+  .header-inner-auth-panel-lang {
+    width: 50%;
+  }
+}

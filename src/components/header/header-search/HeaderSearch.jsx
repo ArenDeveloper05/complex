@@ -1,17 +1,21 @@
 import HeaderSearchForm from "./header-search-form/HeaderSearchForm";
 import HeaderSearchTitle from "./header-search-title/HeaderSearchTitle";
 
-const HeaderSearch = ({ showNav, setShowNav }) => {
-  const handleShowNav = () => {
-    setShowNav(false);
-  };
-
+const HeaderSearch = ({ showNav, handleChangeShowNav }) => {
   return (
-    <div className="header-inner-search" onClick={handleShowNav}>
-      {showNav && <HeaderSearchTitle />}
+    <div
+      className="header-inner-search"
+      style={{ width: showNav ? "auto" : "60%" }}
+    >
+      {showNav && (
+        <HeaderSearchTitle handleChangeShowNav={handleChangeShowNav} />
+      )}
 
       {!showNav && (
-        <HeaderSearchForm showNav={showNav} setShowNav={setShowNav} />
+        <HeaderSearchForm
+          showNav={showNav}
+          handleChangeShowNav={handleChangeShowNav}
+        />
       )}
     </div>
   );

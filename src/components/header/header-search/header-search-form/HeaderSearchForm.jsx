@@ -2,16 +2,11 @@ import { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 
-const HeaderSearchForm = ({ showNav, setShowNav }) => {
+const HeaderSearchForm = ({ showNav, handleChangeShowNav }) => {
   const [inputVal, setInputVal] = useState("");
 
   const handleInputOnChange = (evt) => {
     setInputVal(evt.target.value);
-  };
-
-  const closeSearchForm = () => {
-    console.log("closeButtonClicked");
-    setShowNav(true);
   };
 
   return (
@@ -27,7 +22,7 @@ const HeaderSearchForm = ({ showNav, setShowNav }) => {
         />
       </form>
 
-      <button onClick={closeSearchForm}>
+      <button onClick={handleChangeShowNav}>
         <IoCloseOutline />
       </button>
     </div>
