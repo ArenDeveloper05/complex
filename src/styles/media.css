@@ -101,6 +101,7 @@
 
   .header-inner-auth-panel-signIn-link p {
     padding: 0;
+    margin-top: 4px;
   }
 
   .header-inner-auth-panel-signIn-link-mobile-icon {
@@ -117,6 +118,14 @@
 @media only screen and (max-width: 400px) {
   .header-inner-mobile-logo {
     height: 50px;
+  }
+
+  .header-mobile-nav {
+    top: 111px;
+  }
+
+  .header-mobile-search {
+    top: 111px;
   }
 }
 
