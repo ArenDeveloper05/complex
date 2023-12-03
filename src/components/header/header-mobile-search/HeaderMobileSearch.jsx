@@ -1,6 +1,7 @@
 import { useState } from "react";
-import "./HeaderMobileSearch.scss";
 import { IoIosSearch } from "react-icons/io";
+
+import "./HeaderMobileSearch.scss";
 
 const HeaderMobileSearch = () => {
   const [mobileInputVal, setMobileInputVal] = useState("");

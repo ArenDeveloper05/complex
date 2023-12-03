@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { IoIosSearch } from "react-icons/io";
 
 const HeaderSearchTitle = ({ handleChangeShowNav }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="header-inner-search-title" onClick={handleChangeShowNav}>
       <IoIosSearch className="header-inner-search-title-icon" />
 
-      <p className="header-inner-search-title-txt">НАЙТИ</p>
+      <p className="header-inner-search-title-txt">{t("header.search")}</p>
     </div>
   );
 };

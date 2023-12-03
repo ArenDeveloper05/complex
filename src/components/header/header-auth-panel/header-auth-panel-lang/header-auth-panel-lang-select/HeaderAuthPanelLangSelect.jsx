@@ -1,4 +1,6 @@
+import { changeLanguage } from "i18next";
 import { langsConfig } from "../../../../../config";
+import { FaFlag } from "react-icons/fa6";
 
 const HeaderAuthPanelLangSelect = ({ chooseLang }) => {
   return (
@@ -7,10 +9,15 @@ const HeaderAuthPanelLangSelect = ({ chooseLang }) => {
         return (
           <li
             key={item.id}
-            onClick={chooseLang}
+            onClick={(evt) => {
+              chooseLang(evt);
+              changeLanguage(item.type);
+            }}
             className="header-inner-auth-panel-lang-select-option"
           >
-            {item.title}
+            <FaFlag />
+
+            <p>{item.title}</p>
           </li>
         );
       })}

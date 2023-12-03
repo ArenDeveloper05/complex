@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { LuMenu } from "react-icons/lu";
+import { IoIosSearch } from "react-icons/io";
+import { AiOutlineClose } from "react-icons/ai";
+
 import Container from "../common/container/Container";
-import "./Header.scss";
 import HeaderLogo from "./header-logo/HeaderLogo";
 import HeaderSearch from "./header-search/HeaderSearch";
 import Nav from "./nav/Nav";
 import HeaderAuthPanel from "./header-auth-panel/HeaderAuthPanel";
-import { LuMenu } from "react-icons/lu";
-import { IoIosSearch } from "react-icons/io";
 import HeaderMobileNav from "./header-mobile-nav/HeaderMobileNav";
-import { AiOutlineClose } from "react-icons/ai";
 import HeaderMobileSearch from "./header-mobile-search/HeaderMobileSearch";
+
+import "./Header.scss";
+import HeaderMobileLogo from "./header-mobile-logo/HeaderMobileLogo";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(true);
@@ -19,15 +22,15 @@ const Header = () => {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
 
   const handleChangeShowNav = () => {
-    setShowNav((prev) => (prev = !prev));
+    setShowNav((prev) => !prev);
   };
 
   const handleShowMobileNav = () => {
-    setShowMobileNav((prev) => (prev = !prev));
+    setShowMobileNav((prev) => !prev);
   };
 
   const handleShowMobileSearch = () => {
-    setShowMobileSearch((prev) => (prev = !prev));
+    setShowMobileSearch((prev) => !prev);
   };
 
   return (
@@ -45,35 +48,41 @@ const Header = () => {
 
           {!showMobileNav && (
             <LuMenu
-              className="header-inner-mobile-menu-icon"
+              className="header-inner-mobile-icon"
               onClick={handleShowMobileNav}
             />
           )}
 
           {showMobileNav && (
-            <AiOutlineClose
-              className="header-inner-mobile-close-menu-icon"
-              onClick={handleShowMobileNav}
-            />
-          )}
+            <>
+              <AiOutlineClose
+                className="header-inner-mobile-icon"
+                onClick={handleShowMobileNav}
+              />
 
-          {showMobileNav && <HeaderMobileNav />}
+              <HeaderMobileNav />
+            </>
+          )}
 
           {!showMobileSearch && (
             <IoIosSearch
-              className="header-inner-mobile-search-icon"
+              className="header-inner-mobile-icon"
               onClick={handleShowMobileSearch}
             />
           )}
 
           {showMobileSearch && (
-            <AiOutlineClose
-              className="header-inner-mobile-close-search-icon"
-              onClick={handleShowMobileSearch}
-            />
+            <>
+              <AiOutlineClose
+                className="header-inner-mobile-icon"
+                onClick={handleShowMobileSearch}
+              />
+
+              <HeaderMobileSearch />
+            </>
           )}
 
-          {showMobileSearch && <HeaderMobileSearch />}
+          <HeaderMobileLogo />
 
           <HeaderAuthPanel />
         </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IoIosSearch } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -9,6 +10,8 @@ const HeaderSearchForm = ({ showNav, handleChangeShowNav }) => {
     setInputVal(evt.target.value);
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="header-inner-search-form">
       <form>
@@ -16,7 +19,7 @@ const HeaderSearchForm = ({ showNav, handleChangeShowNav }) => {
 
         <input
           type="text"
-          placeholder="Поиск по сайту"
+          placeholder={t("header.search-placeholder")}
           value={inputVal}
           onChange={handleInputOnChange}
         />

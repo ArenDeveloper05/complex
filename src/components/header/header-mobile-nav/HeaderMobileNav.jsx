@@ -1,5 +1,6 @@
-import "./HeaderMobileNav.scss";
 import HeaderMobileNavLinks from "./header-mobile-nav-links/HeaderMobileNavLinks";
+
+import "./HeaderMobileNav.scss";
 
 const HeaderMobileNav = () => {
   return (

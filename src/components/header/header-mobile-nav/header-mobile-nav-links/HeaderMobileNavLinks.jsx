@@ -1,4 +1,5 @@
 import { navConfig } from "../../../../config";
+
 import HeaderMobileNavLinksLink from "./header-mobile-nav-links-link/HeaderMobileNavLinksLink";
 
 const HeaderMobileNavLinks = () => {

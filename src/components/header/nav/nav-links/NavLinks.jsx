@@ -1,4 +1,5 @@
 import { navConfig } from "../../../../config";
+
 import NavLinksLink from "./nav-links-link/NavLinksLink";
 
 const NavLinks = () => {

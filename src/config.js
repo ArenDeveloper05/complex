@@ -57,7 +57,7 @@ export const navConfig = [
 ];
 
 export const langsConfig = [
-  { id: 1, title: "Eng" },
-  { id: 2, title: "Rus" },
-  { id: 3, title: "Arm" },
+  { id: 1, title: "Eng", type: "en" },
+  { id: 2, title: "Рус", type: "ru" },
+  { id: 3, title: "Հայ", type: "am" },
 ];
