@@ -6,4 +6,12 @@
 
 :root {
   --global-max--width: 1550px;
+  --green-light: #3bb14a;
+  --green-dark: #235944;
+  --orange: #e77818;
+}
+
+@font-face {
+  font-family: "Teko";
+  src: url(../src/assets/fonts/Teko/Teko-VariableFont_wght.ttf);
 }
