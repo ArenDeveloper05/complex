@@ -1,3 +1,11 @@
+// footer icons
+import {
+  FaSquareFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaPinterestP,
+} from "react-icons/fa6";
+
 export const navConfig = [
   {
     id: 1,
@@ -60,4 +68,75 @@ export const langsConfig = [
   { id: 1, title: "Eng", type: "en" },
   { id: 2, title: "Рус", type: "ru" },
   { id: 3, title: "Հայ", type: "am" },
+];
+
+export const footerNetworksConfig = [
+  {
+    id: 1,
+    icon: FaSquareFacebook,
+    link: "/",
+  },
+  {
+    id: 2,
+    icon: FaTwitter,
+    link: "/",
+  },
+  {
+    id: 3,
+    icon: FaInstagram,
+    link: "/",
+  },
+  {
+    id: 4,
+    icon: FaPinterestP,
+    link: "/",
+  },
+];
+
+export const footerExploreConfig = [
+  {
+    id: 1,
+    title: "About Us",
+    link: "/",
+  },
+  {
+    id: 2,
+    title: "Meet Our Team",
+    link: "/",
+  },
+  {
+    id: 3,
+    title: "Our Portfolio",
+    link: "/",
+  },
+  {
+    id: 4,
+    title: "Latest News",
+    link: "/",
+  },
+  {
+    id: 5,
+    title: "Contact Us",
+    link: "/",
+  },
+  {
+    id: 6,
+    title: "Support",
+    link: "/",
+  },
+  {
+    id: 7,
+    title: "Privacy Policy",
+    link: "/",
+  },
+  {
+    id: 8,
+    title: "Terms Of Use",
+    link: "/",
+  },
+  {
+    id: 9,
+    title: "Help",
+    link: "/",
+  },
 ];
