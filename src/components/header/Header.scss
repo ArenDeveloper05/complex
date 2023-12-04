@@ -19,7 +19,7 @@
     display: flex;
     cursor: pointer;
     align-items: center;
-    transition: all 0.2s;
+    transition: 500ms;
 
     &-title {
       display: flex;
@@ -73,8 +73,8 @@
           border: none;
           outline: none;
           font-size: 25px;
+          padding: 30px 10px;
           background-color: #fff;
-          text-transform: uppercase;
         }
       }
 
@@ -202,6 +202,7 @@
         top: 15px;
         border-radius: 10px;
         list-style-type: none;
+        background-color: #fff;
         border: solid 1px #3a3939;
 
         &-option {

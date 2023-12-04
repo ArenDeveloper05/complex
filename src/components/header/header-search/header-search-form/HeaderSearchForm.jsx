@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { IoIosSearch } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 
-const HeaderSearchForm = ({ showNav, handleChangeShowNav }) => {
+const HeaderSearchForm = ({ handleChangeShowNav, handleWidth }) => {
   const [inputVal, setInputVal] = useState("");
 
   const handleInputOnChange = (evt) => {
@@ -12,10 +12,29 @@ const HeaderSearchForm = ({ showNav, handleChangeShowNav }) => {
 
   const { t } = useTranslation();
 
+  const searchFunc = () => {
+    console.log("barev");
+    setInputVal("");
+  };
+
+  const handleSearchBtn = () => {
+    try {
+      searchFunc();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div className="header-inner-search-form">
       <form>
-        <IoIosSearch />
+        <IoIosSearch
+          onClick={() => {
+            if (inputVal.trim()) {
+              handleSearchBtn();
+            }
+          }}
+        />
 
         <input
           type="text"
@@ -25,7 +44,12 @@ const HeaderSearchForm = ({ showNav, handleChangeShowNav }) => {
         />
       </form>
 
-      <button onClick={handleChangeShowNav}>
+      <button
+        onClick={() => {
+          handleChangeShowNav();
+          handleWidth();
+        }}
+      >
         <IoCloseOutline />
       </button>
     </div>

@@ -21,8 +21,24 @@ const Header = () => {
 
   const [showMobileSearch, setShowMobileSearch] = useState(false);
 
+  const [width, setWidth] = useState(true);
+
+  const [second, setSecond] = useState(0);
+
+  const handleWidth = () => {
+    setWidth((prev) => !prev);
+  };
+
   const handleChangeShowNav = () => {
-    setShowNav((prev) => !prev);
+    if (width) {
+      setSecond(400);
+    } else {
+      setSecond(0);
+    }
+
+    setTimeout(() => {
+      setShowNav((prev) => !prev);
+    }, second);
   };
 
   const handleShowMobileNav = () => {
@@ -39,11 +55,13 @@ const Header = () => {
         <div className="header-inner">
           <HeaderLogo />
 
-          {showNav && <Nav />}
+          <Nav width={width} showNav={showNav} />
 
           <HeaderSearch
             showNav={showNav}
             handleChangeShowNav={handleChangeShowNav}
+            width={width}
+            handleWidth={handleWidth}
           />
 
           {!showMobileNav && (
