@@ -51,60 +51,58 @@ const Header = () => {
 
   return (
     <header>
-      <Container>
-        <div className="header-inner">
-          <HeaderLogo />
+      <div className="header-inner">
+        <HeaderLogo />
 
-          <Nav width={width} showNav={showNav} />
+        <Nav width={width} showNav={showNav} />
 
-          <HeaderSearch
-            showNav={showNav}
-            handleChangeShowNav={handleChangeShowNav}
-            width={width}
-            handleWidth={handleWidth}
+        <HeaderSearch
+          showNav={showNav}
+          handleChangeShowNav={handleChangeShowNav}
+          width={width}
+          handleWidth={handleWidth}
+        />
+
+        {!showMobileNav && (
+          <LuMenu
+            className="header-inner-mobile-icon"
+            onClick={handleShowMobileNav}
           />
+        )}
 
-          {!showMobileNav && (
-            <LuMenu
+        {showMobileNav && (
+          <>
+            <AiOutlineClose
               className="header-inner-mobile-icon"
               onClick={handleShowMobileNav}
             />
-          )}
 
-          {showMobileNav && (
-            <>
-              <AiOutlineClose
-                className="header-inner-mobile-icon"
-                onClick={handleShowMobileNav}
-              />
+            <HeaderMobileNav />
+          </>
+        )}
 
-              <HeaderMobileNav />
-            </>
-          )}
+        {!showMobileSearch && (
+          <IoIosSearch
+            className="header-inner-mobile-icon"
+            onClick={handleShowMobileSearch}
+          />
+        )}
 
-          {!showMobileSearch && (
-            <IoIosSearch
+        {showMobileSearch && (
+          <>
+            <AiOutlineClose
               className="header-inner-mobile-icon"
               onClick={handleShowMobileSearch}
             />
-          )}
 
-          {showMobileSearch && (
-            <>
-              <AiOutlineClose
-                className="header-inner-mobile-icon"
-                onClick={handleShowMobileSearch}
-              />
+            <HeaderMobileSearch />
+          </>
+        )}
 
-              <HeaderMobileSearch />
-            </>
-          )}
+        <HeaderMobileLogo />
 
-          <HeaderMobileLogo />
-
-          <HeaderAuthPanel />
-        </div>
-      </Container>
+        <HeaderAuthPanel />
+      </div>
     </header>
   );
 };

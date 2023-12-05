@@ -5,13 +5,20 @@
 }
 
 :root {
-  --global-max--width: 1550px;
+  --global-max--width: 85%;
   --green-light: #3bb14a;
-  --green-dark: #235944;
-  --orange: #e77818;
+  --green-dark: #215642;
+  --orange-dark: #e77818;
+  --orange-light: #ffaa17;
+  --grey-dark: #222429;
 }
 
 @font-face {
   font-family: "Teko";
   src: url(../src/assets/fonts/Teko/Teko-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../src/assets/fonts/Roboto/LICENSE.txt);
 }
