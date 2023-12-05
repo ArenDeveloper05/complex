@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
 import {
   Navigation,
   Pagination,
@@ -9,8 +8,6 @@ import {
   Autoplay,
   EffectFade,
 } from "swiper/modules";
-
-import { ROUTER } from "../../../router/router";
 
 import green from "../../../assets/video/greenBG.mp4";
 

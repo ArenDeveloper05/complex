@@ -1,4 +1,6 @@
 .footer-inner {
+  padding: 15px 0;
+
   &-top {
     display: flex;
     align-items: flex-start;
@@ -280,15 +282,15 @@
   }
 
   &-bottom {
-    padding: 20px 0;
-
-    &-hr {
-      height: 2px;
-      background-color: #3a3939;
-    }
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: solid 2px #3a3939;
 
     &-desc {
-      margin-top: 20px;
       &-txt {
         font-size: 18px;
         text-align: center;

@@ -9,8 +9,8 @@ const HeaderAuthPanelLang = () => {
   const [lang, setLang] = useState(langsConfig[2].title);
   const [showLangs, setShowLangs] = useState(false);
 
-  const chooseLang = (evt) => {
-    setLang(evt.target.textContent);
+  const chooseLang = (title) => {
+    setLang(title);
     setShowLangs(false);
   };
 

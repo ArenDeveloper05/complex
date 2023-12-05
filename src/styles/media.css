@@ -25,10 +25,6 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  header {
-    border-bottom: solid 1px #c7c7c7;
-  }
-
   .nav-bar-links-link {
     padding: 0px;
   }
@@ -42,7 +38,21 @@
   }
 
   .header-inner-search-title-txt {
+    font-size: 14px;
     margin-left: 4px;
+  }
+
+  .header-inner-auth-panel-signIn-link p {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+  .header-inner-auth-panel-signIn-link-icon {
+    font-size: 17px !important;
+  }
+
+  .header-inner-auth-panel-lang-title-txt {
+    font-size: 15px;
   }
 
   /* FOOTER */
@@ -302,5 +312,17 @@
 
   .footer-inner-top-contact {
     width: 100%;
+  }
+}
+
+/*  */
+
+@media only screen and (min-width: 1030px) {
+  .header-mobile-nav {
+    display: none;
+  }
+
+  .header-mobile-search {
+    display: none;
   }
 }

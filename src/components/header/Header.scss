@@ -1,11 +1,29 @@
+header {
+  width: 100%;
+  position: fixed;
+  transition: all 0.2s;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.header-scrolled {
+  // height: auto;
+  background-color: white;
+  border-bottom: solid 1px gray;
+}
+
 .header-inner {
   width: 100%;
   display: flex;
-  padding: 30px 0;
+  transition: all 0.2s;
+  padding: 15px 0;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  z-index: 1;
+
+  &-scrolled {
+    padding: 4px 0;
+  }
 
   &-logo {
     height: 70px;
@@ -29,18 +47,18 @@
 
       &-icon {
         color: black;
-        font-size: 22px;
+        font-size: 20px;
         margin-left: 10px;
         transition: all 0.2s;
       }
 
       &-txt {
-        font-size: 18px;
+        font-size: 16px;
         color: #3a3939;
         margin-left: 10px;
         transition: all 0.2s;
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: capitalize;
       }
     }
 
@@ -69,12 +87,16 @@
 
         > input {
           width: 100%;
-          height: 30px;
           border: none;
           outline: none;
-          font-size: 25px;
-          padding: 30px 10px;
-          background-color: #fff;
+          font-size: 20px;
+          padding: 15px 20px;
+          border-radius: 30px;
+          background-color: rgba(33, 86, 66, 0.2);
+        }
+
+        > input::placeholder {
+          color: var(--green-dark);
         }
       }
 
@@ -124,11 +146,11 @@
   }
 
   &-auth-panel {
-    width: 15%;
+    width: 16%;
     display: flex;
     cursor: pointer;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &-signIn {
       cursor: pointer;
@@ -139,7 +161,6 @@
         text-decoration: none;
 
         > p {
-          padding: 10px;
           color: #3a3939;
           text-align: center;
           transition: all 0.2s;
@@ -148,8 +169,9 @@
 
         &-icon {
           display: flex;
-          font-size: 24px;
+          font-size: 23px;
           color: #3a3939;
+          margin-left: 8px;
           align-items: center;
           transition: all 0.2s;
         }
@@ -204,7 +226,8 @@
         border-radius: 10px;
         list-style-type: none;
         background-color: #fff;
-        border: solid 1px #3a3939;
+        box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.3);
+        box-shadow: -10px -10px 10px #416f33;
 
         &-option {
           padding: 4px;
@@ -214,9 +237,21 @@
           text-align: center;
           transition: all 0.2s;
 
-          > svg {
-            margin-top: 3px;
-            font-size: 15px;
+          &-icon {
+            width: 15px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            > img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          &-title {
+            margin-left: 4px;
           }
 
           &:hover {

@@ -13,9 +13,10 @@
       flex-grow: 1;
       padding: 0 13px;
       align-items: center;
+      position: relative;
 
       > a {
-        font-size: 17px;
+        font-size: 15px;
         cursor: pointer;
         color: #3a3939;
         text-align: center;
@@ -23,8 +24,24 @@
         text-decoration: none;
         text-transform: uppercase;
 
+        &::after {
+          content: "";
+          width: 0%;
+          height: 1px;
+          transition: all 0.2s;
+          position: absolute;
+          left: 0px;
+          bottom: -2px;
+          background-color: var(--green-dark);
+        }
+
+        &:hover::after {
+          width: 100%;
+          opacity: 0.6;
+        }
+
         &:hover {
-          color: #44a326;
+          color: var(--green-light);
         }
       }
     }

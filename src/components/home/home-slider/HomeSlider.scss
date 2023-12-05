@@ -45,9 +45,10 @@
         & > button {
           width: 207px;
           height: 65px;
-          background: var(--orange-light);
+          background: var(--orange-dark);
           border-radius: 16px;
           border: none;
+          cursor: pointer;
           border-radius: 8px;
           font-family: "Teko", serif;
           font-size: 25px;
@@ -66,7 +67,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: var(--green-dark);
+            background-color: #2a8636;
             clip-path: polygon(99% 0, 100% 0, 100% 100%, 85% 100%);
             transition: 0.2s;
             opacity: 1;

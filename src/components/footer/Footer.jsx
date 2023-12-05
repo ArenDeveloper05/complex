@@ -10,6 +10,7 @@ const Footer = () => {
       <Container>
         <div className="footer-inner">
           <FooterTop />
+
           <FooterBottom />
         </div>
       </Container>

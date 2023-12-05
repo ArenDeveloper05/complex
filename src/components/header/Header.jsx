@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LuMenu } from "react-icons/lu";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
@@ -25,6 +25,22 @@ const Header = () => {
 
   const [second, setSecond] = useState(0);
 
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    if (scroll < 110) {
+      const handleScroll = () => {
+        setScroll(window.scrollY);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  });
+
   const handleWidth = () => {
     setWidth((prev) => !prev);
   };
@@ -50,9 +66,13 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className={scroll >= 100 ? "header-scrolled" : ""}>
       <Container>
-        <div className="header-inner">
+        <div
+          className={
+            scroll > 100 ? "header-inner header-inner-scrolled" : "header-inner"
+          }
+        >
           <HeaderLogo />
 
           <Nav width={width} showNav={showNav} />
@@ -78,7 +98,7 @@ const Header = () => {
                 onClick={handleShowMobileNav}
               />
 
-              <HeaderMobileNav />
+              <HeaderMobileNav scroll={scroll} />
             </>
           )}
 
@@ -96,7 +116,7 @@ const Header = () => {
                 onClick={handleShowMobileSearch}
               />
 
-              <HeaderMobileSearch />
+              <HeaderMobileSearch scroll={scroll} />
             </>
           )}
 

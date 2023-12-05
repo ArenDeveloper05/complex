@@ -3,7 +3,7 @@ import { IoIosSearch } from "react-icons/io";
 
 import "./HeaderMobileSearch.scss";
 
-const HeaderMobileSearch = () => {
+const HeaderMobileSearch = ({ scroll }) => {
   const [mobileInputVal, setMobileInputVal] = useState("");
 
   const handleMobileInputOnChange = (evt) => {
@@ -11,7 +11,10 @@ const HeaderMobileSearch = () => {
   };
 
   return (
-    <div className="header-mobile-search">
+    <div
+      className="header-mobile-search"
+      style={{ top: scroll > 100 ? "70px" : "100px" }}
+    >
       <form>
         <button>
           <IoIosSearch />

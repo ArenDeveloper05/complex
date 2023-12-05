@@ -65,9 +65,24 @@ export const navConfig = [
 ];
 
 export const langsConfig = [
-  { id: 1, title: "Eng", type: "en" },
-  { id: 2, title: "Рус", type: "ru" },
-  { id: 3, title: "Հայ", type: "am" },
+  {
+    id: 1,
+    title: "Eng",
+    type: "en",
+    icon: "https://cdn-icons-png.flaticon.com/512/9906/9906534.png",
+  },
+  {
+    id: 2,
+    title: "Рус",
+    type: "ru",
+    icon: "https://cdn-icons-png.flaticon.com/512/5315/5315463.png",
+  },
+  {
+    id: 3,
+    title: "Հայ",
+    type: "am",
+    icon: "https://cdn.countryflags.com/thumbs/armenia/flag-round-250.png",
+  },
 ];
 
 export const footerNetworksConfig = [
