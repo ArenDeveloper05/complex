@@ -51,58 +51,60 @@ const Header = () => {
 
   return (
     <header>
-      <div className="header-inner">
-        <HeaderLogo />
+      <Container>
+        <div className="header-inner">
+          <HeaderLogo />
 
-        <Nav width={width} showNav={showNav} />
+          <Nav width={width} showNav={showNav} />
 
-        <HeaderSearch
-          showNav={showNav}
-          handleChangeShowNav={handleChangeShowNav}
-          width={width}
-          handleWidth={handleWidth}
-        />
-
-        {!showMobileNav && (
-          <LuMenu
-            className="header-inner-mobile-icon"
-            onClick={handleShowMobileNav}
+          <HeaderSearch
+            showNav={showNav}
+            handleChangeShowNav={handleChangeShowNav}
+            width={width}
+            handleWidth={handleWidth}
           />
-        )}
 
-        {showMobileNav && (
-          <>
-            <AiOutlineClose
+          {!showMobileNav && (
+            <LuMenu
               className="header-inner-mobile-icon"
               onClick={handleShowMobileNav}
             />
+          )}
 
-            <HeaderMobileNav />
-          </>
-        )}
+          {showMobileNav && (
+            <>
+              <AiOutlineClose
+                className="header-inner-mobile-icon"
+                onClick={handleShowMobileNav}
+              />
 
-        {!showMobileSearch && (
-          <IoIosSearch
-            className="header-inner-mobile-icon"
-            onClick={handleShowMobileSearch}
-          />
-        )}
+              <HeaderMobileNav />
+            </>
+          )}
 
-        {showMobileSearch && (
-          <>
-            <AiOutlineClose
+          {!showMobileSearch && (
+            <IoIosSearch
               className="header-inner-mobile-icon"
               onClick={handleShowMobileSearch}
             />
+          )}
 
-            <HeaderMobileSearch />
-          </>
-        )}
+          {showMobileSearch && (
+            <>
+              <AiOutlineClose
+                className="header-inner-mobile-icon"
+                onClick={handleShowMobileSearch}
+              />
 
-        <HeaderMobileLogo />
+              <HeaderMobileSearch />
+            </>
+          )}
 
-        <HeaderAuthPanel />
-      </div>
+          <HeaderMobileLogo />
+
+          <HeaderAuthPanel />
+        </div>
+      </Container>
     </header>
   );
 };
