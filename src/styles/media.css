@@ -30,7 +30,11 @@
   }
 
   .nav-bar-links-link {
-    padding: 0 6px;
+    padding: 0px;
+  }
+
+  .nav-bar-links-link > a {
+    font-size: 12px;
   }
 
   .header-inner-search-title-icon {
