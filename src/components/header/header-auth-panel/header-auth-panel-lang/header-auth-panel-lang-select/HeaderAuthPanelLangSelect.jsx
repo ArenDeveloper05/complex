@@ -15,8 +15,6 @@ const HeaderAuthPanelLangSelect = ({ chooseLang }) => {
             }}
             className="header-inner-auth-panel-lang-select-option"
           >
-            <FaFlag />
-
             <p>{item.title}</p>
           </li>
         );
