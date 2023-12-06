@@ -79,6 +79,7 @@
         justify-content: space-between;
 
         &-link {
+          width: 50%;
           margin-top: 20px;
 
           > a {
@@ -128,7 +129,7 @@
           margin-top: 20px;
 
           > svg {
-            font-size: 44px;
+            font-size: 28px;
             color: #3a3939;
           }
 
@@ -182,7 +183,7 @@
           margin-top: 20px;
 
           > svg {
-            font-size: 20px;
+            font-size: 21px;
             color: #3a3939;
           }
 
@@ -239,11 +240,12 @@
           color: #6b6b6b;
           border-radius: 5px;
           transition: all 0.2s;
-          border: solid 2px #3a3939;
-          background-color: #3a3939;
+          color: white;
+          border: solid 2px var(--green-dark);
+          background-color: var(--green-dark);
 
-          &:focus {
-            border: solid 2px #44a326;
+          &::placeholder {
+            color: white;
           }
         }
 
@@ -263,10 +265,11 @@
           top: 50%;
           transform: translate(0, -50%);
           transition: all 0.2s;
-          background-color: #44a326;
+          color: var(--green-dark);
+          background-color: var(--orange-light);
 
           &:hover {
-            color: #44a326;
+            color: var(--orange-dark);
             background-color: #fff;
           }
         }
