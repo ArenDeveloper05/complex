@@ -129,6 +129,7 @@ header {
     font-size: 28px;
     cursor: pointer;
     color: #3a3939;
+    margin-right: 10px;
     transition: all 0.2s;
 
     &:hover {
@@ -217,17 +218,17 @@ header {
       }
 
       &-select {
-        width: 100%;
+        width: 110px;
         margin-top: 10px;
         position: absolute;
         z-index: 2;
-        top: 15px;
-        right: 20px;
+        top: 25px;
+        right: 15px;
         border-radius: 10px;
         list-style-type: none;
         background-color: #fff;
-        box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.3);
-        box-shadow: -10px -10px 10px #416f33;
+        box-shadow: 0 4px 8px var(--green-light), 0 8px 16px var(--green-dark),
+          0 0 15px var(--green-dark);
 
         &-option {
           padding: 4px;

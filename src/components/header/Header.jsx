@@ -39,7 +39,7 @@ const Header = () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
-  });
+  }, []);
 
   const handleWidth = () => {
     setWidth((prev) => !prev);
@@ -52,9 +52,17 @@ const Header = () => {
       setSecond(0);
     }
 
-    setTimeout(() => {
-      setShowNav((prev) => !prev);
-    }, second);
+    const delay = () => {
+      setTimeout(() => {
+        setShowNav((prev) => !prev);
+      }, second);
+    };
+
+    delay();
+
+    return () => {
+      clearTimeout(delay);
+    };
   };
 
   const handleShowMobileNav = () => {
@@ -66,7 +74,7 @@ const Header = () => {
   };
 
   return (
-    <header className={scroll >= 100 ? "header-scrolled" : ""}>
+    <header className={scroll > 100 ? "header-scrolled" : ""}>
       <Container>
         <div
           className={
@@ -84,41 +92,43 @@ const Header = () => {
             handleWidth={handleWidth}
           />
 
-          {!showMobileNav && (
-            <LuMenu
-              className="header-inner-mobile-icon"
-              onClick={handleShowMobileNav}
-            />
-          )}
-
-          {showMobileNav && (
-            <>
-              <AiOutlineClose
+          <div style={{ display: "flex", order: "1" }}>
+            {!showMobileNav && (
+              <LuMenu
                 className="header-inner-mobile-icon"
                 onClick={handleShowMobileNav}
               />
+            )}
 
-              <HeaderMobileNav scroll={scroll} />
-            </>
-          )}
+            {showMobileNav && (
+              <>
+                <AiOutlineClose
+                  className="header-inner-mobile-icon"
+                  onClick={handleShowMobileNav}
+                />
 
-          {!showMobileSearch && (
-            <IoIosSearch
-              className="header-inner-mobile-icon"
-              onClick={handleShowMobileSearch}
-            />
-          )}
+                <HeaderMobileNav scroll={scroll} />
+              </>
+            )}
 
-          {showMobileSearch && (
-            <>
-              <AiOutlineClose
+            {!showMobileSearch && (
+              <IoIosSearch
                 className="header-inner-mobile-icon"
                 onClick={handleShowMobileSearch}
               />
+            )}
 
-              <HeaderMobileSearch scroll={scroll} />
-            </>
-          )}
+            {showMobileSearch && (
+              <>
+                <AiOutlineClose
+                  className="header-inner-mobile-icon"
+                  onClick={handleShowMobileSearch}
+                />
+
+                <HeaderMobileSearch scroll={scroll} />
+              </>
+            )}
+          </div>
 
           <HeaderMobileLogo />
 
