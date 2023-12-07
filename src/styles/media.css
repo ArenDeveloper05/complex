@@ -22,6 +22,14 @@
   .header-inner-auth-panel-signIn a svg {
     font-size: 18px;
   }
+
+  .swiper-slide-container > h1 {
+    font-size: 3vw !important;
+  }
+
+  .swiper-slide-container > p {
+    font-size: 2vw !important;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -171,6 +179,21 @@
   .header-inner-mobile-icon {
     display: block;
   }
+
+  .swiper-slide-container {
+    padding: 30px !important;
+  }
+
+  .swiper-slide-container > button {
+    width: 50% !important;
+    /* padding: 5px !important; */
+    font-size: 2vw !important;
+  }
+
+  .atropos-inner > img {
+    width: 50% !important;
+    left: -10% !important;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -212,6 +235,12 @@
     width: 100%;
     margin-left: 0;
     margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .atropos {
+    height: 50% !important;
   }
 }
 

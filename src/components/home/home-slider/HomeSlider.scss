@@ -27,7 +27,7 @@
         padding-top: 50px;
         background: linear-gradient(
           306deg,
-          rgba(43, 181, 88, 0.5523459383753502) 0%,
+          var(--green-dark) 0%,
           rgba(255, 255, 255, 0.3310574229691877) 100%
         );
 
@@ -85,7 +85,8 @@
                     border: none;
                     cursor: pointer;
                     border-radius: 8px;
-                    font-family: "Teko", serif;
+                    // font-family: "Teko", serif;
+                    font-family: "Roboto";
                     font-size: 20px;
                     line-height: 30px;
                     font-weight: 400;
@@ -105,7 +106,8 @@
                   }
 
                   & > h1 {
-                    font-family: "Teko", serif;
+                    // font-family: "Teko", serif;
+                    font-family: "Roboto";
                     font-size: 40px;
                     font-weight: 600;
                     color: var(--orange-dark);
@@ -125,6 +127,7 @@
 
                   & > p {
                     font-family: "Teko", serif;
+                    // font-family: "Roboto";
                     font-size: 24px;
                     line-height: 1.5em;
                     color: #3a3939;
@@ -151,11 +154,11 @@
     }
 
     & > .swiper-button-prev {
-      color: rgba(87, 86, 86, 0.407);
+      color: var(--green-light);
     }
 
     & > .swiper-button-next {
-      color: rgba(87, 86, 86, 0.407);
+      color: #fff;
     }
 
     & > .swiper-pagination {
