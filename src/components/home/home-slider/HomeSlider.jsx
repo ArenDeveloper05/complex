@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -9,7 +10,18 @@ import {
   EffectFade,
 } from "swiper/modules";
 
-import green from "../../../assets/video/greenBG.mp4";
+import Atropos from "atropos/react";
+
+// IMAGES
+import homeSliderAirConditioner from "../../../assets/images/homeSliderAirConditioner.png";
+import homeSliderGasBoiler from "../../../assets/images/homeSliderGasBoiler.png";
+import homeSliderSolarConverter from "../../../assets/images/homeSliderSolarConverter.png";
+
+import homeSliderAirConditionerBG from "../../../assets/images/homeSliderAirConditionerBG.png";
+import homeSliderGasBoilerBG from "../../../assets/images/homeSliderGasBoilerBG.png";
+import homeSliderSolarConverterBG from "../../../assets/images/homeSliderSolarConverterBG.jpg";
+
+// SCSS
 
 import "./HomeSlider.scss";
 import "swiper/css";
@@ -17,40 +29,67 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
+import "atropos/scss";
+
+import "../../../styles/media.css";
+
+// =============================================
 
 const HomeSlider = () => {
+  const {
+    i18n: { language },
+  } = useTranslation();
+
   const [slides, setSlides] = useState([
     {
-      link: "111",
-      title: "Օդորակիչներ",
-      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime optio facilis \n fuga ipsam officia ipsum voluptate doloribus molestiae, incidunt mollitia quasi! \n Facilis sequi quia quas aperiam, ad quae porro?",
+      img: homeSliderAirConditioner,
+      bgImg: homeSliderAirConditionerBG,
+      title: {
+        am: "ՕԴՈՐԱԿԻՉՆԵՐ",
+        ru: "КОНДИЦИОНЕРЫ",
+        en: "AIR CONDITIONERS",
+      },
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime optio facilis fuga ipsam officia ipsum voluptate doloribus molestiae, incidunt mollitia quasi! Facilis sequi quia quas aperiam, ad quae porro?",
+      btnText: {
+        am: "Կարդալ ավելին",
+        ru: "УЗНАТЬ БОЛЬШЕ",
+        en: "READ MORE",
+      },
     },
     {
-      link: "111",
-      title: "Իտալական գազի \n կաթսաներ",
+      img: homeSliderGasBoiler,
+      bgImg: homeSliderGasBoilerBG,
+      title: {
+        am: "Ջեռուցման համակարգեր",
+        ru: "Системы отопления",
+        en: "Heating systems",
+      },
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime optio facilis \n fuga ipsam officia ipsum voluptate doloribus molestiae, incidunt mollitia quasi! \n Facilis sequi quia quas aperiam, ad quae porro?",
+      btnText: {
+        am: "Կարդալ ավելին",
+        ru: "УЗНАТЬ БОЛЬШЕ",
+        en: "READ MORE",
+      },
     },
     {
-      link: "111",
-      title: `Հաշվեք Ձեր բնակարանի \n ջեռուցումը online`,
+      img: homeSliderSolarConverter,
+      bgImg: homeSliderSolarConverterBG,
+      title: {
+        am: "ԱՐԵՎԱՅԻՆ ԿԱՅԱՆՆԵՐ",
+        ru: "сетевые солнечные электростанции",
+        en: "SOLAR STATIONS",
+      },
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime optio facilis \n fuga ipsam officia ipsum voluptate doloribus molestiae, incidunt mollitia quasi! \n Facilis sequi quia quas aperiam, ad quae porro?",
+      btnText: {
+        am: "Կարդալ ավելին",
+        ru: "УЗНАТЬ БОЛЬШЕ",
+        en: "READ MORE",
+      },
     },
   ]);
 
-  const handleVideoClick = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <section className="home-slider">
-      <video
-        src={green}
-        controls
-        autoPlay
-        muted
-        loop
-        onClick={handleVideoClick}
-      ></video>
       <Swiper
         modules={[
           Navigation,
@@ -68,20 +107,30 @@ const HomeSlider = () => {
         onSlideChange={() => console.log("slide change")}
         loop={true}
         autoplay={{
-          delay: 5000,
+          delay: 20000,
           disableOnInteraction: true,
         }}
         speed={500}
       >
         {slides.map((item, index) => {
           return (
-            <SwiperSlide key={index}>
-              {/* <Link to={ROUTER.HOME_PAGE_ROUTE}>
-                <img src={item.img} alt="img" />
-              </Link> */}
-              <h1>{item.title}</h1>
-              <p>{item.info}</p>
-              <button>read more</button>
+            <SwiperSlide key={index} className="swiper-slide">
+              <Atropos activeOffset={40} shadowScale={0}>
+                <img
+                  className="img"
+                  src={item.img}
+                  alt="img"
+                  data-atropos-offset="12"
+                />
+                <div className="swiper-slide-container" data-atropos-offset="0">
+                  <img src={item.bgImg} alt="img" />
+                  <h1 data-atropos-offset="-5">{item.title[language]}</h1>
+                  <p data-atropos-offset="5">{item.info}</p>
+                  <button data-atropos-offset="-10">
+                    {item.btnText[language]}
+                  </button>
+                </div>
+              </Atropos>
             </SwiperSlide>
           );
         })}

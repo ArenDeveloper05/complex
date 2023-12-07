@@ -7,17 +7,6 @@
   justify-content: center;
   align-items: center;
 
-  & > video {
-    width: 100%;
-    // height: 100%;
-    position: absolute;
-    z-index: 1;
-  }
-
-  video::-webkit-media-controls {
-    display: none !important;
-  }
-
   & > .swiper {
     width: 100%;
     height: 100%;
@@ -42,68 +31,121 @@
           rgba(255, 255, 255, 0.3310574229691877) 100%
         );
 
-        & > button {
-          width: 207px;
-          height: 65px;
-          background: var(--orange-dark);
-          border-radius: 16px;
-          border: none;
-          cursor: pointer;
+        & > .atropos {
+          width: 80%;
+          height: 80%;
           border-radius: 8px;
-          font-family: "Teko", serif;
-          font-size: 25px;
-          line-height: 30px;
-          font-weight: 400;
-          letter-spacing: 0.1em;
-          color: var(--grey-dark);
-          margin-top: 40px;
-          position: relative;
+          // background-color: aquamarine;
 
-          &::before {
-            content: "read more";
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: #2a8636;
-            clip-path: polygon(99% 0, 100% 0, 100% 100%, 85% 100%);
-            transition: 0.2s;
-            opacity: 1;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          & > .atropos-scale {
+            & > .atropos-rotate {
+              & > .atropos-inner {
+                position: relative;
+                overflow: visible;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & > .img {
+                  width: 45%;
+                  // height: 120%;
+                  position: absolute;
+                  left: -8%;
+                  border-radius: 8px;
+                  z-index: 2;
+                  filter: drop-shadow(0px 0px 20px #848383);
+                }
+
+                & > .swiper-slide-container {
+                  width: 75%;
+                  height: 100%;
+                  // border: 1px solid red;
+                  border-radius: 8px;
+                  display: flex;
+                  gap: 50px;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  position: absolute;
+                  right: 0;
+                  padding: 0px 130px;
+                  box-shadow: 0px 0px 10px 1px #848383;
+
+                  & > img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: 8px;
+                  }
+
+                  & > button {
+                    width: 220px;
+                    height: 65px;
+                    background: var(--orange-dark);
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    font-family: "Teko", serif;
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    letter-spacing: 0.1em;
+                    color: #fff;
+                    transition: 1s;
+                    /* From https://css.glass */
+                    background: rgba(231, 120, 24, 0.59);
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5.2px);
+                    -webkit-backdrop-filter: blur(5.2px);
+                    border: 1px solid rgba(231, 120, 24, 1);
+
+                    &:hover {
+                      background-color: var(--orange-dark);
+                    }
+                  }
+
+                  & > h1 {
+                    font-family: "Teko", serif;
+                    font-size: 40px;
+                    font-weight: 600;
+                    color: var(--orange-dark);
+                    text-decoration: none;
+                    white-space: pre-line;
+                    text-transform: uppercase;
+                    text-align: center;
+                    /* From https://css.glass */
+                    background: rgba(255, 255, 255, 0.45);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    padding: 10px;
+                  }
+
+                  & > p {
+                    font-family: "Teko", serif;
+                    font-size: 24px;
+                    line-height: 1.5em;
+                    color: #3a3939;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    text-align: justify;
+                    padding: 20px;
+                    text-shadow: 0px 0px 15px #fff;
+                    /* From https://css.glass */
+                    background: rgba(255, 255, 255, 0.45);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                  }
+                }
+              }
+            }
           }
-
-          &:hover::before {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          }
-        }
-
-        & > h1 {
-          font-family: "Teko", serif;
-          font-size: 70px;
-          font-weight: 600;
-          color: #fff;
-          text-align: center;
-          text-decoration: none;
-          white-space: pre-line;
-          text-shadow: 0px 0px 15px var(--grey-dark);
-        }
-
-        & > p {
-          font-family: "Teko", serif;
-          font-size: 24px;
-          line-height: 1.5em;
-          color: #ffffff;
-          text-shadow: 0px 0px 15px var(--grey-dark);
-          font-weight: 400;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          white-space: pre-line;
-          text-align: center;
         }
       }
     }
