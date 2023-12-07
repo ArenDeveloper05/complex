@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { LuMenu } from "react-icons/lu";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
@@ -10,9 +10,9 @@ import Nav from "./nav/Nav";
 import HeaderAuthPanel from "./header-auth-panel/HeaderAuthPanel";
 import HeaderMobileNav from "./header-mobile-nav/HeaderMobileNav";
 import HeaderMobileSearch from "./header-mobile-search/HeaderMobileSearch";
+import HeaderMobileLogo from "./header-mobile-logo/HeaderMobileLogo";
 
 import "./Header.scss";
-import HeaderMobileLogo from "./header-mobile-logo/HeaderMobileLogo";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(true);
@@ -25,21 +25,27 @@ const Header = () => {
 
   const [second, setSecond] = useState(0);
 
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(false);
+
+  const handleScroll = useCallback(() => {
+    if (window.scrollY >= 100) {
+      if (!scroll) {
+        setScroll(true);
+      }
+    } else {
+      if (scroll) {
+        setScroll(false);
+      }
+    }
+  }, [scroll]);
 
   useEffect(() => {
-    if (scroll < 110) {
-      const handleScroll = () => {
-        setScroll(window.scrollY);
-      };
+    window.addEventListener("scroll", handleScroll);
 
-      window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   const handleWidth = () => {
     setWidth((prev) => !prev);
@@ -74,11 +80,11 @@ const Header = () => {
   };
 
   return (
-    <header className={scroll > 100 ? "header-scrolled" : ""}>
+    <header className={scroll ? "header-scrolled" : ""}>
       <Container>
         <div
           className={
-            scroll > 100 ? "header-inner header-inner-scrolled" : "header-inner"
+            scroll ? "header-inner header-inner-scrolled" : "header-inner"
           }
         >
           <HeaderLogo />

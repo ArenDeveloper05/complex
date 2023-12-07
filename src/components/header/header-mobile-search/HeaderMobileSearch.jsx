@@ -13,7 +13,7 @@ const HeaderMobileSearch = ({ scroll }) => {
   return (
     <div
       className="header-mobile-search"
-      style={{ top: scroll > 100 ? "70px" : "100px" }}
+      style={{ top: scroll ? "70px" : "100px" }}
     >
       <form>
         <button>
