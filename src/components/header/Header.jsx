@@ -58,17 +58,9 @@ const Header = () => {
       setSecond(0);
     }
 
-    const delay = () => {
-      setTimeout(() => {
-        setShowNav((prev) => !prev);
-      }, second);
-    };
-
-    delay();
-
-    return () => {
-      clearTimeout(delay);
-    };
+    setTimeout(() => {
+      setShowNav((prev) => !prev);
+    }, second);
   };
 
   const handleShowMobileNav = () => {
