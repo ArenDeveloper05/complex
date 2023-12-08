@@ -1,3 +1,12 @@
+footer {
+  color: white;
+  background-size: cover;
+  background-position: 10% 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("https://room356.co.uk/cdn/shop/articles/Black_Home_Decor_768x468.png?v=1655219231");
+}
+
 .footer-inner {
   padding: 15px 0;
 
@@ -20,7 +29,6 @@
 
         > p {
           font-size: 16px;
-          color: #3a3939;
         }
       }
 
@@ -48,7 +56,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #dbdbdb;
+            color: white;
 
             &-icon {
               font-size: 18px;
@@ -67,7 +75,6 @@
 
       &-title {
         font-size: 24px;
-        color: #3a3939;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -83,7 +90,7 @@
           margin-top: 20px;
 
           > a {
-            color: #3a3939;
+            color: white;
             position: relative;
             letter-spacing: 0.5px;
             transition: all 0.2s;
@@ -117,7 +124,6 @@
 
       &-title {
         font-size: 24px;
-        color: #3a3939;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -130,12 +136,10 @@
 
           > svg {
             font-size: 28px;
-            color: #3a3939;
           }
 
           > p {
             margin-left: 10px;
-            color: #3a3939;
           }
         }
 
@@ -145,12 +149,11 @@
           margin-top: 20px;
 
           > svg {
-            color: #3a3939;
             font-size: 22px;
           }
 
           > a {
-            color: #3a3939;
+            color: white;
             margin-left: 10px;
             transition: all 0.2s;
             text-decoration: none;
@@ -184,12 +187,12 @@
 
           > svg {
             font-size: 21px;
-            color: #3a3939;
           }
 
           > a {
             margin-left: 10px;
-            color: #3a3939;
+
+            color: white;
             position: relative;
             transition: all 0.2s;
             text-decoration: none;
@@ -222,7 +225,7 @@
 
       &-title {
         font-size: 24px;
-        color: #3a3939;
+
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -277,7 +280,7 @@
 
       &-txt {
         font-size: 14px;
-        color: #3a3939;
+
         line-height: 30px;
         margin-top: 20px;
       }
