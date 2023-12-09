@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { LuMenu } from "react-icons/lu";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
