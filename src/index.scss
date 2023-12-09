@@ -23,3 +23,14 @@
   font-family: "Roboto";
   src: url(../src/assets/fonts/Roboto/LICENSE.txt);
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 100px;
+  background-color: var(--green-light);
+  border-radius: 15px;
+}

@@ -21,6 +21,8 @@ import homeSliderAirConditionerBG from "../../../assets/images/homeSliderAirCond
 import homeSliderGasBoilerBG from "../../../assets/images/homeSliderGasBoilerBG.png";
 import homeSliderSolarConverterBG from "../../../assets/images/homeSliderSolarConverterBG.jpg";
 
+import video from "../../../assets/video/greenBG.mp4";
+
 // SCSS
 
 import "./HomeSlider.scss";
@@ -90,6 +92,7 @@ const HomeSlider = () => {
 
   return (
     <section className="home-slider">
+      <video src={video} controls loop muted autoPlay></video>
       <Swiper
         modules={[
           Navigation,
@@ -123,7 +126,7 @@ const HomeSlider = () => {
                   data-atropos-offset="12"
                 />
                 <div className="swiper-slide-container" data-atropos-offset="0">
-                  <img src={item.bgImg} alt="img" />
+                  {/* <img src={item.bgImg} alt="img" /> */}
                   <h1 data-atropos-offset="-5">{item.title[language]}</h1>
                   <p data-atropos-offset="5">{item.info}</p>
                   <button data-atropos-offset="-10">

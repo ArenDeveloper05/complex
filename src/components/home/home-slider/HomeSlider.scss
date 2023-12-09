@@ -7,6 +7,17 @@
   justify-content: center;
   align-items: center;
 
+  & > video {
+    width: 100%;
+    position: absolute;
+    // height: 80%;
+    z-index: -1;
+    &::-webkit-media-controls-panel {
+      display: none !important;
+      -webkit-appearance: none;
+    }
+  }
+
   & > .swiper {
     width: 100%;
     height: 100%;
@@ -25,15 +36,15 @@
         flex-direction: column;
         gap: 25px;
         padding-top: 50px;
-        background: rgb(255, 255, 255);
-        background: linear-gradient(
-          150deg,
-          rgba(255, 255, 255, 1) 30%,
-          rgba(162, 212, 179, 1) 49%,
-          rgba(53, 149, 85, 1) 65%,
-          rgba(32, 147, 69, 1) 84%,
-          rgba(59, 177, 74, 1) 97%
-        );
+        // background: rgb(255, 255, 255);
+        // background: linear-gradient(
+        //   150deg,
+        //   rgba(255, 255, 255, 1) 30%,
+        //   rgba(162, 212, 179, 1) 49%,
+        //   rgba(53, 149, 85, 1) 65%,
+        //   rgba(32, 147, 69, 1) 84%,
+        //   rgba(59, 177, 74, 1) 97%
+        // );
 
         & > .atropos {
           width: 80%;
@@ -72,6 +83,13 @@
                   right: 0;
                   padding: 0px 130px;
                   box-shadow: 0px 0px 10px 1px #848383;
+                  /* From https://css.glass */
+                  background: rgba(255, 255, 255, 0.12);
+                  border-radius: 8px;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  backdrop-filter: blur(5px);
+                  -webkit-backdrop-filter: blur(5px);
+                  border: 1px solid rgba(255, 255, 255, 0.3);
 
                   & > img {
                     width: 100%;
@@ -110,26 +128,26 @@
                     font-family: "Roboto";
                     font-size: 40px;
                     font-weight: 600;
-                    color: var(--orange-dark);
+                    // color: var(--orange-dark);
+                    color: #fff;
                     text-decoration: none;
                     white-space: pre-line;
                     text-transform: uppercase;
                     text-align: center;
-                    /* From https://css.glass */
-                    background: rgba(255, 255, 255, 0.45);
-                    border-radius: 8px;
-                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                    backdrop-filter: blur(5px);
-                    -webkit-backdrop-filter: blur(5px);
-                    border: 1px solid rgba(255, 255, 255, 0.3);
                     padding: 10px;
+                    border-radius: 8px;
+                    background: rgba(231, 120, 24, 0.59);
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5.2px);
+                    -webkit-backdrop-filter: blur(5.2px);
+                    border: 1px solid rgba(231, 120, 24, 1);
                   }
 
                   & > p {
                     font-family: "Teko", serif;
                     font-size: 24px;
                     line-height: 1.5em;
-                    color: #3a3939;
+                    color: var(--orange-dark);
                     font-weight: 400;
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
@@ -137,7 +155,7 @@
                     padding: 20px;
                     text-shadow: 0px 0px 15px #fff;
                     /* From https://css.glass */
-                    background: rgba(255, 255, 255, 0.45);
+                    background: rgb(255, 255, 255);
                     border-radius: 8px;
                     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                     backdrop-filter: blur(5px);
