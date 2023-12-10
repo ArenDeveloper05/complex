@@ -23,7 +23,7 @@
         transition: all 0.2s;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: "Reactive";
+        font-family: var(--ff-1);
         letter-spacing: 1px;
 
         &::after {

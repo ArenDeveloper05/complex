@@ -5,15 +5,6 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-:root {
-  --global-max--width: 1600px;
-  --green-light: #3bb14a;
-  --green-dark: #215642;
-  --orange-dark: #e77818;
-  --orange-light: #ffaa17;
-  --grey-dark: #222429;
-}
-
 @font-face {
   font-family: "Teko";
   src: url(../src/assets/fonts/Teko/Teko-VariableFont_wght.ttf);
@@ -27,6 +18,22 @@
 @font-face {
   font-family: "Reactive";
   src: url(../src/assets/fonts/Reactive/Reactive-Regular.otf);
+}
+
+@font-face {
+  font-family: "Trak";
+  src: url(../src/assets/fonts/Trak/Trak-Black.ttf);
+}
+
+:root {
+  --global-max--width: 1600px;
+  --ff-1: "Reactive", "Trak", "system-ui";
+  --green-light: #3bb14a;
+  --green-dark: #215642;
+  --orange-dark: #e77818;
+  --orange-light: #ffaa17;
+  --grey-dark: #222429;
+  --text-color: #585858;
 }
 
 ::-webkit-scrollbar {
