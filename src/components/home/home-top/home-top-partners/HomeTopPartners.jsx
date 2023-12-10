@@ -7,6 +7,7 @@ import {
 } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useSelector } from "react-redux";
 
 // SCSS
 import "./HomeTopPartners.scss";
@@ -14,7 +15,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useSelector } from "react-redux";
 
 const HomeTopPartners = () => {
   const partnersList = useSelector((state) => state.partners.partnersList);
