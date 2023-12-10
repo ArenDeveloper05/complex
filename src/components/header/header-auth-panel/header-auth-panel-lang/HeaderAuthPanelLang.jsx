@@ -18,19 +18,18 @@ const HeaderAuthPanelLang = () => {
     setShowLangs((prev) => !prev);
   };
 
-  const handleOutsideClick = () => {
-    setShowLangs(false);
-  };
-
   const languageRef = useRef(null);
-  useOutsideClick(languageRef, handleOutsideClick);
+  useOutsideClick(languageRef, () => {
+    setShowLangs(false);
+  });
 
   return (
-    <div className="header-inner-auth-panel-lang" ref={languageRef}>
-      <div
-        className="header-inner-auth-panel-lang-title"
-        onClick={handleShowLangs}
-      >
+    <div
+      className="header-inner-auth-panel-lang"
+      ref={languageRef}
+      onClick={handleShowLangs}
+    >
+      <div className="header-inner-auth-panel-lang-title">
         <p className="header-inner-auth-panel-lang-title-txt">{lang}</p>
         <p className="header-inner-auth-panel-lang-title-icon">
           {showLangs ? <FaCaretUp /> : <FaCaretDown />}
