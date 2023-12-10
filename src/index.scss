@@ -6,7 +6,7 @@
 }
 
 :root {
-  --global-max--width: 1500px;
+  --global-max--width: 1600px;
   --green-light: #3bb14a;
   --green-dark: #215642;
   --orange-dark: #e77818;
@@ -22,6 +22,11 @@
 @font-face {
   font-family: "Roboto";
   src: url(../src/assets/fonts/Roboto/LICENSE.txt);
+}
+
+@font-face {
+  font-family: "Reactive";
+  src: url(../src/assets/fonts/Reactive/Reactive-Regular.otf);
 }
 
 ::-webkit-scrollbar {

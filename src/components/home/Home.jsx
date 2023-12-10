@@ -8,12 +8,8 @@ const Home = () => {
   return (
     <div className="home">
       <HomeSlider />
-<<<<<<< HEAD
-      <HomeTop />
-=======
-
       <HomeServices />
->>>>>>> c65c98fdc94a628b3bee5b2448f446f187276241
+      <HomeTop />
     </div>
   );
 };

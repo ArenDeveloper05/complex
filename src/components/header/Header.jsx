@@ -91,14 +91,7 @@ const Header = () => {
           />
 
           <div style={{ display: "flex", order: "1" }}>
-            {!showMobileNav && (
-              <LuMenu
-                className="header-inner-mobile-icon"
-                onClick={handleShowMobileNav}
-              />
-            )}
-
-            {showMobileNav && (
+            {showMobileNav ? (
               <>
                 <AiOutlineClose
                   className="header-inner-mobile-icon"
@@ -107,16 +100,14 @@ const Header = () => {
 
                 <HeaderMobileNav scroll={scroll} />
               </>
-            )}
-
-            {!showMobileSearch && (
-              <IoIosSearch
+            ) : (
+              <LuMenu
                 className="header-inner-mobile-icon"
-                onClick={handleShowMobileSearch}
+                onClick={handleShowMobileNav}
               />
             )}
 
-            {showMobileSearch && (
+            {showMobileSearch ? (
               <>
                 <AiOutlineClose
                   className="header-inner-mobile-icon"
@@ -125,6 +116,11 @@ const Header = () => {
 
                 <HeaderMobileSearch scroll={scroll} />
               </>
+            ) : (
+              <IoIosSearch
+                className="header-inner-mobile-icon"
+                onClick={handleShowMobileSearch}
+              />
             )}
           </div>
 

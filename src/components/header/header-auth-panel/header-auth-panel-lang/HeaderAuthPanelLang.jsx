@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import { langsConfig } from "../../../../config";
 
 import HeaderAuthPanelLangSelect from "./header-auth-panel-lang-select/HeaderAuthPanelLangSelect";
 import useOutsideClick from "../../../../utils/hooks/useOutsideClick";
-import { langsConfig } from "../../../../config";
 
 const HeaderAuthPanelLang = () => {
   const [lang, setLang] = useState(langsConfig[2].title);
