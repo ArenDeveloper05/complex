@@ -228,9 +228,8 @@ header {
         border-radius: 10px;
         list-style-type: none;
         background-color: #fff;
-        box-shadow: 0 4px 8px var(--green-light), 0 8px 16px var(--green-dark),
-          0 0 15px var(--green-dark);
-
+        box-shadow: rgb(95 214 90 / 47%) 0px 20px 25px -5px,
+          rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
         &-option {
           padding: 4px;
           display: flex;
