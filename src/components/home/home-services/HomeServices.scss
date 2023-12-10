@@ -70,7 +70,8 @@
           align-items: flex-start;
           justify-content: space-evenly;
           flex-direction: column;
-          background-color: rgb(210, 210, 210);
+          background-image: url(../../../assets/images/white-aestetic.jpg);
+          background-attachment: fixed;
 
           &-icon {
             font-size: 44px;

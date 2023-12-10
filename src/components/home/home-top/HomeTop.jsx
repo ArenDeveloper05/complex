@@ -21,18 +21,22 @@ import HomeTopPartners from "./home-top-partners/HomeTopPartners";
 const HomeTop = () => {
   const [products, setProducts] = useState([
     {
+      id: 1,
       img: product1,
       info: "Կոնդենսացիոն գազի կաթսա Immergas VICTRIX TERA 24",
     },
     {
+      id: 2,
       img: product2,
       info: "Էլ կոնվեկցիոն տաքացուցիչ Ballu Enzo BEC/EZMR-1500",
     },
     {
+      id: 3,
       img: product4,
       info: "Գազի կաթսա Beretta CIAO S 24 CSI",
     },
   ]);
+
   return (
     <div className="home-top">
       <div className="home-top-img">
@@ -52,12 +56,12 @@ const HomeTop = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {products.map((item) => {
+          {products.map(({ id, info, img }) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={id}>
                 <div className="swiper-slide-container">
-                  <p>{item.info}</p>
-                  <img src={item.img} alt="" />
+                  <p>{info}</p>
+                  <img src={img} alt="" />
                 </div>
               </SwiperSlide>
             );

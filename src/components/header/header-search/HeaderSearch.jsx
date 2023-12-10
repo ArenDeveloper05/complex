@@ -7,14 +7,12 @@ const HeaderSearch = ({ showNav, handleChangeShowNav, handleWidth, width }) => {
       className="header-inner-search"
       style={{ width: width ? "8%" : "60%" }}
     >
-      {showNav && (
+      {showNav ? (
         <HeaderSearchTitle
           handleChangeShowNav={handleChangeShowNav}
           handleWidth={handleWidth}
         />
-      )}
-
-      {!showNav && (
+      ) : (
         <HeaderSearchForm
           handleChangeShowNav={handleChangeShowNav}
           handleWidth={handleWidth}
