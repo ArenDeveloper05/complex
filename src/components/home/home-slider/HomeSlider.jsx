@@ -102,6 +102,7 @@ const HomeSlider = () => {
           Autoplay,
           EffectFade,
         ]}
+        effect={"coverflow"}
         spaceBetween={0}
         slidesPerView={1}
         navigation
@@ -110,6 +111,10 @@ const HomeSlider = () => {
         onSlideChange={() => console.log("slide change")}
         loop={true}
         speed={500}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
       >
         {slides.map((item, index) => {
           return (
@@ -122,7 +127,6 @@ const HomeSlider = () => {
                   data-atropos-offset="12"
                 />
                 <div className="swiper-slide-container" data-atropos-offset="0">
-                  {/* <img src={item.bgImg} alt="img" /> */}
                   <h1 data-atropos-offset="-5">{item.title[language]}</h1>
                   <p data-atropos-offset="5">{item.info}</p>
                   <button data-atropos-offset="-10">

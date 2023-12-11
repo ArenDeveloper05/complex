@@ -14,8 +14,8 @@ const HomeCounter = () => {
         <div className="home-counter-container-box">
           <div className="home-counter-container-box-content">
             <img src={userIcon} alt="" />
-            <CountUp start={0} end={1035} duration={3}>
-              {({ countUpRef }) => <span ref={countUpRef} />}
+            <CountUp start={0} end={1035} duration={2} delay={0}>
+              {({ countUpRef }) => <span ref={countUpRef}></span>}
             </CountUp>
           </div>
           <div className="home-counter-container-box-info">
@@ -25,7 +25,7 @@ const HomeCounter = () => {
         <div className="home-counter-container-box">
           <div className="home-counter-container-box-content">
             <img src={userIcon} alt="" />
-            <CountUp start={0} end={958} duration={3}>
+            <CountUp start={0} end={958} duration={3} delay={0}>
               {({ countUpRef }) => <span ref={countUpRef} />}
             </CountUp>
           </div>
@@ -36,7 +36,7 @@ const HomeCounter = () => {
         <div className="home-counter-container-box">
           <div className="home-counter-container-box-content">
             <img src={userIcon} alt="" />
-            <CountUp start={0} end={435} duration={3}>
+            <CountUp start={0} end={435} duration={3} delay={0}>
               {({ countUpRef }) => <span ref={countUpRef} />}
             </CountUp>
           </div>
@@ -47,7 +47,7 @@ const HomeCounter = () => {
         <div className="home-counter-container-box">
           <div className="home-counter-container-box-content">
             <img src={userIcon} alt="" />
-            <CountUp start={0} end={1236} duration={2}>
+            <CountUp start={0} end={1236} duration={2} delay={0}>
               {({ countUpRef }) => <span ref={countUpRef} />}
             </CountUp>
           </div>
