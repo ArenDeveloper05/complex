@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 //IMAGES
@@ -46,15 +52,15 @@ const HomeTop = () => {
       </div>
       <div className="home-top-container">
         <Swiper
-          // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={0}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={-50}
           slidesPerView={2}
           navigation
           pagination={{ clickable: true }}
-          // scrollbar={{ draggable: false }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
         >
           {products.map(({ id, info, img }) => {
             return (
