@@ -86,8 +86,9 @@ footer {
         justify-content: space-between;
 
         &-link {
-          width: 50%;
+          width: 47%;
           margin-top: 20px;
+          // border: solid cyan;
 
           > a {
             color: white;
@@ -95,6 +96,10 @@ footer {
             letter-spacing: 0.5px;
             transition: all 0.2s;
             text-decoration: none;
+            display: block;
+            overflow: hidden;
+            // white-space: nowrap;
+            text-overflow: ellipsis;
 
             &::before {
               content: "";

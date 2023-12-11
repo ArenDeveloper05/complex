@@ -1,9 +1,15 @@
+import { useTranslation } from "react-i18next";
+
 const HomeServicesMore = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="services-inner-more">
-      <p>We provide new ways to manage your businesses.</p>
+      <p>{t("main.main_services.more")}</p>
 
-      <a href="/">Request Your Quote {"> >"}</a>
+      <a href="/">
+        {t("main.main_services.more_link")} {"> >"}
+      </a>
     </div>
   );
 };
