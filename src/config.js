@@ -110,47 +110,83 @@ export const footerNetworksConfig = [
 export const footerExploreConfig = [
   {
     id: 1,
-    title: "About Us",
+    title: {
+      am: "Մեր մասին",
+      ru: "О нас",
+      en: "About Us",
+    },
     link: "/",
   },
   {
     id: 2,
-    title: "Meet Our Team",
+    title: {
+      am: "Ծանոթացեք մեր թիմին",
+      ru: "Познакомьтесь с нашей командой",
+      en: "Meet Our Team",
+    },
     link: "/",
   },
   {
     id: 3,
-    title: "Our Portfolio",
+    title: {
+      am: "Մեր պորտֆոլիոն",
+      ru: "Наше портфолио",
+      en: "Our Portfolio",
+    },
     link: "/",
   },
   {
     id: 4,
-    title: "Latest News",
+    title: {
+      am: "Վերջին նորություններ",
+      ru: "Последние новости",
+      en: "Latest News",
+    },
     link: "/",
   },
   {
     id: 5,
-    title: "Contact Us",
+    title: {
+      am: "Կապ մեզ հետ",
+      ru: "Связаться с нами",
+      en: "Contact Us",
+    },
     link: "/",
   },
   {
     id: 6,
-    title: "Support",
+    title: {
+      am: "Աջակցություն",
+      ru: "Поддерживать",
+      en: "Support",
+    },
     link: "/",
   },
   {
     id: 7,
-    title: "Privacy Policy",
+    title: {
+      am: "Գաղտնիության քաղաքականություն",
+      ru: "Политика Конфиденциальности",
+      en: "Privacy Policy",
+    },
     link: "/",
   },
   {
     id: 8,
-    title: "Terms Of Use",
+    title: {
+      am: "Օգտվելու կանոններ",
+      ru: "Правила использования",
+      en: "Terms Of Use",
+    },
     link: "/",
   },
   {
     id: 9,
-    title: "Help",
+    title: {
+      am: "Օգնություն",
+      ru: "Помощь",
+      en: "Help",
+    },
     link: "/",
   },
 ];

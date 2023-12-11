@@ -1,10 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 const FooterTopWebPageInfoDesc = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="footer-inner-top-webPage-info-desc">
-      <p>
-        Welcome to our web design agency. Lorem ipsum simply free text dolor
-        sited amet cons cing elit.
-      </p>
+      <p>{t("footer.footer_logo.text")}</p>
     </div>
   );
 };

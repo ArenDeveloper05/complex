@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { HiOutlineMail } from "react-icons/hi";
 
 const FooterTopNewsletter = () => {
@@ -8,14 +9,18 @@ const FooterTopNewsletter = () => {
     setFooterInputVal(evt.target.value);
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="footer-inner-top-newsletter">
-      <p className="footer-inner-top-newsletter-title">NEWSLETTER</p>
+      <p className="footer-inner-top-newsletter-title">
+        {t("footer.footer_newsletter.title")}
+      </p>
 
       <form>
         <input
           type="text"
-          placeholder="Email Address"
+          placeholder={t("footer.footer_newsletter.input_placeholder")}
           value={footerInputVal}
           onChange={handleFooterInputOnChange}
         />
@@ -26,7 +31,7 @@ const FooterTopNewsletter = () => {
       </form>
 
       <p className="footer-inner-top-newsletter-txt">
-        Sign up for our latest news & articles. We won’t give you spam mails.
+        {t("footer.footer_newsletter.text")}
       </p>
     </div>
   );

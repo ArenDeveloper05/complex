@@ -7,7 +7,9 @@
   "main": {
     "main_services": {
       "minor_title": "Our Future",
-      "primary_title": "Grow up your business"
+      "primary_title": "Grow up your business",
+      "more": "We provide new ways to manage your businesses.",
+      "more_link": "Request Your Quote"
     },
     "main_subscribe": {
       "minor_title": "Get Offers",
@@ -16,5 +18,23 @@
       "form_button": "Start your services",
       "note": "Give it a try: it only takes a click to unsubscribe"
     }
+  },
+  "footer": {
+    "footer_logo": {
+      "text": "Welcome to our web design agency. Lorem ipsum simply free text dolor sited amet cons cing elit."
+    },
+    "footer_explore": {
+      "title": "EXPLORE"
+    },
+    "footer_contact": {
+      "title": "CONTACT",
+      "address": "66 Broklyn Street, New York United States of America"
+    },
+    "footer_newsletter": {
+      "title": "NEWSLETTER",
+      "input_placeholder": "Email Address",
+      "text": "Sign up for our latest news & articles. We won’t give you spam mails."
+    },
+    "footer_bottom_text": "The customer is very happy."
   }
 }
