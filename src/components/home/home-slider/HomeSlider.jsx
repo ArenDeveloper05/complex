@@ -109,10 +109,6 @@ const HomeSlider = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
         loop={true}
-        autoplay={{
-          delay: 20000,
-          disableOnInteraction: true,
-        }}
         speed={500}
       >
         {slides.map((item, index) => {

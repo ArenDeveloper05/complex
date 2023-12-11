@@ -23,12 +23,12 @@ const HomeTopPartners = () => {
     <div className="home-top-partners">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        spaceBetween={50}
+        spaceBetween={-50}
         slidesPerView={6}
         navigation
         loop
         autoplay={{
-          delay: 1000,
+          delay: 1500,
           disableOnInteraction: false,
         }}
       >
