@@ -1,0 +1,27 @@
+.lines {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+
+  & :not(:first-child) {
+    margin-left: 10px;
+  }
+
+  &-green-line {
+    height: 5px;
+    background-color: var(--green-dark);
+  }
+
+  &-orange-line {
+    height: 5px;
+    background-color: var(--orange-dark);
+  }
+
+  &-shortLine {
+    width: 25px;
+  }
+
+  &-longLine {
+    width: 50px;
+  }
+}

@@ -19,29 +19,6 @@
         margin-top: 10px;
         text-align: center;
       }
-
-      &-lines {
-        display: flex;
-        margin-top: 20px;
-        align-items: center;
-
-        & :not(:first-child) {
-          margin-left: 10px;
-        }
-
-        &-line {
-          height: 5px;
-          background-color: var(--orange-dark);
-        }
-
-        &-shortLine {
-          width: 25px;
-        }
-
-        &-longLine {
-          width: 50px;
-        }
-      }
     }
 
     &-form {

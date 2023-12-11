@@ -14,7 +14,6 @@ export const navConfig = [
       ru: "О нас",
       en: "About us",
     },
-
     link: "/",
   },
   {

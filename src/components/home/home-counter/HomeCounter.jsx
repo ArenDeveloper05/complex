@@ -4,12 +4,13 @@ import CountUp from "react-countup";
 import userIcon from "../../../assets/images/user.png";
 
 import "./HomeCounter.scss";
+import Lines from "../../common/lines/Lines";
 const HomeCounter = () => {
   return (
     <div className="home-counter">
       <p className="home-counter-info">some facts</p>
       <p className="home-counter-title">We always ready for a challenge</p>
-      <div className="home-counter-line"></div>
+      <Lines bcg={"green"} />
       <div className="home-counter-container">
         <div className="home-counter-container-box">
           <div className="home-counter-container-box-content">

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import HomeSubscribeTitleLines from "./home-subscribe-title-lines/HomeSubscribeTitleLines";
+import Lines from "../../../common/lines/Lines";
 
 const HomeSubscribeTitle = () => {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ const HomeSubscribeTitle = () => {
         {t("main.main_subscribe.primary_title")}
       </p>
 
-      <HomeSubscribeTitleLines />
+      <Lines bcg={"orange"} />
     </div>
   );
 };

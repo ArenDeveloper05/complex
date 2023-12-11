@@ -5,9 +5,13 @@
     "search-placeholder": "Поиск по сайту"
   },
   "main": {
+    "main_services": {
+      "minor_title": "Наше будущее",
+      "primary_title": "Развивайте свой бизнес"
+    },
     "main_subscribe": {
       "minor_title": "Получить предложения",
-      "primary_title": "Обратная связь",
+      "primary_title": "Подписывайтесь на нашу новостную рассылку",
       "input_placeholder": "Введите адрес ел. почты",
       "form_button": "Начните свои услуги",
       "note": "Попробуйте: чтобы отказаться от подписки, достаточно одного клика"

@@ -5,9 +5,13 @@
     "search-placeholder": "Search"
   },
   "main": {
+    "main_services": {
+      "minor_title": "Our Future",
+      "primary_title": "Grow up your business"
+    },
     "main_subscribe": {
       "minor_title": "Get Offers",
-      "primary_title": "Feedback",
+      "primary_title": "Subscribe to our newsletter",
       "input_placeholder": "Enter Your E-Mail",
       "form_button": "Start your services",
       "note": "Give it a try: it only takes a click to unsubscribe"

@@ -5,9 +5,13 @@
     "search-placeholder": "Փնտրել"
   },
   "main": {
+    "main_services": {
+      "minor_title": "Մեր ապագան",
+      "primary_title": "Մեծացրեք ձեր բիզնեսը"
+    },
     "main_subscribe": {
       "minor_title": "Ստանալ Առաջարկներ",
-      "primary_title": "Հետադարձ կապ",
+      "primary_title": "Բաժանորդագրվեք մեր տեղեկագրին",
       "input_placeholder": "Մուտքագրեք Ձեր էլ. հասցեն",
       "form_button": "Սկսեք ձեր ծառայությունները",
       "note": "Փորձեք. բաժանորդագրությունից դուրս գալու համար ընդամենը մեկ սեղմում է պահանջվում"

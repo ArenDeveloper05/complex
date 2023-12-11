@@ -23,6 +23,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import HomeTopPartners from "./home-top-partners/HomeTopPartners";
+import Lines from "../../common/lines/Lines";
 
 const HomeTop = () => {
   const [products, setProducts] = useState([
@@ -48,7 +49,7 @@ const HomeTop = () => {
       <div className="home-top-img">
         <p className="home-top-img-info">what our users say</p>
         <p className="home-top-img-title">top products</p>
-        <div className="home-top-img-line"></div>
+        <Lines bcg={"green"} />
       </div>
       <div className="home-top-container">
         <Swiper
