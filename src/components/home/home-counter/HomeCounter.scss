@@ -10,6 +10,7 @@
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
+  // border: 1px solid red;
 
   &-info {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -49,7 +50,7 @@
       justify-content: center;
       align-items: flex-start;
       gap: 5px;
-      padding: 0px 50px;
+      padding-left: 50px;
 
       &-content {
         border: inherit;
@@ -68,6 +69,7 @@
       }
 
       &-info {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,6 +81,7 @@
           font-size: 20px;
           line-height: 30px;
           font-weight: 700;
+          width: 100%;
         }
       }
     }
