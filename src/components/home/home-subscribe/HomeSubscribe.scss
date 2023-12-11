@@ -1,0 +1,110 @@
+.subscribe {
+  &-inner {
+    padding: 85px 0;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      &-light {
+        color: gray;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      &-bold {
+        font-size: 35px;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      &-lines {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+
+        & :not(:first-child) {
+          margin-left: 10px;
+        }
+
+        &-line {
+          height: 5px;
+          background-color: var(--orange-dark);
+        }
+
+        &-shortLine {
+          width: 25px;
+        }
+
+        &-longLine {
+          width: 50px;
+        }
+      }
+    }
+
+    &-form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      &-input-prnt {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > input {
+          width: 340px;
+          height: 60px;
+          border: none;
+          outline: none;
+          font-size: 16px;
+          padding: 0 30px;
+          text-transform: capitalize;
+          text-overflow: ellipsis;
+          color: #999999;
+          background-color: #f5f5f5;
+        }
+
+        > button {
+          width: 200px;
+          height: 60px;
+          border: none;
+          outline: none;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+          border-radius: 0 4px 4px 0;
+          background-color: var(--orange-light);
+
+          &:hover {
+            background-color: var(--orange-dark);
+          }
+        }
+      }
+
+      &-note {
+        color: gray;
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+
+        > svg {
+          font-size: 20px;
+        }
+
+        > p {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -4,5 +4,13 @@
     "sign-in": "войти",
     "search-placeholder": "Поиск по сайту"
   },
-  "barev": "zdravstvuyte"
+  "main": {
+    "main_subscribe": {
+      "minor_title": "Получить предложения",
+      "primary_title": "Обратная связь",
+      "input_placeholder": "Введите адрес ел. почты",
+      "form_button": "Начните свои услуги",
+      "note": "Попробуйте: чтобы отказаться от подписки, достаточно одного клика"
+    }
+  }
 }

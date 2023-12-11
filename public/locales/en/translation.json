@@ -4,5 +4,13 @@
     "sign-in": "sign in",
     "search-placeholder": "Search"
   },
-  "barev": "hello"
+  "main": {
+    "main_subscribe": {
+      "minor_title": "Get Offers",
+      "primary_title": "Feedback",
+      "input_placeholder": "Enter Your E-Mail",
+      "form_button": "Start your services",
+      "note": "Give it a try: it only takes a click to unsubscribe"
+    }
+  }
 }
