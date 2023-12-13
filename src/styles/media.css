@@ -6,10 +6,6 @@
     padding: 0 8px !important;
   }
 
-  .nav-bar-links-link a {
-    font-size: 15px !important;
-  }
-
   .header-inner-search-title-txt {
     font-size: 14px !important;
   }
@@ -36,12 +32,17 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .nav-bar-links-link {
-    padding: 0px !important;
+  .armenian-font {
+    font-size: 13px !important;
+    margin: 0 4px;
   }
 
-  .nav-bar-links-link > a {
-    font-size: 12px !important;
+  .not-armenian-font {
+    font-size: 18px !important;
+  }
+
+  .nav-bar-links-link {
+    padding: 0px !important;
   }
 
   .header-inner-search-title-icon {

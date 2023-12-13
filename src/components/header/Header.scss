@@ -92,11 +92,16 @@ header {
           font-size: 20px;
           padding: 15px 20px;
           border-radius: 30px;
-          background-color: rgba(33, 86, 66, 0.2);
+          background-color: rgb(33 86 66 / 54%);
+          color: white;
+          font-family: var(--ff-1);
+          text-transform: uppercase;
+          font-size: 18px;
         }
 
         > input::placeholder {
           color: var(--green-dark);
+          font-size: 15px;
         }
       }
 

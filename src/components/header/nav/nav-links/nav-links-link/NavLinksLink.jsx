@@ -8,7 +8,15 @@ const NavLinksLink = ({ item }) => {
 
   return (
     <li className="nav-bar-links-link">
-      <Link to={item.link}>{item.title[language]}</Link>
+      <Link
+        to={item.link}
+        style={{
+          fontSize: language === "am" ? "16px" : "21px",
+        }}
+        className={language === "am" ? "armenian-font" : "not-armenian-font"}
+      >
+        {item.title[language]}
+      </Link>
     </li>
   );
 };

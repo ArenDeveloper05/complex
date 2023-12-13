@@ -25,9 +25,14 @@
   src: url(../src/assets/fonts/Trak/Trak-Black.ttf);
 }
 
+@font-face {
+  font-family: "Russian";
+  src: url(../src/assets/fonts/Russian/343-font.ttf);
+}
+
 :root {
   --global-max--width: 1600px;
-  --ff-1: "Reactive", "Trak", "system-ui";
+  --ff-1: "Reactive", "Trak", "Russian" !important;
   --green-light: #3bb14a;
   --green-dark: #215642;
   --orange-dark: #e77818;
