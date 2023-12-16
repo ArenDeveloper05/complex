@@ -69,21 +69,20 @@ const HomeTop = () => {
             },
           }}
         >
-          {products.map(({ id, info, img }) => {
-            return (
-              <SwiperSlide key={id}>
-                <div className="swiper-slide-productsContainer">
-                  <p>{info}</p>
-                  <img src={img} alt="" />
-                </div>
-              </SwiperSlide>
-            );
-          })}
+          {products &&
+            products.map(({ id, info, img }) => {
+              return (
+                <SwiperSlide key={id}>
+                  <div className="swiper-slide-productsContainer">
+                    <p>{info}</p>
+                    <img src={img} alt="" />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
-      <div className="home-top-footer">
-        <HomeTopPartners />
-      </div>
+      <div className="home-top-footer"></div>
     </div>
   );
 };

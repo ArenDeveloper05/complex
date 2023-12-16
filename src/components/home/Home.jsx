@@ -17,9 +17,9 @@ const Home = () => {
   return (
     <div className="home">
       <HomeSlider />
+      <HomeTop />
       <HomeCounter />
       <HomeServices />
-      <HomeTop />
       <HomeSubscribe />
     </div>
   );

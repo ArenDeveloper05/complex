@@ -2,12 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-@font-face {
-  font-family: "Teko";
-  src: url(../src/assets/fonts/Teko/Teko-VariableFont_wght.ttf);
+  font-family: "Gill Sans";
 }
 
 @font-face {
@@ -15,24 +10,9 @@
   src: url(../src/assets/fonts/Roboto/LICENSE.txt);
 }
 
-@font-face {
-  font-family: "Reactive";
-  src: url(../src/assets/fonts/Reactive/Reactive-Regular.otf);
-}
-
-@font-face {
-  font-family: "Trak";
-  src: url(../src/assets/fonts/Trak/Trak-Black.ttf);
-}
-
-@font-face {
-  font-family: "Russian";
-  src: url(../src/assets/fonts/Russian/343-font.ttf);
-}
-
 :root {
   --global-max--width: 1600px;
-  --ff-1: "Reactive", "Trak", "Russian" !important;
+  --ff-1: system-ui;
   --green-light: #3bb14a;
   --green-dark: #215642;
   --orange-dark: #e77818;

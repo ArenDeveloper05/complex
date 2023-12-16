@@ -44,20 +44,11 @@ export const navConfig = [
     link: "/",
   },
   {
-    id: 5,
-    title: {
-      am: "Ապառիկ վաճառք",
-      ru: "Продажа в кредит",
-      en: "Sale on credit",
-    },
-    link: "/",
-  },
-  {
     id: 6,
     title: {
-      am: "Տեսանյութեր",
-      ru: "Медиа",
-      en: "Media",
+      am: "Նորություններ",
+      ru: "Новости",
+      en: "News",
     },
     link: "/",
   },

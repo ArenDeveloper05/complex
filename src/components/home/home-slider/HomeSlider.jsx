@@ -92,7 +92,6 @@ const HomeSlider = () => {
 
   return (
     <section className="home-slider">
-      <video src={video} controls loop muted autoPlay></video>
       <Swiper
         modules={[
           Navigation,

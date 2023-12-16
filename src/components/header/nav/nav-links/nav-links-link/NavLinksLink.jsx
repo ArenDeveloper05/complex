@@ -10,10 +10,9 @@ const NavLinksLink = ({ item }) => {
     <li className="nav-bar-links-link">
       <Link
         to={item.link}
-        style={{
-          fontSize: language === "am" ? "16px" : "21px",
-        }}
-        className={language === "am" ? "armenian-font" : "not-armenian-font"}
+        // style={{
+        //   fontSize: language === "am" ? "16px" : "21px",
+        // }}
       >
         {item.title[language]}
       </Link>

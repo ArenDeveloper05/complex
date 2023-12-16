@@ -32,15 +32,6 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .armenian-font {
-    font-size: 13px !important;
-    margin: 0 4px;
-  }
-
-  .not-armenian-font {
-    font-size: 18px !important;
-  }
-
   .nav-bar-links-link {
     padding: 0px !important;
   }
