@@ -181,3 +181,16 @@ export const footerExploreConfig = [
     link: "/",
   },
 ];
+
+export const animationModesConfig = {
+  title: {
+    1: "title-animated-1",
+    2: "title-animated-2",
+    3: "title-animated-3",
+  },
+  info: {
+    1: "info-animated-1",
+    2: "info-animated-2",
+    3: "info-animated-3",
+  },
+};

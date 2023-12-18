@@ -36,5 +36,11 @@
       "text": "Sign up for our latest news & articles. We won’t give you spam mails."
     },
     "footer_bottom_text": "The customer is very happy."
+  },
+  "validations": {
+    "required": "Required field",
+    "email": "Invalid email",
+    "short": "Too short",
+    "password_confirmation": "Password mismatch"
   }
 }
