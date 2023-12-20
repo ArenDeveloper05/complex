@@ -34,6 +34,9 @@ import "swiper/css/effect-fade";
 import "atropos/scss";
 
 import "../../../styles/media.css";
+import { objectHasKey, objectIsNotEpmty } from "../../../utils/helpers/helpers";
+import { animationModesConfig } from "../../../config";
+import { Link } from "react-router-dom";
 
 // =============================================
 
@@ -57,6 +60,11 @@ const HomeSlider = () => {
         ru: "УЗНАТЬ БОЛЬШЕ",
         en: "READ MORE",
       },
+      animation_mode: {
+        title: 1,
+        info: 1,
+      },
+      link: "",
     },
     {
       img: homeSliderGasBoiler,
@@ -72,6 +80,11 @@ const HomeSlider = () => {
         ru: "УЗНАТЬ БОЛЬШЕ",
         en: "READ MORE",
       },
+      animation_mode: {
+        title: 1,
+        info: 1,
+      },
+      link: "",
     },
     {
       img: homeSliderSolarConverter,
@@ -87,12 +100,31 @@ const HomeSlider = () => {
         ru: "УЗНАТЬ БОЛЬШЕ",
         en: "READ MORE",
       },
+      animation_mode: {
+        title: 1,
+        info: 1,
+      },
+      link: "",
     },
   ]);
 
+  function generateAnimationMode(mode, type) {
+    if (
+      mode &&
+      type &&
+      objectIsNotEpmty(mode) &&
+      objectHasKey(mode, type) &&
+      objectHasKey(animationModesConfig, type)
+    ) {
+      return objectHasKey(animationModesConfig[type], mode[type])
+        ? animationModesConfig[type][mode[type]]
+        : "";
+    }
+    return "";
+  }
+
   return (
     <section className="home-slider">
-      <video src={video} controls loop muted autoPlay></video>
       <Swiper
         modules={[
           Navigation,
@@ -116,27 +148,28 @@ const HomeSlider = () => {
           disableOnInteraction: false,
         }}
       >
-        {slides.map((item, index) => {
-          return (
-            <SwiperSlide key={index} className="swiper-slide">
-              <Atropos activeOffset={40} shadowScale={0}>
-                <img
-                  className="img"
-                  src={item.img}
-                  alt="img"
-                  data-atropos-offset="12"
-                />
-                <div className="swiper-slide-container" data-atropos-offset="0">
-                  <h1 data-atropos-offset="-5">{item.title[language]}</h1>
-                  <p data-atropos-offset="5">{item.info}</p>
-                  <button data-atropos-offset="-10">
-                    {item.btnText[language]}
-                  </button>
-                </div>
-              </Atropos>
-            </SwiperSlide>
-          );
-        })}
+        {slides &&
+          slides.map(
+            ({ id, item, title, info, animation_mode, link }, index) => {
+              return (
+                <SwiperSlide key={index} className="swiper-slide">
+                  <div>
+                    <Link to={link}>
+                      <h1
+                        className={`title ${generateAnimationMode(
+                          animation_mode,
+                          "title"
+                        )}`}
+                      >
+                        {title ? title[language] : ""}
+                      </h1>
+                      {/* <p></p> */}
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              );
+            }
+          )}
       </Swiper>
     </section>
   );

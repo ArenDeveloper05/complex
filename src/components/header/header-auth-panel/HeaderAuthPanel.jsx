@@ -1,10 +1,10 @@
+import HeaderAuthPanelContact from "./header-auth-panel-contact/HeaderAuthPanelContact";
 import HeaderAuthPanelLang from "./header-auth-panel-lang/HeaderAuthPanelLang";
-import HeaderAuthPanelSignIn from "./header-auth-panel-sign-in/HeaderAuthPanelSignIn";
 
 const HeaderAuthPanel = () => {
   return (
     <div className="header-inner-auth-panel">
-      <HeaderAuthPanelSignIn />
+      <HeaderAuthPanelContact />
 
       <HeaderAuthPanelLang />
     </div>

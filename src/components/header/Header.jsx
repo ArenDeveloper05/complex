@@ -79,7 +79,7 @@ const Header = () => {
             scroll ? "header-inner header-inner-scrolled" : "header-inner"
           }
         >
-          <HeaderLogo />
+          <HeaderLogo scroll={scroll} />
 
           <Nav width={width} showNav={showNav} />
 

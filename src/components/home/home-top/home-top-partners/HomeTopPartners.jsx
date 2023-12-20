@@ -24,12 +24,26 @@ const HomeTopPartners = () => {
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={-50}
-        slidesPerView={6}
+        slidesPerView={1}
         navigation
         loop
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          330: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+          800: {
+            slidesPerView: 4,
+          },
+          900: {
+            slidesPerView: 6,
+          },
         }}
       >
         {partnersList &&

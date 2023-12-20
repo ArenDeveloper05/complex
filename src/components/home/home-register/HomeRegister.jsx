@@ -1,0 +1,228 @@
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+// import { login, register } from "../../../../api/api";
+import { useTranslation } from "react-i18next";
+
+import "./HomeRegister.scss";
+import { Button, MenuItem, NativeSelect, TextField } from "@mui/material";
+
+const HomeRegister = () => {
+  const { t } = useTranslation();
+
+  const registerSchema = Yup.object().shape({
+    first_name: Yup.string()
+      .min(4, t("validations.short"))
+      .required(t("validations.required")),
+    last_name: Yup.string()
+      .min(4, t("validations.short"))
+      .required(t("validations.required")),
+    email: Yup.string()
+      .email(t("validations.email"))
+      .required(t("validations.required")),
+    phone: Yup.string()
+      .min(8, t("validations.short"))
+      .required(t("validations.required")),
+    password: Yup.string()
+      .min(8, t("validations.short"))
+      .required(t("validations.required")),
+    password_confirmation: Yup.string()
+      .min(8, t("validations.short"))
+      .required(t("validations.required")),
+  });
+
+  const registerFunction = async (userData) => {
+    console.log(userData);
+    // try {
+    //   const { data } = await register({
+    //     ...userData,
+    //     role: "user",
+    //     phone: userData.phone.toString(),
+    //   });
+    // if (data.status === 200) {
+    // const loginResponse = await login({
+    //   email: userData.email,
+    //   password: userData.password,
+    //   });
+    // console.log(loginResponse.data);
+    //   console.log(data);
+    //   // }
+    //   if (data.errors && Object.keys(data.errors) !== 0) {
+    //     setErrors(data.errors);
+    //   }
+    // } catch (error) {
+    //   console.log(error, "error");
+    //   setErrors(error.response.data);
+    // }
+  };
+
+  const inputStyles = {
+    width: "100%",
+    backgroundColor: "#f4f5f8",
+    border: "none",
+    outline: "none",
+  };
+
+  return (
+    <div className="home-register">
+      <div className="home-register-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8496117746936!2d44.54348797654462!3d40.16790197074532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc9b1545f85d%3A0x4613b3bd8f45d778!2sToon%20Complex!5e0!3m2!1sru!2sam!4v1702719467255!5m2!1sru!2sam"
+          width="600"
+          height="450"
+          style={{ border: "0" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="map"
+        ></iframe>
+      </div>
+      <div className="home-register-form">
+        <Formik
+          initialValues={{
+            first_name: "",
+            last_name: "",
+            email: "",
+            phone: "",
+            phone_code: "+374",
+            password: "",
+            password_confirmation: "",
+          }}
+          validationSchema={registerSchema}
+          onSubmit={(values) => {
+            if (values.password === values.password_confirmation) {
+              registerFunction(values);
+            }
+          }}
+        >
+          {({ errors, touched, values, handleChange, handleBlur }) => {
+            // console.log(errors);
+            return (
+              <Form>
+                <h1>ԳՐԱՆՑՎԵԼ</h1>
+                <div className="home-register-form-row">
+                  <TextField
+                    name="first_name"
+                    label="Անուն"
+                    value={values.first_name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    sx={inputStyles}
+                  />
+                  {errors.first_name && touched.first_name ? (
+                    <div className="form-error">{errors.first_name}</div>
+                  ) : null}
+                </div>
+                <div className="home-register-form-row">
+                  <TextField
+                    name="last_name"
+                    id="lname"
+                    label="Ազգանուն"
+                    value={values.last_name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    sx={inputStyles}
+                  />
+                  {errors.last_name && touched.last_name ? (
+                    <div className="form-error">{errors.last_name}</div>
+                  ) : null}
+                </div>
+                <div className="home-register-form-row phone-row">
+                  <div className="home-register-form-row-phone">
+                    <NativeSelect
+                      id="demo-simple-select"
+                      name="phone_code"
+                      value={values.phone_code}
+                      onChange={(e) => {
+                        handleChange(e);
+                        values.phone_code = e.target.value;
+                      }}
+                    >
+                      <option value="+374">+374</option>
+                      <option value="+7">+7</option>
+                    </NativeSelect>
+                    <TextField
+                      name="phone"
+                      type="number"
+                      id="reg-phone"
+                      label="Հեռ․ համար"
+                      value={values.phone}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      sx={inputStyles}
+                    />
+                  </div>
+                  {errors.phone && touched.phone ? (
+                    <div className="form-error">{errors.phone}</div>
+                  ) : null}
+                </div>
+                <div className="home-register-form-row">
+                  <TextField
+                    name="email"
+                    type="email"
+                    id="reg-email"
+                    label="Էլ-Փոստ"
+                    sx={inputStyles}
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {errors.email && touched.email ? (
+                    <div className="form-error">{errors.email}</div>
+                  ) : null}
+                </div>
+                <div className="home-register-form-row">
+                  <TextField
+                    name="password"
+                    type="password"
+                    id="reg-pass"
+                    label="Գաղտնաբառ"
+                    sx={inputStyles}
+                    value={values.password}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {errors.password && touched.password ? (
+                    <div className="form-error">{errors.password}</div>
+                  ) : null}
+                </div>
+                <div className="home-register-form-row">
+                  <TextField
+                    name="password_confirmation"
+                    type="password"
+                    id="reg-pass-confirm"
+                    label="Կրկնել Գաղտնաբառը"
+                    sx={inputStyles}
+                    value={values.password_confirmation}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {errors.password_confirmation &&
+                  touched.password_confirmation ? (
+                    <div className="form-error">
+                      {errors.password_confirmation}
+                    </div>
+                  ) : null}
+                  {values.password !== values.password_confirmation && (
+                    <div className="form-error--confirmation">
+                      {t("validations.password_confirmation")}
+                    </div>
+                  )}
+                </div>
+
+                <Button
+                  className="register-button"
+                  type="submit"
+                  variant="outlined"
+                >
+                  ԳՐԱՆՑՎԵԼ
+                </Button>
+              </Form>
+            );
+          }}
+        </Formik>
+      </div>
+    </div>
+  );
+};
+
+export default HomeRegister;

@@ -44,20 +44,11 @@ export const navConfig = [
     link: "/",
   },
   {
-    id: 5,
-    title: {
-      am: "Ապառիկ վաճառք",
-      ru: "Продажа в кредит",
-      en: "Sale on credit",
-    },
-    link: "/",
-  },
-  {
     id: 6,
     title: {
-      am: "Տեսանյութեր",
-      ru: "Медиа",
-      en: "Media",
+      am: "Նորություններ",
+      ru: "Новости",
+      en: "News",
     },
     link: "/",
   },
@@ -190,3 +181,16 @@ export const footerExploreConfig = [
     link: "/",
   },
 ];
+
+export const animationModesConfig = {
+  title: {
+    1: "title-animated-1",
+    2: "title-animated-2",
+    3: "title-animated-3",
+  },
+  info: {
+    1: "info-animated-1",
+    2: "info-animated-2",
+    3: "info-animated-3",
+  },
+};

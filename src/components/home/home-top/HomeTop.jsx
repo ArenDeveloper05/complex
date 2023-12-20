@@ -18,6 +18,7 @@ import product5 from "../../../assets/images/homeTopProduct5.jpg";
 
 //SCSS
 import "./HomeTop.scss";
+import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -55,29 +56,33 @@ const HomeTop = () => {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={-50}
-          slidesPerView={2}
+          slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
           autoplay={{
             delay: 4000,
             disableOnInteraction: false,
           }}
+          breakpoints={{
+            900: {
+              slidesPerView: 2,
+            },
+          }}
         >
-          {products.map(({ id, info, img }) => {
-            return (
-              <SwiperSlide key={id}>
-                <div className="swiper-slide-container">
-                  <p>{info}</p>
-                  <img src={img} alt="" />
-                </div>
-              </SwiperSlide>
-            );
-          })}
+          {products &&
+            products.map(({ id, info, img }) => {
+              return (
+                <SwiperSlide key={id}>
+                  <div className="swiper-slide-productsContainer">
+                    <p>{info}</p>
+                    <img src={img} alt="" />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
-      <div className="home-top-footer">
-        <HomeTopPartners />
-      </div>
+      <div className="home-top-footer"></div>
     </div>
   );
 };
