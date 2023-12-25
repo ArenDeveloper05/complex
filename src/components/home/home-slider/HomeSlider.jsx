@@ -6,22 +6,18 @@ import {
   Pagination,
   Scrollbar,
   A11y,
-  Autoplay,
+  // Autoplay,
   EffectFade,
 } from "swiper/modules";
 
-import Atropos from "atropos/react";
-
 // IMAGES
+
 import homeSliderAirConditioner from "../../../assets/images/homeSliderAirConditioner.png";
 import homeSliderGasBoiler from "../../../assets/images/homeSliderGasBoiler.png";
 import homeSliderSolarConverter from "../../../assets/images/homeSliderSolarConverter.png";
 
-import homeSliderAirConditionerBG from "../../../assets/images/homeSliderAirConditionerBG.png";
-import homeSliderGasBoilerBG from "../../../assets/images/homeSliderGasBoilerBG.png";
-import homeSliderSolarConverterBG from "../../../assets/images/homeSliderSolarConverterBG.jpg";
-
-import video from "../../../assets/video/greenBG.mp4";
+import homeSlide1BG from "../../../assets/images/homeSlide1BG.png";
+// import homeSlide2BG from "../../../assets/images/homeSlide2BG.png";
 
 // SCSS
 
@@ -38,7 +34,7 @@ import { objectHasKey, objectIsNotEpmty } from "../../../utils/helpers/helpers";
 import { animationModesConfig } from "../../../config";
 import { Link } from "react-router-dom";
 
-// =============================================
+// ====================================================
 
 const HomeSlider = () => {
   const {
@@ -48,17 +44,16 @@ const HomeSlider = () => {
   const [slides, setSlides] = useState([
     {
       img: homeSliderAirConditioner,
-      bgImg: homeSliderAirConditionerBG,
+      bgImg: homeSlide1BG,
       title: {
-        am: "ՕԴՈՐԱԿԻՉՆԵՐ",
-        ru: "КОНДИЦИОНЕРЫ",
-        en: "AIR CONDITIONERS",
+        am: "SMART WIFI DRY+",
+        ru: "",
+        en: "",
       },
-      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime optio facilis fuga ipsam officia ipsum voluptate doloribus molestiae, incidunt mollitia quasi! Facilis sequi quia quas aperiam, ad quae porro?",
-      btnText: {
-        am: "Կարդալ ավելին",
-        ru: "УЗНАТЬ БОЛЬШЕ",
-        en: "READ MORE",
+      info: {
+        am: "WI-FI Управление климатом\n из любой точки мира",
+        ru: "",
+        en: "",
       },
       animation_mode: {
         title: 1,
@@ -68,41 +63,39 @@ const HomeSlider = () => {
     },
     {
       img: homeSliderGasBoiler,
-      bgImg: homeSliderGasBoilerBG,
+      bgImg: homeSlide1BG,
       title: {
-        am: "Ջեռուցման համակարգեր",
-        ru: "Системы отопления",
-        en: "Heating systems",
+        am: "SMART WIFI DRY+",
+        ru: "",
+        en: "",
       },
-      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime optio facilis \n fuga ipsam officia ipsum voluptate doloribus molestiae, incidunt mollitia quasi! \n Facilis sequi quia quas aperiam, ad quae porro?",
-      btnText: {
-        am: "Կարդալ ավելին",
-        ru: "УЗНАТЬ БОЛЬШЕ",
-        en: "READ MORE",
+      info: {
+        am: "WI-FI Управление климатом\n из любой точки мира",
+        ru: "",
+        en: "",
       },
       animation_mode: {
-        title: 1,
-        info: 1,
+        title: 2,
+        info: 2,
       },
       link: "",
     },
     {
       img: homeSliderSolarConverter,
-      bgImg: homeSliderSolarConverterBG,
+      bgImg: homeSlide1BG,
       title: {
-        am: "ԱՐԵՎԱՅԻՆ ԿԱՅԱՆՆԵՐ",
-        ru: "сетевые солнечные электростанции",
-        en: "SOLAR STATIONS",
+        am: "SMART WIFI DRY+",
+        ru: "",
+        en: "",
       },
-      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime optio facilis \n fuga ipsam officia ipsum voluptate doloribus molestiae, incidunt mollitia quasi! \n Facilis sequi quia quas aperiam, ad quae porro?",
-      btnText: {
-        am: "Կարդալ ավելին",
-        ru: "УЗНАТЬ БОЛЬШЕ",
-        en: "READ MORE",
+      info: {
+        am: "WI-FI Управление климатом\n из любой точки мира",
+        ru: "",
+        en: "",
       },
       animation_mode: {
-        title: 1,
-        info: 1,
+        title: 3,
+        info: 3,
       },
       link: "",
     },
@@ -131,7 +124,7 @@ const HomeSlider = () => {
           Pagination,
           Scrollbar,
           A11y,
-          Autoplay,
+          // Autoplay,
           EffectFade,
         ]}
         effect={"coverflow"}
@@ -143,18 +136,27 @@ const HomeSlider = () => {
         onSlideChange={() => console.log("slide change")}
         loop={true}
         speed={500}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
       >
         {slides &&
           slides.map(
-            ({ id, item, title, info, animation_mode, link }, index) => {
+            ({ id, item, title, info, animation_mode, link, img, bgImg }) => {
               return (
-                <SwiperSlide key={index} className="swiper-slide">
-                  <div>
-                    <Link to={link}>
+                <SwiperSlide key={id} className="swiper-slide">
+                  <Link to={link}>
+                    <img src={bgImg} alt="" />
+                    <div className="swiper-slide-container">
+                      <p
+                        className={`info ${generateAnimationMode(
+                          animation_mode,
+                          "info"
+                        )}`}
+                      >
+                        {info ? info[language] : ""}
+                      </p>
                       <h1
                         className={`title ${generateAnimationMode(
                           animation_mode,
@@ -163,9 +165,10 @@ const HomeSlider = () => {
                       >
                         {title ? title[language] : ""}
                       </h1>
-                      {/* <p></p> */}
-                    </Link>
-                  </div>
+                    </div>
+
+                    {/* <p></p> */}
+                  </Link>
                 </SwiperSlide>
               );
             }

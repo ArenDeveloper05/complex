@@ -12,6 +12,11 @@
   src: url(../src/assets/fonts/Roboto/LICENSE.txt);
 }
 
+@font-face {
+  font-family: "MyRaid";
+  src: url(../src/assets//fonts/myriad/MyriadProRegular.ttf);
+}
+
 :root {
   --global-max--width: 1600px;
   --ff-1: system-ui;
