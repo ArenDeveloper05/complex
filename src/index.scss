@@ -22,6 +22,8 @@
   --ff-1: system-ui;
   --ff-2: "Teko", sans-serif;
   --font-size-big: 60px;
+  --font-size-mid: 50px;
+  --font-size-small: 40px;
   --green-light: #3bb14a;
   --green-dark: #215642;
   --orange-dark: #e77818;
@@ -40,4 +42,18 @@
   height: 100px;
   background-color: var(--green-light);
   border-radius: 15px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--green-dark);
+  font-size: var(--font-size-big);
+  font-family: var(--ff-1);
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 0.4s;
+  cursor: pointer;
+  &:hover {
+    color: var(--green-light);
+  }
 }

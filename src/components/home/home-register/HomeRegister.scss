@@ -2,6 +2,7 @@
   max-width: var(--global-max--width);
   margin: auto;
   padding: 64px;
+  padding-bottom: 0;
   display: flex;
   gap: 64px;
   &-map {
@@ -21,6 +22,8 @@
     border-radius: 10px;
     background-color: white;
     position: relative;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
     button {
       color: var(--green-light);
       border-color: var(--green-light);
@@ -33,6 +36,8 @@
       text-align: center;
       margin-bottom: 32px;
       color: var(--green-dark);
+      transition: 0.3s;
+      transition-timing-function: ease-in-out;
     }
     &-row {
       margin-bottom: 40px;
@@ -73,6 +78,12 @@
           }
         }
       }
+    }
+    &:hover {
+      background-color: var(--thm-black);
+    }
+    &:hover h1 {
+      color: white;
     }
   }
 }

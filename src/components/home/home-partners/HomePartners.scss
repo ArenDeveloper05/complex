@@ -2,11 +2,7 @@
   max-width: var(--global-max--width);
   margin: auto;
   margin-bottom: 50px;
-  &-title {
-    text-align: center;
-    color: var(--green-dark);
-    font-size: var(--font-size-big);
-  }
+
   .lines {
     width: max-content;
     margin: auto;

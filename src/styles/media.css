@@ -32,6 +32,10 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  .section-title {
+    font-size: var(--font-size-mid) !important;
+  }
+
   .nav-bar-links-link {
     padding: 0px !important;
   }
@@ -173,9 +177,23 @@
   .home-top-partners {
     width: 95% !important;
   }
+  .home-register {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-register-map {
+    width: 100%;
+  }
+  .home-register-form {
+    width: 80% !important;
+    transform: translateY(-100px) !important;
+  }
 }
 
 @media only screen and (max-width: 1030px) {
+  .section-title {
+    font-size: var(--font-size-small) !important;
+  }
   .nav-bar {
     display: none !important;
   }

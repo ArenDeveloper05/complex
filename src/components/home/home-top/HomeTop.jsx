@@ -48,8 +48,7 @@ const HomeTop = () => {
   return (
     <div className="home-top">
       <div className="home-top-img">
-        <p className="home-top-img-info">what our users say</p>
-        <p className="home-top-img-title">top products</p>
+        <h1 className="home-top-img-title section-title">top products</h1>
         <Lines bcg={"green"} />
       </div>
       <div className="home-top-container">
@@ -82,7 +81,6 @@ const HomeTop = () => {
             })}
         </Swiper>
       </div>
-      <div className="home-top-footer"></div>
     </div>
   );
 };

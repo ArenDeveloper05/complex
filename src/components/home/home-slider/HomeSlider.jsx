@@ -43,6 +43,7 @@ const HomeSlider = () => {
 
   const [slides, setSlides] = useState([
     {
+      id: 1,
       img: homeSliderAirConditioner,
       bgImg: homeSlide1BG,
       title: {
@@ -62,6 +63,7 @@ const HomeSlider = () => {
       link: "",
     },
     {
+      id: 2,
       img: homeSliderGasBoiler,
       bgImg: homeSlide1BG,
       title: {
@@ -81,6 +83,7 @@ const HomeSlider = () => {
       link: "",
     },
     {
+      id: 3,
       img: homeSliderSolarConverter,
       bgImg: homeSlide1BG,
       title: {

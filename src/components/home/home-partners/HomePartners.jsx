@@ -23,7 +23,7 @@ const HomePartners = () => {
 
   return (
     <div className="home-partners">
-      <h1 className="home-partners-title">Our Partners</h1>
+      <h1 className="home-partners-title section-title">Our Partners</h1>
       <Lines bcg={"green"} />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
