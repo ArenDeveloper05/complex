@@ -95,7 +95,6 @@ const HomeRegister = () => {
           }}
         >
           {({ errors, touched, values, handleChange, handleBlur }) => {
-            // console.log(errors);
             return (
               <Form>
                 <h1>ԳՐԱՆՑՎԵԼ</h1>

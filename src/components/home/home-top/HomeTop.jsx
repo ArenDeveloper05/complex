@@ -23,7 +23,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import HomeTopPartners from "./home-top-partners/HomeTopPartners";
+import HomeTopPartners from "../home-partners/HomePartners";
 import Lines from "../../common/lines/Lines";
 
 const HomeTop = () => {

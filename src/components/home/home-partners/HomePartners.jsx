@@ -9,18 +9,22 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
 
+import Lines from "../../common/lines/Lines";
+
 // SCSS
-import "./HomeTopPartners.scss";
+import "./HomePartners.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const HomeTopPartners = () => {
+const HomePartners = () => {
   const partnersList = useSelector((state) => state.partners.partnersList);
 
   return (
-    <div className="home-top-partners">
+    <div className="home-partners">
+      <h1 className="home-partners-title">Our Partners</h1>
+      <Lines bcg={"green"} />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={-50}
@@ -59,4 +63,4 @@ const HomeTopPartners = () => {
   );
 };
 
-export default HomeTopPartners;
+export default HomePartners;

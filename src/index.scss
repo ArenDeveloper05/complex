@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Teko:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,12 +15,15 @@
 :root {
   --global-max--width: 1600px;
   --ff-1: system-ui;
+  --ff-2: "Teko", sans-serif;
+  --font-size-big: 60px;
   --green-light: #3bb14a;
   --green-dark: #215642;
   --orange-dark: #e77818;
   --orange-light: #ffaa17;
   --grey-dark: #222429;
   --text-color: #585858;
+  --thm-black: #222429;
 }
 
 ::-webkit-scrollbar {

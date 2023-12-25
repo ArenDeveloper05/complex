@@ -6,6 +6,7 @@ import HomeSlider from "./home-slider/HomeSlider";
 import HomeSubscribe from "./home-subscribe/HomeSubscribe";
 import HomeTop from "./home-top/HomeTop";
 import HomeRegister from "./home-register/HomeRegister";
+import HomePartners from "./home-partners/HomePartners";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -19,11 +20,12 @@ const Home = () => {
   return (
     <div className="home">
       <HomeSlider />
+      <HomeCounter />
       <HomeTop />
       <HomeRegister />
-      <HomeCounter />
-      <HomeServices />
-      <HomeSubscribe />
+      {/* <HomeServices /> */}
+      {/* <HomeSubscribe /> */}
+      <HomePartners />
     </div>
   );
 };
