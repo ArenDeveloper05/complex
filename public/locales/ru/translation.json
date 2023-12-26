@@ -17,6 +17,22 @@
       "input_placeholder": "Введите адрес ел. почты",
       "form_button": "Начните свои услуги",
       "note": "Попробуйте: чтобы отказаться от подписки, достаточно одного клика"
+    },
+    "main_top_products": {
+      "title": "ТОП ПРОДУКТЫ"
+    },
+    "main_register": {
+      "title": "Зарегистрироваться",
+      "name_placeholder": "Имя",
+      "surname_placeholder": "Фамилия",
+      "phone_placeholder": "Номер телефона",
+      "email_placeholder": "Эл. почта",
+      "password_placeholder": "Пароль",
+      "repeat_password_placeholder": "Повторите пароль",
+      "button": "Зарегистрироваться"
+    },
+    "main_partners": {
+      "title": "НАШИ ПАРТНЕРЫ"
     }
   },
   "footer": {

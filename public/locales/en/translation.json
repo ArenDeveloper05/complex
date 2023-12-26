@@ -17,6 +17,22 @@
       "input_placeholder": "Enter Your E-Mail",
       "form_button": "Start your services",
       "note": "Give it a try: it only takes a click to unsubscribe"
+    },
+    "main_top_products": {
+      "title": "TOP PRODUCTS"
+    },
+    "main_register": {
+      "title": "Sign up",
+      "name_placeholder": "Name",
+      "surname_placeholder": "Surname",
+      "phone_placeholder": "Phone number",
+      "email_placeholder": "Email",
+      "password_placeholder": "Password",
+      "repeat_password_placeholder": "Repeat password",
+      "button": "Sign up"
+    },
+    "main_partners": {
+      "title": "OUR PARTNERS"
     }
   },
   "footer": {

@@ -4,25 +4,41 @@ const initialState = {
   countData: [
     {
       id: 1,
-      title: "clients satisfaction",
+      title: {
+        am: "հաճախորդների գոհունակությունը",
+        en: "clients satisfaction",
+        ru: "удовлетворенность клиентов",
+      },
       count: 1035,
       aos: "fade-right",
     },
     {
       id: 2,
-      title: "great projects",
+      title: {
+        am: "մեծ նախագծեր",
+        en: "great projects",
+        ru: "отличные проекты",
+      },
       count: 958,
       aos: "fade-up",
     },
     {
       id: 3,
-      title: "awards won",
+      title: {
+        am: "շահած մրցանակներ",
+        en: "awards won",
+        ru: "выигранные награды",
+      },
       count: 958,
       aos: "fade-up",
     },
     {
       id: 4,
-      title: "spend time",
+      title: {
+        am: "ժամանակ անցկացնել",
+        en: "spend time",
+        ru: "проводить время",
+      },
       count: 958,
       aos: "fade-left",
     },

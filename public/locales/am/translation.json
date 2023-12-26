@@ -1,7 +1,7 @@
 {
   "header": {
     "search": "փնտրել",
-    "sign-in": "գրանցվել",
+    "Գրանցվել": "գրանցվել",
     "search-placeholder": "Փնտրել"
   },
   "main": {
@@ -17,6 +17,22 @@
       "input_placeholder": "Մուտքագրեք Ձեր էլ. հասցեն",
       "form_button": "Սկսեք ձեր ծառայությունները",
       "note": "Փորձեք. բաժանորդագրությունից դուրս գալու համար ընդամենը մեկ սեղմում է պահանջվում"
+    },
+    "main_top_products": {
+      "title": "ԼԱՎԱԳՈՒՅՆ ԱՊՐԱՆՔՆԵՐ"
+    },
+    "main_register": {
+      "title": "Գրանցվել",
+      "name_placeholder": "Անուն",
+      "surname_placeholder": "Ազգանուն",
+      "phone_placeholder": "Հեռ․ համար",
+      "email_placeholder": "Էլ-Փոստ",
+      "password_placeholder": "Գաղտնաբառ",
+      "repeat_password_placeholder": "Կրկնել գաղտնաբառը",
+      "button": "Գրանցվել"
+    },
+    "main_partners": {
+      "title": "ՄԵՐ ԳՈՐԾԸՆԿԵՐՆԵՐԸ"
     }
   },
   "footer": {

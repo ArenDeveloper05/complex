@@ -102,11 +102,11 @@ const HomeRegister = () => {
           {({ errors, touched, values, handleChange, handleBlur }) => {
             return (
               <Form>
-                <h1>ԳՐԱՆՑՎԵԼ</h1>
+                <h1>{t("main.main_register.title")}</h1>
                 <div className="home-register-form-row">
                   <TextField
                     name="first_name"
-                    label="Անուն"
+                    label={t("main.main_register.name_placeholder")}
                     value={values.first_name}
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -154,7 +154,7 @@ const HomeRegister = () => {
                       name="phone"
                       type="number"
                       id="reg-phone"
-                      label="Հեռ․ համար"
+                      label={t("main.main_register.phone_placeholder")}
                       value={values.phone}
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -170,7 +170,7 @@ const HomeRegister = () => {
                     name="email"
                     type="email"
                     id="reg-email"
-                    label="Էլ-Փոստ"
+                    label={t("main.main_register.email_placeholder")}
                     sx={inputStyles}
                     value={values.email}
                     onChange={handleChange}
@@ -185,7 +185,7 @@ const HomeRegister = () => {
                     name="password"
                     type="password"
                     id="reg-pass"
-                    label="Գաղտնաբառ"
+                    label={t("main.main_register.password_placeholder")}
                     sx={inputStyles}
                     value={values.password}
                     onChange={handleChange}
@@ -200,7 +200,7 @@ const HomeRegister = () => {
                     name="password_confirmation"
                     type="password"
                     id="reg-pass-confirm"
-                    label="Կրկնել Գաղտնաբառը"
+                    label={t("main.main_register.repeat_password_placeholder")}
                     sx={inputStyles}
                     value={values.password_confirmation}
                     onChange={handleChange}
@@ -224,7 +224,7 @@ const HomeRegister = () => {
                   type="submit"
                   variant="outlined"
                 >
-                  ԳՐԱՆՑՎԵԼ
+                  {t("main.main_register.button")}
                 </Button>
               </Form>
             );

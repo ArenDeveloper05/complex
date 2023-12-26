@@ -17,13 +17,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useTranslation } from "react-i18next";
 
 const HomePartners = () => {
+  const { t } = useTranslation();
   const partnersList = useSelector((state) => state.partners.partnersList);
 
   return (
     <div className="home-partners">
-      <h1 className="home-partners-title section-title">Our Partners</h1>
+      <h1 className="home-partners-title section-title">
+        {t("main.main_partners.title")}
+      </h1>
       <Lines bcg={"green"} />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

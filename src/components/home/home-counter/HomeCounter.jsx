@@ -4,8 +4,13 @@ import CountUp from "react-countup";
 import ReactVisibilitySensor from "react-visibility-sensor";
 
 import "./HomeCounter.scss";
+import { useTranslation } from "react-i18next";
 
 const HomeCounter = () => {
+  const {
+    i18n: { language },
+  } = useTranslation();
+
   const countData = useSelector((state) => state.count.countData);
 
   return (
@@ -28,7 +33,7 @@ const HomeCounter = () => {
                   </CountUp>
                 </div>
                 <div className="home-counter-container-box-info">
-                  <p>{title ? title : ""}</p>
+                  <p>{title.en ? title.en : ""}</p>
                 </div>
               </div>
             );
