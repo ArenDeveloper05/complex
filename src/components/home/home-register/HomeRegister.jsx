@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import "./HomeRegister.scss";
 import { Button, MenuItem, NativeSelect, TextField } from "@mui/material";
+import { Parallax, useParallax } from "react-scroll-parallax";
 
 const HomeRegister = () => {
   const { t } = useTranslation();
@@ -62,9 +63,13 @@ const HomeRegister = () => {
     outline: "none",
   };
 
+  const parallax = useParallax({
+    speed: -10,
+  });
+
   return (
     <div className="home-register">
-      <div className="home-register-map">
+      <div className="home-register-map" ref={parallax.ref}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8496117746936!2d44.54348797654462!3d40.16790197074532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc9b1545f85d%3A0x4613b3bd8f45d778!2sToon%20Complex!5e0!3m2!1sru!2sam!4v1702719467255!5m2!1sru!2sam"
           width="600"

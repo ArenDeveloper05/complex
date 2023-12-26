@@ -8,6 +8,8 @@ import {
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import Lines from "../../common/lines/Lines";
+
 //IMAGES
 
 import product1 from "../../../assets/images/homeTopProduct1.png";
@@ -23,8 +25,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import HomeTopPartners from "../home-partners/HomePartners";
-import Lines from "../../common/lines/Lines";
+import { Parallax } from "react-scroll-parallax";
 
 const HomeTop = () => {
   const [products, setProducts] = useState([
@@ -75,7 +76,9 @@ const HomeTop = () => {
                 <SwiperSlide key={id}>
                   <div className="swiper-slide-productsContainer">
                     <h1>{title}</h1>
-                    <img src={img} alt="" />
+                    <Parallax speed={-10}>
+                      <img src={img} alt="" />
+                    </Parallax>
                     <p>{info}</p>
                   </div>
                 </SwiperSlide>

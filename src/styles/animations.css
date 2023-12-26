@@ -31,10 +31,10 @@
 
 @keyframes info-animated-3 {
   0% {
-    transform: translate(750px, -500px);
+    transform: translate(0px, -500px);
   }
   100% {
-    transform: translate(750px, -100px);
+    transform: translate(100px, -30px);
   }
 }
 
@@ -71,10 +71,10 @@
 
 @keyframes title-animated-3 {
   0% {
-    transform: translate(350px, -500px);
+    transform: translate(0px, -500px);
   }
   100% {
-    transform: translate(350px, -200px);
+    transform: translate(0px, -200px);
   }
 }
 
