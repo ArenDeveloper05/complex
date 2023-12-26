@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 
 import CountUp from "react-countup";
+import ReactVisibilitySensor from "react-visibility-sensor";
 
 import "./HomeCounter.scss";
-import ReactVisibilitySensor from "react-visibility-sensor";
 
 const HomeCounter = () => {
   const countData = useSelector((state) => state.count.countData);

@@ -49,11 +49,15 @@ const HomeTop = () => {
               return (
                 <SwiperSlide key={id}>
                   <div className="swiper-slide-productsContainer">
-                    <h1>{title}</h1>
+                    <h1>{title ? title : ""}</h1>
                     <Parallax speed={-10}>
-                      <img src={img} alt="" />
+                      <img src={img ? img : ""} alt="img" />
                     </Parallax>
-                    <p>{info}</p>
+                    <Parallax speed={-15}>
+                      <div className="swiper-slide-productsContainer-desc">
+                        {info ? info : ""}
+                      </div>
+                    </Parallax>
                   </div>
                 </SwiperSlide>
               );
