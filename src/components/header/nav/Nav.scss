@@ -32,15 +32,15 @@
         &::after {
           content: "";
           width: 0%;
-          height: 1px;
-          transition: all 0.2s;
+          height: 2px;
+          transition: all 0.4s;
           position: absolute;
-          bottom: -2px;
+          bottom: -10px;
           background-color: var(--green-dark);
         }
 
         &:hover::after {
-          width: 100%;
+          width: 90%;
           opacity: 0.6;
         }
 

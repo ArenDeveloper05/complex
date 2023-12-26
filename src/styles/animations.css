@@ -1,0 +1,158 @@
+/*INFO ANIMATIONS */
+.info-animated-1 {
+  animation: info-animated-1 1s forwards;
+}
+
+@keyframes info-animated-1 {
+  0% {
+    transform: translate(-1000px, 0px);
+  }
+  100% {
+    transform: translate(120px, 0px);
+  }
+}
+
+.info-animated-2 {
+  animation: info-animated-2 1s forwards;
+}
+
+@keyframes info-animated-2 {
+  0% {
+    transform: translateX(150px) rotate(90deg) translateY(100px);
+  }
+  100% {
+    transform: translateX(150px) rotate(0deg) translateY(100px);
+  }
+}
+
+.info-animated-3 {
+  animation: info-animated-3 1s forwards;
+}
+
+@keyframes info-animated-3 {
+  0% {
+    transform: translate(750px, -500px);
+  }
+  100% {
+    transform: translate(750px, -100px);
+  }
+}
+
+/* TITLE ANIMATIONS */
+.title-animated-1 {
+  animation: title-animated-1 1s 0.5s both;
+}
+
+@keyframes title-animated-1 {
+  0% {
+    transform: translate(120px, -2000px);
+  }
+  100% {
+    transform: translate(120px, 0px);
+  }
+}
+
+.title-animated-2 {
+  animation: title-animated-2 1s both;
+}
+
+@keyframes title-animated-2 {
+  0% {
+    transform: translateX(120px) rotate(90deg) translateY(-150px);
+  }
+  100% {
+    transform: translateX(-240px) rotate(0deg) translateY(0px);
+  }
+}
+
+.title-animated-3 {
+  animation: title-animated-3 1s 1s both;
+}
+
+@keyframes title-animated-3 {
+  0% {
+    transform: translate(350px, -500px);
+  }
+  100% {
+    transform: translate(350px, -200px);
+  }
+}
+
+/* IMAGE ANIMATIONS */
+.img-animated-1 {
+  animation-name: img-animated-1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes img-animated-1 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(20px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.img-animated-2 {
+  animation-name: img-animated-2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes img-animated-2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.img-animated-3 {
+  animation-name: img-animated-3;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes img-animated-3 {
+  0% {
+    transform: translate(-60px, -50px);
+  }
+  17% {
+    transform: translate(-150px, 0px);
+  }
+  34% {
+    transform: translate(-60px, 50px);
+  }
+  51% {
+    transform: translate(60px, -50px);
+  }
+  68% {
+    transform: translate(150px, 0px);
+  }
+  85% {
+    transform: translate(60px, 50px);
+  }
+  100% {
+    transform: translate(-60px, -50px);
+  }
+}
+
+/* SLIDER BACKGROUND */
+@keyframes swiper-bg {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1.3);
+  }
+}
