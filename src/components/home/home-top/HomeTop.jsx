@@ -31,26 +31,27 @@ const HomeTop = () => {
     {
       id: 1,
       img: product1,
-      info: "Կոնդենսացիոն գազի կաթսա Immergas VICTRIX TERA 24",
+      title: "Կոնդենսացիոն գազի կաթսա Immergas VICTRIX TERA 24",
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
     },
     {
       id: 2,
       img: product2,
-      info: "Էլ կոնվեկցիոն տաքացուցիչ Ballu Enzo BEC/EZMR-1500",
+      title: "Էլ կոնվեկցիոն տաքացուցիչ Ballu Enzo BEC/EZMR-1500",
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
     },
     {
       id: 3,
       img: product4,
-      info: "Գազի կաթսա Beretta CIAO S 24 CSI",
+      title: "Գազի կաթսա Beretta CIAO S 24 CSI",
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
     },
   ]);
 
   return (
     <div className="home-top">
-      <div className="home-top-img">
-        <h1 className="home-top-img-title section-title">top products</h1>
-        <Lines bcg={"green"} />
-      </div>
+      <h1 className="home-top-title">top products</h1>
+      <Lines bcg={"green"} />
       <div className="home-top-container">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -69,12 +70,13 @@ const HomeTop = () => {
           }}
         >
           {products &&
-            products.map(({ id, info, img }) => {
+            products.map(({ id, info, img, title }) => {
               return (
                 <SwiperSlide key={id}>
                   <div className="swiper-slide-productsContainer">
-                    <p>{info}</p>
+                    <h1>{title}</h1>
                     <img src={img} alt="" />
+                    <p>{info}</p>
                   </div>
                 </SwiperSlide>
               );
