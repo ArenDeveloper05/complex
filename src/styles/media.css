@@ -234,10 +234,10 @@
     font-size: 2vw !important;
   }
 
-  .atropos-inner > img {
+  /* .atropos-inner > img {
     width: 50% !important ;
     left: -10% !important ;
-  }
+  } */
 }
 
 @media only screen and (max-width: 720px) {
@@ -289,9 +289,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .atropos {
+  /* .atropos {
     height: 50% !important;
-  }
+  } */
 
   .subscribe-inner-form-input-prnt {
     width: 100%;

@@ -74,16 +74,9 @@
           padding: 0 10px;
           fieldset {
             height: 56px;
-            // border: solid;
           }
         }
       }
-    }
-    &:hover {
-      background-color: var(--thm-black);
-    }
-    &:hover h1 {
-      color: white;
     }
   }
 }

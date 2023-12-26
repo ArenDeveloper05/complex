@@ -128,9 +128,15 @@ const HomeRegister = () => {
                 <div className="home-register-form-row phone-row">
                   <div className="home-register-form-row-phone">
                     <NativeSelect
-                      id="demo-simple-select"
+                      className="phone_code_select"
                       name="phone_code"
                       value={values.phone_code}
+                      style={{
+                        height: "56px",
+                        color: "#e77818",
+                        marginRight: "2px",
+                        backgroundColor: "#f4f5f8",
+                      }}
                       onChange={(e) => {
                         handleChange(e);
                         values.phone_code = e.target.value;

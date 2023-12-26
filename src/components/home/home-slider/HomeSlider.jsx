@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -6,7 +6,7 @@ import {
   Pagination,
   Scrollbar,
   A11y,
-  // Autoplay,
+  Autoplay,
   EffectFade,
 } from "swiper/modules";
 
@@ -16,8 +16,8 @@ import homeSliderAirConditioner from "../../../assets/images/homeSliderAirCondit
 import homeSliderGasBoiler from "../../../assets/images/homeSliderGasBoiler.png";
 import homeSliderSolarConverter from "../../../assets/images/homeSliderSolarConverter.png";
 
-import homeSlide1BG from "../../../assets/images/homeSlide1BG.png";
-// import homeSlide2BG from "../../../assets/images/homeSlide2BG.png";
+import sliderBG from "../../../assets/images/slider/background.jpg";
+import sliderBG2 from "../../../assets/images/slider/slider2.jpg";
 
 // SCSS
 
@@ -33,6 +33,7 @@ import "../../../styles/media.css";
 import { objectHasKey, objectIsNotEpmty } from "../../../utils/helpers/helpers";
 import { animationModesConfig } from "../../../config";
 import { Link } from "react-router-dom";
+import Atropos from "atropos/react";
 
 // ====================================================
 
@@ -45,7 +46,7 @@ const HomeSlider = () => {
     {
       id: 1,
       img: homeSliderAirConditioner,
-      bgImg: homeSlide1BG,
+      bgImg: sliderBG2,
       title: {
         am: "SMART WIFI DRY+",
         ru: "",
@@ -59,13 +60,14 @@ const HomeSlider = () => {
       animation_mode: {
         title: 1,
         info: 1,
+        img: 1,
       },
       link: "",
     },
     {
       id: 2,
       img: homeSliderGasBoiler,
-      bgImg: homeSlide1BG,
+      bgImg: sliderBG2,
       title: {
         am: "SMART WIFI DRY+",
         ru: "",
@@ -79,13 +81,14 @@ const HomeSlider = () => {
       animation_mode: {
         title: 2,
         info: 2,
+        img: 2,
       },
       link: "",
     },
     {
       id: 3,
       img: homeSliderSolarConverter,
-      bgImg: homeSlide1BG,
+      bgImg: sliderBG2,
       title: {
         am: "SMART WIFI DRY+",
         ru: "",
@@ -99,6 +102,7 @@ const HomeSlider = () => {
       animation_mode: {
         title: 3,
         info: 3,
+        img: 3,
       },
       link: "",
     },
@@ -127,7 +131,7 @@ const HomeSlider = () => {
           Pagination,
           Scrollbar,
           A11y,
-          // Autoplay,
+          Autoplay,
           EffectFade,
         ]}
         effect={"coverflow"}
@@ -136,7 +140,7 @@ const HomeSlider = () => {
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        onSlideChange={(e) => {}}
         loop={true}
         speed={500}
         // autoplay={{
@@ -150,7 +154,7 @@ const HomeSlider = () => {
               return (
                 <SwiperSlide key={id} className="swiper-slide">
                   <Link to={link}>
-                    <img src={bgImg} alt="" />
+                    <img src={bgImg} alt="background" className="swiper-bg" />
                     <div className="swiper-slide-container">
                       <p
                         className={`info ${generateAnimationMode(
@@ -168,9 +172,13 @@ const HomeSlider = () => {
                       >
                         {title ? title[language] : ""}
                       </h1>
+                      <Atropos
+                        shadowScale={0}
+                        className={generateAnimationMode(animation_mode, "img")}
+                      >
+                        <img src={img} alt="img" />
+                      </Atropos>
                     </div>
-
-                    {/* <p></p> */}
                   </Link>
                 </SwiperSlide>
               );

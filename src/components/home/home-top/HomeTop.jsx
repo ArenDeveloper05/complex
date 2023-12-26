@@ -50,7 +50,7 @@ const HomeTop = () => {
 
   return (
     <div className="home-top">
-      <h1 className="home-top-title">top products</h1>
+      <h1 className="home-top-title section-title">top products</h1>
       <Lines bcg={"green"} />
       <div className="home-top-container">
         <Swiper
