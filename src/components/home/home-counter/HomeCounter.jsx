@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import CountUp from "react-countup";
 
 import "./HomeCounter.scss";
+import ReactVisibilitySensor from "react-visibility-sensor";
 
 const HomeCounter = () => {
   const countData = useSelector((state) => state.count.countData);
@@ -19,7 +20,11 @@ const HomeCounter = () => {
                   data-aos={aos}
                 >
                   <CountUp start={0} end={count} duration={5} delay={0}>
-                    {({ countUpRef }) => <span ref={countUpRef}></span>}
+                    {({ countUpRef, start }) => (
+                      <ReactVisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </ReactVisibilitySensor>
+                    )}
                   </CountUp>
                 </div>
                 <div className="home-counter-container-box-info">

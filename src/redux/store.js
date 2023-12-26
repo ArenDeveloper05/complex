@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import servicesReducer from "./slices/servicesSlice";
+import topReducer from "./slices/topSlice";
 import partnersReducer from "./slices/partnersSlice";
 import countReducer from "./slices/countSlice";
 
 const store = configureStore({
   reducer: {
-    services: servicesReducer,
+    top: topReducer,
     partners: partnersReducer,
     count: countReducer,
   },

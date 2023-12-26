@@ -143,10 +143,10 @@ const HomeSlider = () => {
         onSlideChange={(e) => {}}
         loop={true}
         speed={500}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 10000,
+          disableOnInteraction: false,
+        }}
       >
         {slides &&
           slides.map(
