@@ -31,18 +31,23 @@
       }
 
       &-info {
-        width: 100%;
+        width: 290px;
+        height: 63px;
+        // width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         border: inherit;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: solid;
 
         & > p {
           font-family: var(--ff-2);
           font-size: 40px;
-          text-transform: uppercase;
           color: white;
           letter-spacing: 2px;
+          text-transform: uppercase;
         }
       }
     }

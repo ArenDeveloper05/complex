@@ -9,19 +9,31 @@ const initialState = {
     {
       id: 1,
       img: product1,
-      title: "Կոնդենսացիոն գազի կաթսա Immergas VICTRIX TERA 24",
+      title: {
+        am: "Կոնդենսացիոն գազի կաթսա Immergas VICTRIX TERA 24",
+        en: "Condensing gas boiler Immergas VICTRIX TERA 24",
+        ru: "Конденсационный газовый котел Immergas VICTRIX TERA 24",
+      },
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
     },
     {
       id: 2,
       img: product2,
-      title: "Էլ կոնվեկցիոն տաքացուցիչ Ballu Enzo BEC/EZMR-1500",
+      title: {
+        am: "Էլ կոնվեկցիոն տաքացուցիչ Ballu Enzo BEC/EZMR-1500",
+        en: "Convection heater Ballu Enzo BEC/EZMR-1500",
+        ru: "Конвекционный обогреватель Ballu Enzo BEC/EZMR-1500",
+      },
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
     },
     {
       id: 3,
       img: product4,
-      title: "Գազի կաթսա Beretta CIAO S 24 CSI",
+      title: {
+        am: "Գազի կաթսա Beretta CIAO S 24 CSI",
+        en: "Gas boiler Beretta CIAO S 24 CSI",
+        ru: "Газовый котел Beretta CIAO S 24 CSI",
+      },
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
     },
   ],
