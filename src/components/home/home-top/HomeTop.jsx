@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Navigation,
   Pagination,
@@ -7,6 +6,9 @@ import {
   Autoplay,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Parallax } from "react-scroll-parallax";
+import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 import Lines from "../../common/lines/Lines";
 
@@ -17,9 +19,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Parallax } from "react-scroll-parallax";
-import { useSelector } from "react-redux";
-import { useTranslation } from "react-i18next";
 
 const HomeTop = () => {
   const {
@@ -46,6 +45,7 @@ const HomeTop = () => {
             delay: 4000,
             disableOnInteraction: false,
           }}
+          loop={true}
           breakpoints={{
             900: {
               slidesPerView: 2,

@@ -82,20 +82,25 @@
       }
     }
 
-    & > .swiper-button-prev {
+    & > .swiper-button-prev,
+    .swiper-button-next {
       color: var(--green-light);
-    }
-
-    & > .swiper-button-next {
-      color: var(--green-light);
+      opacity: 0;
+      transition: 0.6s;
     }
 
     & > .swiper-pagination {
       > .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
-        background-color: rgb(255, 255, 255);
+        background-color: var(--green-light);
       }
+    }
+    &:hover > .swiper-button-prev {
+      opacity: 0.2;
+    }
+    &:hover > .swiper-button-next {
+      opacity: 0.2;
     }
   }
 }

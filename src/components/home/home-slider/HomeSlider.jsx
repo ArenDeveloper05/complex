@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -10,16 +9,12 @@ import {
   EffectFade,
 } from "swiper/modules";
 
-// IMAGES
+import { objectHasKey, objectIsNotEpmty } from "../../../utils/helpers/helpers";
+import { animationModesConfig } from "../../../config";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import homeSliderAirConditioner from "../../../assets/images/homeSliderAirConditioner.png";
-import homeSliderGasBoiler from "../../../assets/images/homeSliderGasBoiler.png";
-import homeSliderSolarConverter from "../../../assets/images/homeSliderSolarConverter.png";
-
-import sliderBG from "../../../assets/images/slider/background.jpg";
-import sliderBG2 from "../../../assets/images/slider/slider2.jpg";
-
-// SCSS
+import Atropos from "atropos/react";
 
 import "./HomeSlider.scss";
 import "swiper/css";
@@ -30,83 +25,13 @@ import "swiper/css/effect-fade";
 import "atropos/scss";
 
 import "../../../styles/media.css";
-import { objectHasKey, objectIsNotEpmty } from "../../../utils/helpers/helpers";
-import { animationModesConfig } from "../../../config";
-import { Link } from "react-router-dom";
-import Atropos from "atropos/react";
-
-// ====================================================
 
 const HomeSlider = () => {
   const {
     i18n: { language },
   } = useTranslation();
 
-  const [slides, setSlides] = useState([
-    {
-      id: 1,
-      img: homeSliderAirConditioner,
-      bgImg: sliderBG2,
-      title: {
-        am: "SMART WIFI DRY+",
-        ru: "",
-        en: "",
-      },
-      info: {
-        am: "WI-FI Управление климатом\n из любой точки мира",
-        ru: "",
-        en: "",
-      },
-      animation_mode: {
-        title: 1,
-        info: 1,
-        img: 1,
-      },
-      link: "",
-    },
-    {
-      id: 2,
-      img: homeSliderGasBoiler,
-      bgImg: sliderBG2,
-      title: {
-        am: "SMART WIFI DRY+",
-        ru: "",
-        en: "",
-      },
-      info: {
-        am: "WI-FI Управление климатом\n из любой точки мира",
-        ru: "",
-        en: "",
-      },
-      animation_mode: {
-        title: 2,
-        info: 2,
-        img: 2,
-      },
-      link: "",
-    },
-    {
-      id: 3,
-      img: homeSliderSolarConverter,
-      bgImg: sliderBG2,
-      title: {
-        am: "SMART WIFI DRY+",
-        ru: "",
-        en: "",
-      },
-      info: {
-        am: "WI-FI Управление климатом\n из любой точки мира",
-        ru: "",
-        en: "",
-      },
-      animation_mode: {
-        title: 3,
-        info: 3,
-        img: 3,
-      },
-      link: "",
-    },
-  ]);
+  const slides = useSelector((state) => state.slider.sliderData);
 
   function generateAnimationMode(mode, type) {
     if (
@@ -140,17 +65,7 @@ const HomeSlider = () => {
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={(e) => {
-          console.log(e.el);
-          const iList = e.el.querySelector(".info").classList;
-          const t = e.el.querySelector(".title");
-          const cls = iList[iList.length - 1];
-          iList.remove(`${iList[iList.length - 1]}`);
-          iList.add(`${cls}`);
-
-          console.log(iList[iList.length - 1]);
-          console.log(t);
-        }}
+        onSlideChange={(e) => {}}
         loop={true}
         speed={500}
         autoplay={{

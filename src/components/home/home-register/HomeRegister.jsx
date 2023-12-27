@@ -4,8 +4,8 @@ import * as Yup from "yup";
 import { useTranslation } from "react-i18next";
 
 import "./HomeRegister.scss";
-import { Button, MenuItem, NativeSelect, TextField } from "@mui/material";
-import { Parallax, useParallax } from "react-scroll-parallax";
+import { Button, NativeSelect, TextField } from "@mui/material";
+import { useParallax } from "react-scroll-parallax";
 
 const HomeRegister = () => {
   const { t } = useTranslation();
@@ -120,7 +120,7 @@ const HomeRegister = () => {
                   <TextField
                     name="last_name"
                     id="lname"
-                    label="Ազգանուն"
+                    label={t("main.main_register.surname_placeholder")}
                     value={values.last_name}
                     onChange={handleChange}
                     onBlur={handleBlur}

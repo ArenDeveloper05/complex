@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 import CountUp from "react-countup";
 import ReactVisibilitySensor from "react-visibility-sensor";
 
 import "./HomeCounter.scss";
-import { useTranslation } from "react-i18next";
 
 const HomeCounter = () => {
   const {
