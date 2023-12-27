@@ -208,6 +208,10 @@
 }
 
 @media only screen and (max-width: 1030px) {
+  .parallax-title {
+    font-size: var(--font-size-small) !important;
+  }
+
   .section-title {
     font-size: var(--font-size-small) !important;
   }
@@ -294,6 +298,14 @@
   /* .atropos {
     height: 50% !important;
   } */
+
+  .parallax {
+    padding: 50px 15px !important;
+  }
+
+  .parallax-desc {
+    width: 100% !important;
+  }
 
   .subscribe-inner-form-input-prnt {
     width: 100%;
