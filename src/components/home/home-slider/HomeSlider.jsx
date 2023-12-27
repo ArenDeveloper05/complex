@@ -140,7 +140,17 @@ const HomeSlider = () => {
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={(e) => {}}
+        onSlideChange={(e) => {
+          console.log(e.el);
+          const iList = e.el.querySelector(".info").classList;
+          const t = e.el.querySelector(".title");
+          const cls = iList[iList.length - 1];
+          iList.remove(`${iList[iList.length - 1]}`);
+          iList.add(`${cls}`);
+
+          console.log(iList[iList.length - 1]);
+          console.log(t);
+        }}
         loop={true}
         speed={500}
         autoplay={{
