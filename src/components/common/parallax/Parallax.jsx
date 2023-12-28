@@ -1,3 +1,4 @@
+import { Parallax as ParallaxContainer } from "react-scroll-parallax";
 import "./Parallax.scss";
 
 const Parallax = ({ bcg, title, txt, img, side }) => {
@@ -14,9 +15,11 @@ const Parallax = ({ bcg, title, txt, img, side }) => {
       </div>
 
       <div className="parallax-desc">
-        <Parallax>
-          <h1 className="parallax-desc-title section-title">{title}</h1>
-        </Parallax>
+        <ParallaxContainer speed={-10}>
+          <h1 className="ParallaxContainer-desc-title section-title">
+            {title}
+          </h1>
+        </ParallaxContainer>
         <p className="parallax-desc-txt">{txt}</p>
       </div>
     </div>
