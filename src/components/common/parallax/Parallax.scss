@@ -22,12 +22,9 @@
     width: 550px;
     min-height: 300px;
     padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
     &-title {
-      text-align: center;
+      text-align: start !important;
       color: var(--green-dark);
       text-transform: uppercase;
       font-size: var(--font-size-big);
@@ -37,6 +34,8 @@
     &-txt {
       margin-top: 20px;
       font-family: var(--ff-1);
+      font-size: var(--font-size-small);
+      line-height: 42px;
     }
   }
 }

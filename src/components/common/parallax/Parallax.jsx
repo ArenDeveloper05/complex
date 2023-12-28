@@ -10,11 +10,13 @@ const Parallax = ({ bcg, title, txt, img, side }) => {
       }}
     >
       <div className="parallax-img">
-        <img src={img || ""} alt="" />
+        {img && <img src={img || ""} alt="" />}
       </div>
 
       <div className="parallax-desc">
-        <h1 className="parallax-desc-title section-title">{title}</h1>
+        <Parallax>
+          <h1 className="parallax-desc-title section-title">{title}</h1>
+        </Parallax>
         <p className="parallax-desc-txt">{txt}</p>
       </div>
     </div>
