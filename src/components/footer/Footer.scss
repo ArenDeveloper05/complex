@@ -1,6 +1,5 @@
 footer {
   padding-top: 60px;
-  color: var(--green-dark);
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../../assets/images/slider/background.jpg);
@@ -56,7 +55,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: black;
+            color: white;
 
             &-icon {
               font-size: 18px;
@@ -76,6 +75,7 @@ footer {
       &-title {
         font-size: 24px;
         font-weight: bold;
+        color: var(--green-dark);
         text-transform: uppercase;
       }
 
@@ -88,7 +88,6 @@ footer {
         &-link {
           width: 47%;
           margin-top: 20px;
-          // border: solid cyan;
 
           > a {
             color: black;
@@ -98,7 +97,6 @@ footer {
             text-decoration: none;
             display: block;
             overflow: hidden;
-            // white-space: nowrap;
             text-overflow: ellipsis;
 
             &::before {
@@ -107,7 +105,7 @@ footer {
               height: 2px;
               position: absolute;
               left: 0;
-              bottom: -3px;
+              bottom: 0px;
               transition: all 0.2s;
               background-color: #44a326;
             }
@@ -130,6 +128,7 @@ footer {
       &-title {
         font-size: 24px;
         font-weight: bold;
+        color: var(--green-dark);
         text-transform: uppercase;
       }
 
@@ -196,7 +195,6 @@ footer {
 
           > a {
             margin-left: 10px;
-
             color: black;
             position: relative;
             transition: all 0.2s;
@@ -230,7 +228,7 @@ footer {
 
       &-title {
         font-size: 24px;
-
+        color: var(--green-dark);
         font-weight: bold;
         text-transform: uppercase;
       }

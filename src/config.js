@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaPinterestP,
 } from "react-icons/fa6";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
 
 export const navConfig = [
   {
@@ -94,6 +95,11 @@ export const footerNetworksConfig = [
   {
     id: 4,
     icon: FaPinterestP,
+    link: "/",
+  },
+  {
+    id: 5,
+    icon: PiTelegramLogoDuotone,
     link: "/",
   },
 ];
