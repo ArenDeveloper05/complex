@@ -9,12 +9,13 @@
   background-attachment: fixed;
 
   &-img {
-    width: 350px;
-    height: 300px;
+    width: 550px;
+    height: 350px;
 
     > img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -23,19 +24,23 @@
     min-height: 300px;
     padding: 20px;
 
-    &-title {
-      text-align: start !important;
-      color: var(--green-dark);
-      text-transform: uppercase;
-      font-size: var(--font-size-big);
-      font-family: var(--ff-1);
+    &-ParallaxContainer {
+      &-title {
+        text-align: start !important;
+        color: var(--green-dark);
+        text-transform: uppercase;
+        font-size: var(--font-size-big);
+        font-family: var(--ff-1);
+      }
     }
 
     &-txt {
-      margin-top: 20px;
-      font-family: var(--ff-1);
-      font-size: var(--font-size-small);
+      margin-top: 50px;
       line-height: 42px;
+      text-align: justify;
+      font-family: var(--ff-1);
+      color: var(--green-light);
+      font-size: var(--font-size-small);
     }
   }
 }
