@@ -8,6 +8,7 @@ import {
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 import Lines from "../../common/lines/Lines";
 
@@ -17,7 +18,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useTranslation } from "react-i18next";
 
 const HomePartners = () => {
   const { t } = useTranslation();

@@ -20,7 +20,9 @@ const Parallax = ({ bcg, title, txt, img, side }) => {
             {title}
           </h1>
         </ParallaxContainer>
-        <p className="parallax-desc-txt">{txt}</p>
+        <ParallaxContainer speed={-15}>
+          <p className="parallax-desc-txt">{txt}</p>
+        </ParallaxContainer>
       </div>
     </div>
   );
