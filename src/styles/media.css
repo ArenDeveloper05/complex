@@ -23,15 +23,36 @@
   }
 
   .swiper-slide-container > h1 {
-    font-size: 3vw !important;
+    font-size: 36px !important;
   }
 
   .swiper-slide-container > p {
-    font-size: 2vw !important;
+    font-size: 30px !important;
+  }
+
+  .swiper-slide-container > div {
+    transform: scale(0.7) !important;
+  }
+
+  .swiper-slide-container > div img {
+    width: 100%;
+    height: 100%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
+  .swiper-slide-container > h1 {
+    font-size: 26px !important;
+  }
+
+  .swiper-slide-container > p {
+    font-size: 20px !important;
+  }
+
+  .swiper-slide-container > div {
+    transform: scale(0.5) !important;
+  }
+
   .section-title {
     font-size: var(--font-size-mid) !important;
   }
@@ -208,6 +229,16 @@
 }
 
 @media only screen and (max-width: 1030px) {
+  .parallax {
+    flex-direction: column;
+    padding: 32px 10px;
+  }
+
+  .parallax-img {
+    margin-top: 112px;
+    width: 100%;
+  }
+
   .parallax-title {
     font-size: var(--font-size-small) !important;
   }
@@ -291,6 +322,30 @@
 @media only screen and (max-width: 645px) {
   .home-counter-container {
     width: 100%;
+  }
+
+  .home-slider {
+    height: 700px;
+  }
+
+  .home-register {
+    padding: 10px;
+  }
+
+  .home-register-form {
+    width: 90% !important;
+  }
+
+  .home-register-form-row {
+    margin-bottom: 30px;
+  }
+
+  .home-counter-container-box-content > span {
+    font-size: 70px;
+  }
+
+  .home-counter-container-box-info > p {
+    font-size: 26px;
   }
 }
 

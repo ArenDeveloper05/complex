@@ -24,8 +24,6 @@ import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import "atropos/scss";
 
-import "../../../styles/media.css";
-
 const HomeSlider = () => {
   const {
     i18n: { language },

@@ -181,13 +181,14 @@ header {
 
       &-list {
         position: absolute;
-        border: solid;
         right: -10px;
+        top: 60px;
         width: 300px;
         transition: 0.5s;
         height: 0px;
         background-color: white;
         opacity: 0;
+        box-shadow: 5px 6px 10px #00000052;
       }
     }
 
