@@ -3,11 +3,11 @@ import * as Yup from "yup";
 // import { login, register } from "../../../../api/api";
 import { useTranslation } from "react-i18next";
 
-import "./HomeRegister.scss";
+import "./ContactRegister.scss";
 import { Button, NativeSelect, TextField } from "@mui/material";
 import { useParallax } from "react-scroll-parallax";
 
-const HomeRegister = () => {
+const ContactRegister = () => {
   const { t } = useTranslation();
 
   const registerSchema = Yup.object().shape({
@@ -68,8 +68,8 @@ const HomeRegister = () => {
   });
 
   return (
-    <div className="home-register">
-      <div className="home-register-map" ref={parallax.ref}>
+    <div className="contact-register">
+      <div className="contact-register-map" ref={parallax.ref}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8496117746936!2d44.54348797654462!3d40.16790197074532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc9b1545f85d%3A0x4613b3bd8f45d778!2sToon%20Complex!5e0!3m2!1sru!2sam!4v1702719467255!5m2!1sru!2sam"
           width="600"
@@ -81,7 +81,7 @@ const HomeRegister = () => {
           title="map"
         ></iframe>
       </div>
-      <div className="home-register-form">
+      <div className="contact-register-form">
         <Formik
           initialValues={{
             first_name: "",
@@ -103,7 +103,7 @@ const HomeRegister = () => {
             return (
               <Form>
                 <h1>{t("main.main_register.title")}</h1>
-                <div className="home-register-form-row">
+                <div className="contact-register-form-row">
                   <TextField
                     name="first_name"
                     label={t("main.main_register.name_placeholder")}
@@ -116,7 +116,7 @@ const HomeRegister = () => {
                     <div className="form-error">{errors.first_name}</div>
                   ) : null}
                 </div>
-                <div className="home-register-form-row">
+                <div className="contact-register-form-row">
                   <TextField
                     name="last_name"
                     id="lname"
@@ -130,8 +130,8 @@ const HomeRegister = () => {
                     <div className="form-error">{errors.last_name}</div>
                   ) : null}
                 </div>
-                <div className="home-register-form-row phone-row">
-                  <div className="home-register-form-row-phone">
+                <div className="contact-register-form-row phone-row">
+                  <div className="contact-register-form-row-phone">
                     <NativeSelect
                       className="phone_code_select"
                       name="phone_code"
@@ -165,7 +165,7 @@ const HomeRegister = () => {
                     <div className="form-error">{errors.phone}</div>
                   ) : null}
                 </div>
-                <div className="home-register-form-row">
+                <div className="contact-register-form-row">
                   <TextField
                     name="email"
                     type="email"
@@ -180,7 +180,7 @@ const HomeRegister = () => {
                     <div className="form-error">{errors.email}</div>
                   ) : null}
                 </div>
-                <div className="home-register-form-row">
+                <div className="contact-register-form-row">
                   <TextField
                     name="password"
                     type="password"
@@ -195,7 +195,7 @@ const HomeRegister = () => {
                     <div className="form-error">{errors.password}</div>
                   ) : null}
                 </div>
-                <div className="home-register-form-row">
+                <div className="contact-register-form-row">
                   <TextField
                     name="password_confirmation"
                     type="password"
@@ -235,4 +235,4 @@ const HomeRegister = () => {
   );
 };
 
-export default HomeRegister;
+export default ContactRegister;
