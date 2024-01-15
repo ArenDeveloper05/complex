@@ -7,6 +7,8 @@ import {
 } from "react-icons/fa6";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 
+import { ROUTER } from "./router/router";
+
 export const navConfig = [
   {
     id: 1,
@@ -52,7 +54,7 @@ export const navConfig = [
       ru: "Связь",
       en: "Contact",
     },
-    link: "/",
+    link: ROUTER.CONTACT_PAGE_ROUTE,
   },
 ];
 
