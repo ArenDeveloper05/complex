@@ -12,22 +12,23 @@
     &-link {
       display: flex;
       flex-grow: 1;
-      padding: 0 13px;
+      padding: 0 20px;
       align-items: center;
       position: relative;
 
       > a {
         cursor: pointer;
-        color: #585858;
+        color: var(--text-color);
         display: flex;
         justify-content: center;
         text-align: center;
         transition: all 0.2s;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: var(--ff-1);
         letter-spacing: 1px;
+        font-family: var(--ff-1);
         font-weight: 600;
+        font-size: 20px;
 
         &::after {
           content: "";
@@ -45,7 +46,7 @@
         }
 
         &:hover {
-          color: var(--green-light);
+          color: var(--green-dark);
         }
       }
     }

@@ -35,21 +35,22 @@ export const navConfig = [
     },
     link: "/",
   },
-  {
-    id: 4,
-    title: {
-      am: "Գործընկերներ",
-      ru: "Партнеры",
-      en: "Partners",
-    },
-    link: "/",
-  },
+
   {
     id: 6,
     title: {
       am: "Նորություններ",
       ru: "Новости",
       en: "News",
+    },
+    link: "/",
+  },
+  {
+    id: 7,
+    title: {
+      am: "Կապ",
+      ru: "Связь",
+      en: "Contact",
     },
     link: "/",
   },

@@ -20,7 +20,6 @@ const Home = () => {
   return (
     <div className="home">
       <HomeSlider />
-      <HomeCounter />
       <Parallax
         bcg={
           "https://www.buildxact.com/us/wp-content/uploads/sites/2/2022/01/blog-104294966.jpg"
@@ -34,7 +33,7 @@ const Home = () => {
         }
       />
       <HomeTop />
-      <HomeRegister />
+      {/* <HomeRegister /> */}
       <Parallax
         bcg={
           "https://cdn.iheat.co.uk/blogs/What-You-Should-Know-Before-Getting-A-Heat-Pump.jpg_vnyliq.jpg"
@@ -48,6 +47,7 @@ const Home = () => {
         }
         side
       />
+      <HomeCounter />
       <HomePartners />
     </div>
   );

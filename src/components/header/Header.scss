@@ -24,12 +24,14 @@ header {
     padding: 4px 0;
   }
 
-  &-logo {
-    height: 70px;
-    transition: 0.5s;
+  > a {
+    .header-inner-logo {
+      transition: 0.5s;
 
-    > img {
-      height: 100%;
+      > img {
+        height: 100%;
+        filter: drop-shadow(2px 2px 0px white);
+      }
     }
   }
 
@@ -83,7 +85,7 @@ header {
           transition: all 0.2s;
 
           &:hover {
-            color: #44a326;
+            color: var(--green-dark);
           }
         }
 
@@ -119,7 +121,7 @@ header {
           transition: all 0.2s;
 
           &:hover {
-            color: #44a326;
+            color: var(--green-dark);
           }
         }
       }
@@ -127,7 +129,7 @@ header {
 
     &:hover &-title svg,
     &:hover &-title p {
-      color: #44a326;
+      color: var(--green-dark);
     }
   }
 
@@ -140,7 +142,7 @@ header {
     transition: all 0.2s;
 
     &:hover {
-      color: #44a326;
+      color: var(--green-dark);
     }
   }
 
@@ -219,7 +221,7 @@ header {
 
         &:hover &-txt,
         &:hover &-icon {
-          color: #44a326;
+          color: var(--green-dark);
         }
       }
 
@@ -262,7 +264,7 @@ header {
           }
 
           &:hover {
-            color: #44a326;
+            color: var(--green-dark);
           }
         }
       }

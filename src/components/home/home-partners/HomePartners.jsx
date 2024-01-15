@@ -28,7 +28,7 @@ const HomePartners = () => {
       <h1 className="home-partners-title section-title">
         {t("main.main_partners.title")}
       </h1>
-      <Lines bcg={"green"} />
+      <Lines bcg={"#215642"} />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={-50}

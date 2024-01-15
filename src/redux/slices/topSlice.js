@@ -14,7 +14,7 @@ const initialState = {
         en: "Condensing gas boiler Immergas VICTRIX TERA 24",
         ru: "Конденсационный газовый котел Immergas VICTRIX TERA 24",
       },
-      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores ",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const initialState = {
         en: "Convection heater Ballu Enzo BEC/EZMR-1500",
         ru: "Конвекционный обогреватель Ballu Enzo BEC/EZMR-1500",
       },
-      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores ",
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const initialState = {
         en: "Gas boiler Beretta CIAO S 24 CSI",
         ru: "Газовый котел Beretta CIAO S 24 CSI",
       },
-      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores totam voluptates temporibus in veniam, facere dolorem obcaecati eos nisi aut, nihil illo maiores nostrum nemo perferendis officiis ipsum!",
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi asperiores ",
     },
   ],
 };

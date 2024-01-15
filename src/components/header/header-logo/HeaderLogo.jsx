@@ -7,7 +7,7 @@ const HeaderLogo = ({ scroll }) => {
     <Link to={ROUTER.HOME_PAGE_ROUTE}>
       <div
         className="header-inner-logo"
-        style={{ height: scroll ? "80px" : "100px" }}
+        style={{ height: scroll ? "130px" : "160px" }}
       >
         <img src={logo} alt="Logo" />
       </div>

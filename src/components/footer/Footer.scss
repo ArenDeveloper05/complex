@@ -2,7 +2,7 @@ footer {
   padding-top: 60px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../../assets/images/slider/background.jpg);
+  background: linear-gradient(56deg, white, #00000024);
   background-position: top;
 }
 
@@ -75,7 +75,7 @@ footer {
       &-title {
         font-size: 24px;
         font-weight: bold;
-        color: var(--green-dark);
+        color: var(--text-color);
         text-transform: uppercase;
       }
 
@@ -128,7 +128,7 @@ footer {
       &-title {
         font-size: 24px;
         font-weight: bold;
-        color: var(--green-dark);
+        color: var(--text-color);
         text-transform: uppercase;
       }
 
@@ -228,7 +228,7 @@ footer {
 
       &-title {
         font-size: 24px;
-        color: var(--green-dark);
+        color: var(--text-color);
         font-weight: bold;
         text-transform: uppercase;
       }

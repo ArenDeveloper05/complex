@@ -33,7 +33,7 @@ const HomeTop = () => {
       <h1 className="home-top-title section-title">
         {t("main.main_top_products.title")}
       </h1>
-      <Lines bcg={"green"} />
+      <Lines bcg={"#215642"} />
       <div className="home-top-container">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -58,7 +58,7 @@ const HomeTop = () => {
                 <SwiperSlide key={id}>
                   <div className="swiper-slide-productsContainer">
                     {/* <h1>{title ? title : ""}</h1> */}
-                    <h1>{title[language]}</h1>
+                    {/* <h1>{title[language]}</h1> */}
                     <Parallax speed={-10}>
                       <img src={img ? img : ""} alt="img" />
                     </Parallax>
