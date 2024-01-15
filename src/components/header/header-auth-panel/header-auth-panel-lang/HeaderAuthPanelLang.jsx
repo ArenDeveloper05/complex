@@ -8,7 +8,7 @@ import useOutsideClick from "../../../../utils/hooks/useOutsideClick";
 
 const HeaderAuthPanelLang = () => {
   const [lang, setLang] = useState(langsConfig[2].title);
-  const [showLangs, setShowLangs] = useState(false);
+  const [showLangs, setShowLangs] = useState(true);
 
   const chooseLang = (title) => {
     if (lang !== title) {
@@ -18,7 +18,6 @@ const HeaderAuthPanelLang = () => {
   };
 
   const handleShowLangs = () => {
-    console.log(123);
     setShowLangs((prev) => !prev);
   };
 
