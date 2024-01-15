@@ -1,5 +1,6 @@
-import "./Contact.scss";
 import ContactRegister from "./contact-register/ContactRegister";
+
+import "./Contact.scss";
 
 const Contact = () => {
   return (

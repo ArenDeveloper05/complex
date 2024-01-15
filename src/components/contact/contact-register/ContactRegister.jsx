@@ -3,9 +3,10 @@ import * as Yup from "yup";
 // import { login, register } from "../../../../api/api";
 import { useTranslation } from "react-i18next";
 
-import "./ContactRegister.scss";
 import { Button, NativeSelect, TextField } from "@mui/material";
 import { useParallax } from "react-scroll-parallax";
+
+import "./ContactRegister.scss";
 
 const ContactRegister = () => {
   const { t } = useTranslation();

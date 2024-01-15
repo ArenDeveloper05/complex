@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
-import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { langsConfig } from "../../../../config";
+
+import arrowIcon from "../../../../assets/images/icons/arrow-up.png";
 
 import HeaderAuthPanelLangSelect from "./header-auth-panel-lang-select/HeaderAuthPanelLangSelect";
 import useOutsideClick from "../../../../utils/hooks/useOutsideClick";
@@ -17,6 +18,7 @@ const HeaderAuthPanelLang = () => {
   };
 
   const handleShowLangs = () => {
+    console.log(123);
     setShowLangs((prev) => !prev);
   };
 
@@ -33,9 +35,15 @@ const HeaderAuthPanelLang = () => {
     >
       <div className="header-inner-auth-panel-lang-title">
         <p className="header-inner-auth-panel-lang-title-txt">{lang}</p>
-        <p className="header-inner-auth-panel-lang-title-icon">
-          {showLangs ? <FaCaretUp /> : <FaCaretDown />}
-        </p>
+        <div className="header-inner-auth-panel-lang-title-icon">
+          <img
+            src={arrowIcon}
+            alt="arrow"
+            style={{
+              transform: showLangs ? "rotate(180deg)" : "rotate(0deg)",
+            }}
+          />
+        </div>
       </div>
 
       {showLangs && <HeaderAuthPanelLangSelect chooseLang={chooseLang} />}
