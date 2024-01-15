@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 
 import "./Home.scss";
 import Parallax from "../common/parallax/Parallax";
+import HomeOffer from "./home-offer/HomeOffer";
 
 const Home = () => {
   useEffect(() => {
@@ -47,6 +48,7 @@ const Home = () => {
         side
       />
       <HomeCounter />
+      <HomeOffer />
       <HomePartners />
     </div>
   );
