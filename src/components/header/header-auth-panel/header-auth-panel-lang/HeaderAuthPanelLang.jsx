@@ -11,10 +11,7 @@ const HeaderAuthPanelLang = () => {
   const [showLangs, setShowLangs] = useState(false);
 
   const chooseLang = (title) => {
-    if (lang !== title) {
-      setLang(title);
-      setShowLangs(false);
-    }
+    setLang(title);
   };
 
   const handleShowLangs = () => {

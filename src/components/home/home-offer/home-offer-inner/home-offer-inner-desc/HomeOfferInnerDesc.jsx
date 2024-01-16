@@ -1,14 +1,15 @@
+import { useTranslation } from "react-i18next";
+
 const HomeOfferInnerDesc = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="home-offer-inner-desc">
-      <p className="home-offer-inner-desc-title section-title">МИССИЯ</p>
-
-      <p className="home-offer-inner-desc-txt">
-        Климат – незаметная и неотъемлемая часть жизни человека. Используя
-        современные материалы, энергосберегающие и информационные технологии,
-        Ballu создает собственную экосистему, в которой человек становится
-        главным по климату
+      <p className="home-offer-inner-desc-title section-title">
+        {t("main.main_offer.title")}
       </p>
+
+      <p className="home-offer-inner-desc-txt">{t("main.main_offer.text")}</p>
     </div>
   );
 };
