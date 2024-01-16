@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { LuMenu } from "react-icons/lu";
-import { IoIosSearch } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 
 import Container from "../common/container/Container";
@@ -9,7 +8,6 @@ import HeaderSearch from "./header-search/HeaderSearch";
 import Nav from "./nav/Nav";
 import HeaderAuthPanel from "./header-auth-panel/HeaderAuthPanel";
 import HeaderMobileNav from "./header-mobile-nav/HeaderMobileNav";
-import HeaderMobileSearch from "./header-mobile-search/HeaderMobileSearch";
 import HeaderMobileLogo from "./header-mobile-logo/HeaderMobileLogo";
 
 import "./Header.scss";
@@ -18,8 +16,6 @@ const Header = () => {
   const [showNav, setShowNav] = useState(true);
 
   const [showMobileNav, setShowMobileNav] = useState(false);
-
-  const [showMobileSearch, setShowMobileSearch] = useState(false);
 
   const [width, setWidth] = useState(true);
 
@@ -67,10 +63,6 @@ const Header = () => {
     setShowMobileNav((prev) => !prev);
   };
 
-  const handleShowMobileSearch = () => {
-    setShowMobileSearch((prev) => !prev);
-  };
-
   return (
     <header className={scroll ? "header-scrolled" : ""}>
       <Container>
@@ -104,22 +96,6 @@ const Header = () => {
               <LuMenu
                 className="header-inner-mobile-icon"
                 onClick={handleShowMobileNav}
-              />
-            )}
-
-            {showMobileSearch ? (
-              <>
-                <AiOutlineClose
-                  className="header-inner-mobile-icon"
-                  onClick={handleShowMobileSearch}
-                />
-
-                <HeaderMobileSearch scroll={scroll} />
-              </>
-            ) : (
-              <IoIosSearch
-                className="header-inner-mobile-icon"
-                onClick={handleShowMobileSearch}
               />
             )}
           </div>

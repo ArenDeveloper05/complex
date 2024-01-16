@@ -39,7 +39,11 @@ const HeaderAuthPanelLang = () => {
             src={arrowIcon}
             alt="arrow"
             style={{
+<<<<<<< HEAD
               transform: showLangs ? "rotate(0deg)" : "rotate(180deg)",
+=======
+              transform: showLangs ? "rotate(0)" : "rotate(180deg)",
+>>>>>>> 4ded82a9c73bd98f6964ff793ea46ea979fe3ffa
             }}
           />
         </div>
