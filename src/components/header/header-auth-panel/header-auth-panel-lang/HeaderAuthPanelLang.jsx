@@ -8,7 +8,7 @@ import useOutsideClick from "../../../../utils/hooks/useOutsideClick";
 
 const HeaderAuthPanelLang = () => {
   const [lang, setLang] = useState(langsConfig[2].title);
-  const [showLangs, setShowLangs] = useState(true);
+  const [showLangs, setShowLangs] = useState(false);
 
   const chooseLang = (title) => {
     if (lang !== title) {
@@ -39,7 +39,7 @@ const HeaderAuthPanelLang = () => {
             src={arrowIcon}
             alt="arrow"
             style={{
-              transform: showLangs ? "rotate(180deg)" : "rotate(0deg)",
+              transform: showLangs ? "rotate(0deg)" : "rotate(180deg)",
             }}
           />
         </div>
