@@ -3,14 +3,13 @@
   height: 100vh;
   z-index: 9;
   transition: all 0.2s;
-  padding-top: 50px;
+  padding: 30px 50px;
   position: absolute;
   left: 0;
-  top: 100px;
   background-color: white;
 
   &-links {
-    padding: 30px 50px;
+    margin-top: 30px;
     animation-duration: 0.3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;

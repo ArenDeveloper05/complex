@@ -36,6 +36,7 @@ header {
   }
 
   &-search {
+    min-width: 160px !important;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -195,7 +196,6 @@ header {
     }
 
     &-lang {
-      width: 100px;
       display: flex;
       color: #3a3939;
       position: relative;

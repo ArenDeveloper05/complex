@@ -1,20 +1,16 @@
 .home-offer {
   background-size: cover;
-  background-image: url("https://www.ballu.ru/local/templates/ballu/images/wave-gray.png");
+  background-image: url("../../../assets/images/home-offer-bcg.png");
 
   &-inner {
+    padding: 40px 0;
+    gap: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     &-desc {
       width: 30%;
-
-      &-title {
-        color: var(--green-dark);
-        font-size: 44px;
-        text-transform: uppercase;
-      }
 
       &-txt {
         color: gray;

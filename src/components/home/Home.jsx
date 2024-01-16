@@ -33,7 +33,6 @@ const Home = () => {
         }
       />
       <HomeTop />
-      {/* <HomeRegister /> */}
       <Parallax
         bcg={
           "https://cdn.iheat.co.uk/blogs/What-You-Should-Know-Before-Getting-A-Heat-Pump.jpg_vnyliq.jpg"
