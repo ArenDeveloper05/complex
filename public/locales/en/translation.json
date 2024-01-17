@@ -16,7 +16,8 @@
       "email_placeholder": "Email",
       "password_placeholder": "Password",
       "repeat_password_placeholder": "Repeat password",
-      "button": "Sign up"
+      "button": "Subscribe",
+      "subscribe": "Subscribe"
     },
     "main_partners": {
       "title": "OUR PARTNERS"
@@ -38,9 +39,7 @@
       "address": "66 Broklyn Street, New York United States of America"
     },
     "footer_newsletter": {
-      "title": "NEWSLETTER",
-      "input_placeholder": "Email Address",
-      "text": "Sign up for our latest news & articles. We won’t give you spam mails."
+      "title": "Subscribe"
     },
     "footer_bottom_text": "The customer is very happy."
   },

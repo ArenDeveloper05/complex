@@ -16,7 +16,8 @@
       "email_placeholder": "Էլ-Փոստ",
       "password_placeholder": "Գաղտնաբառ",
       "repeat_password_placeholder": "Կրկնել գաղտնաբառը",
-      "button": "Գրանցվել"
+      "button": "Բաժանորդագրվել",
+      "subscribe": "Բաժանորդագրվել"
     },
     "main_partners": {
       "title": "ՄԵՐ ԳՈՐԾԸՆԿԵՐՆԵՐԸ"
@@ -38,9 +39,7 @@
       "address": "66 Broklyn Street, Նյու Յորք Ամերիկայի Միացյալ Նահանգներ"
     },
     "footer_newsletter": {
-      "title": "ԼՐԱՏՎԱԿԱՆ",
-      "input_placeholder": "Էլ. հասցե",
-      "text": "Գրանցվեք մեր վերջին նորություններին և հոդվածներին: Մենք ձեզ սպամ նամակներ չենք տա:"
+      "title": "Բաժանորդագրվել"
     },
     "footer_bottom_text": "Հաճախորդը շատ գոհ է։"
   },

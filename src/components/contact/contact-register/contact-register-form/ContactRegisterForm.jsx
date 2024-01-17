@@ -1,6 +1,6 @@
-import { useTranslation } from "react-i18next";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
+import { useTranslation } from "react-i18next";
 import { Button, TextField } from "@mui/material";
 
 const inputStyles = {
@@ -10,7 +10,7 @@ const inputStyles = {
   outline: "none",
 };
 
-const FooterTopNewsletter = () => {
+const ContactRegisterForm = () => {
   const { t } = useTranslation();
 
   const registerSchema = Yup.object().shape({
@@ -30,10 +30,7 @@ const FooterTopNewsletter = () => {
   };
 
   return (
-    <div className="footer-inner-top-newsletter">
-      <p className="footer-inner-top-newsletter-title">
-        {t("footer.footer_newsletter.title")}
-      </p>
+    <div className="contact-register-form">
       <Formik
         initialValues={{
           first_name: "",
@@ -50,6 +47,7 @@ const FooterTopNewsletter = () => {
         {({ errors, touched, values, handleChange, handleBlur }) => {
           return (
             <Form>
+              <h1>{t("main.main_register.subscribe")}</h1>
               <div className="contact-register-form-row">
                 <TextField
                   name="first_name"
@@ -109,4 +107,4 @@ const FooterTopNewsletter = () => {
   );
 };
 
-export default FooterTopNewsletter;
+export default ContactRegisterForm;

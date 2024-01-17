@@ -3,6 +3,7 @@ import topReducer from "./slices/topSlice";
 import partnersReducer from "./slices/partnersSlice";
 import countReducer from "./slices/countSlice";
 import sliderReducer from "./slices/sliderSlice";
+import contactReducer from "./slices/contactSlice";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     partners: partnersReducer,
     count: countReducer,
     slider: sliderReducer,
+    contact: contactReducer,
   },
 });
 

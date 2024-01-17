@@ -16,7 +16,8 @@
       "email_placeholder": "Эл. почта",
       "password_placeholder": "Пароль",
       "repeat_password_placeholder": "Повторите пароль",
-      "button": "Зарегистрироваться"
+      "button": "Подписаться",
+      "subscribe": "Подписаться"
     },
     "main_partners": {
       "title": "НАШИ ПАРТНЕРЫ"
@@ -38,9 +39,7 @@
       "address": "66 Broklyn Street, Нью-Йорк, США"
     },
     "footer_newsletter": {
-      "title": "НОВОСТНАЯ РАССЫЛКА",
-      "input_placeholder": "Адрес эл. почты",
-      "text": "Подпишитесь на наши последние новости и статьи. Мы не будем рассылать вам спам."
+      "title": "Подписаться"
     },
     "footer_bottom_text": "Клиент очень доволен."
   },

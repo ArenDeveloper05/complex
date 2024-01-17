@@ -46,8 +46,8 @@ const Home = () => {
         }
         side
       />
-      <HomeCounter />
       <HomeOffer />
+      <HomeCounter />
       <HomePartners />
     </div>
   );
