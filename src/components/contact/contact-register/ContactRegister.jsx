@@ -7,9 +7,34 @@ import { Button, NativeSelect, TextField } from "@mui/material";
 import { useParallax } from "react-scroll-parallax";
 
 import "./ContactRegister.scss";
+import { useState } from "react";
 
 const ContactRegister = () => {
   const { t } = useTranslation();
+
+  const [selectedMap, setSelectedMap] = useState(
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1149.0428190369068!2d44.567120000424936!3d40.18195873732741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abcae005e23b3%3A0x2d57c7e8a020e1ec!2zNTAgR2Fsc2hveWFuIFN0LCDUtdaA1ofVodW2IDAwNzk!5e0!3m2!1shy!2sam!4v1705407984403!5m2!1shy!2sam"
+  );
+  const [state, setState] = useState([
+    {
+      id: 1,
+      title: "mek",
+      mapLink:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1149.0428190369068!2d44.567120000424936!3d40.18195873732741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abcae005e23b3%3A0x2d57c7e8a020e1ec!2zNTAgR2Fsc2hveWFuIFN0LCDUtdaA1ofVodW2IDAwNzk!5e0!3m2!1shy!2sam!4v1705407984403!5m2!1shy!2sam",
+    },
+    {
+      id: 2,
+      title: "erku",
+      mapLink:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8496117746936!2d44.54348797654462!3d40.16790197074532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc9b1545f85d%3A0x4613b3bd8f45d778!2sToon%20Complex!5e0!3m2!1sru!2sam!4v1702719467255!5m2!1sru!2sam",
+    },
+    {
+      id: 3,
+      title: "ereq",
+      mapLink:
+        "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2761.6259572912663!2d44.5642046956986!3d40.19900674909549!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shy!2sam!4v1705408255911!5m2!1shy!2sam",
+    },
+  ]);
 
   const registerSchema = Yup.object().shape({
     first_name: Yup.string()
@@ -71,16 +96,33 @@ const ContactRegister = () => {
   return (
     <div className="contact-register">
       <div className="contact-register-map" ref={parallax.ref}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8496117746936!2d44.54348797654462!3d40.16790197074532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abc9b1545f85d%3A0x4613b3bd8f45d778!2sToon%20Complex!5e0!3m2!1sru!2sam!4v1702719467255!5m2!1sru!2sam"
-          width="600"
-          height="450"
-          style={{ border: "0" }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="map"
-        ></iframe>
+        <div className="contact-register-map-links">
+          {state.map((item) => {
+            return (
+              <p
+                key={item.id}
+                onClick={() => {
+                  setSelectedMap(item.mapLink);
+                }}
+              >
+                {item.title}
+              </p>
+            );
+          })}
+        </div>
+
+        <div className="contact-register-map-parent">
+          <iframe
+            src={selectedMap}
+            width="600"
+            height="450"
+            style={{ border: "0" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="map"
+          ></iframe>
+        </div>
       </div>
       <div className="contact-register-form">
         <Formik

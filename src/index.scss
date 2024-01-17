@@ -48,7 +48,8 @@
 
 .section-title {
   text-align: center;
-  color: var(--green-dark);
+  color: var(--green-dark); //
+  color: var(--text-color);
   font-size: var(--font-size-big);
   font-family: var(--ff-1);
   font-weight: 400;
@@ -56,6 +57,7 @@
   transition: 0.4s;
   cursor: pointer;
   &:hover {
-    color: var(--green-light);
+    color: var(--green-light); //
+    color: var(--green-dark);
   }
 }
