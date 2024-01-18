@@ -7,6 +7,9 @@ import {
 } from "react-icons/fa6";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 
+// footer contact icons
+import { CiPhone, CiMail, CiLocationArrow1 } from "react-icons/ci";
+
 import { ROUTER } from "./router/router";
 
 export const navConfig = [
@@ -186,6 +189,41 @@ export const footerExploreConfig = [
       am: "Օգնություն",
       ru: "Помощь",
       en: "Help",
+    },
+    link: "/",
+  },
+];
+
+export const footerContactConfig = [
+  {
+    id: 1,
+    icon: CiLocationArrow1,
+    title: {
+      am: "66 Broklyn Street, Նյու Յորք Ամերիկայի Միացյալ Նահանգներ",
+      ru: "66 Broklyn Street, Нью-Йорк, США",
+      en: "66 Broklyn Street, New York United States of America",
+    },
+    link: "/",
+  },
+
+  {
+    id: 2,
+    icon: CiPhone,
+    title: {
+      am: "666 888 000",
+      ru: "666 888 000",
+      en: "666 888 000",
+    },
+    link: "tel:666 888 000",
+  },
+
+  {
+    id: 3,
+    icon: CiMail,
+    title: {
+      am: "someEmail@gmail.com",
+      ru: "someEmail@gmail.com",
+      en: "someEmail@gmail.com",
     },
     link: "/",
   },
