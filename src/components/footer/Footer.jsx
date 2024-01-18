@@ -1,4 +1,5 @@
 import Container from "../common/container/Container";
+import WhatsApp from "../whatsapp/WhatsApp";
 import FooterBottom from "./footer-bottom/FooterBottom";
 import FooterTop from "./footer-top/FooterTop";
 
@@ -13,6 +14,7 @@ const Footer = () => {
           <FooterBottom />
         </div>
       </Container>
+      <WhatsApp />
     </footer>
   );
 };
