@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 // import { ReactComponentElement as whatsappIcon } from "../../assets/images/icons/whatsappIcon.png";
 
-import "./WhatsApp.scss";
 import { WhatsAppWidget } from "react-whatsapp-widget";
 import "react-whatsapp-widget/dist/index.css";
+
+import "./WhatsApp.scss";
 
 const WhatsApp = () => {
   return (
