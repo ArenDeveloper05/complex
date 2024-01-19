@@ -31,7 +31,7 @@ const FooterTopNewsletter = () => {
 
   return (
     <div className="footer-inner-top-newsletter">
-      <p className="footer-inner-top-newsletter-title">
+      <p className="footer-inner-top-title">
         {t("footer.footer_newsletter.title")}
       </p>
       <Formik

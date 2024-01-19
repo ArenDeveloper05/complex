@@ -2,7 +2,10 @@
   "header": {
     "search": "փնտրել",
     "Գրանցվել": "գրանցվել",
-    "search-placeholder": "Փնտրել"
+    "search-placeholder": "Փնտրել",
+    "header_mobile_search": {
+      "input_placeholder": "Կայքի որոնում"
+    }
   },
   "main": {
     "main_top_products": {

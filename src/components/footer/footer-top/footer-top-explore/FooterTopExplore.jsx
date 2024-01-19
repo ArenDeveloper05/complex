@@ -6,7 +6,7 @@ const FooterTopExplore = () => {
 
   return (
     <div className="footer-inner-top-explore">
-      <p className="footer-inner-top-explore-title">
+      <p className="footer-inner-top-title">
         {t("footer.footer_explore.title")}
       </p>
 

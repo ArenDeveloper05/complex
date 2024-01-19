@@ -6,7 +6,7 @@ const FooterTopContact = () => {
 
   return (
     <div className="footer-inner-top-contact">
-      <p className="footer-inner-top-contact-title">
+      <p className="footer-inner-top-title">
         {t("footer.footer_contact.title")}
       </p>
 

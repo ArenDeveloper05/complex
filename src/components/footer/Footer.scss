@@ -14,6 +14,15 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
 
+    &-title {
+      font-size: 24px;
+      color: var(--text-color);
+      font-weight: bold;
+      text-transform: uppercase;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     &-webPage-info {
       width: 260px;
 
@@ -77,14 +86,15 @@ footer {
       }
 
       &-links {
+        gap: 20px;
         display: flex;
         flex-wrap: wrap;
+        margin-top: 20px;
         list-style-type: none;
         justify-content: space-between;
 
         &-link {
-          width: 47%;
-          margin-top: 20px;
+          width: 40%;
           position: relative;
 
           &::before {
@@ -121,17 +131,10 @@ footer {
     &-contact {
       width: 260px;
 
-      &-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: var(--text-color);
-        text-transform: uppercase;
-      }
-
       &-links {
-        margin-top: 20px;
-        display: flex;
         gap: 20px;
+        display: flex;
+        margin-top: 20px;
         flex-direction: column;
 
         &-item {
@@ -139,17 +142,25 @@ footer {
           align-items: center;
 
           &-link {
+            width: 100%;
             gap: 10px;
             color: black;
             display: flex;
+            position: relative;
             align-items: center;
             text-decoration: none;
-            position: relative;
 
             &-icon {
               & > svg {
                 font-size: 24px;
               }
+            }
+
+            &-txt {
+              overflow: hidden;
+              display: block;
+              letter-spacing: 0.5px;
+              text-overflow: ellipsis;
             }
 
             &::after {
@@ -178,14 +189,9 @@ footer {
     &-newsletter {
       width: 260px;
 
-      &-title {
-        font-size: 24px;
-        color: var(--text-color);
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
       > form {
+        margin-top: 20px;
+
         .contact-register-form-row {
           position: relative;
           margin-bottom: 30px;

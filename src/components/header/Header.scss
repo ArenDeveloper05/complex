@@ -199,14 +199,16 @@ header {
 
     &-lang {
       display: flex;
-      color: #3a3939;
       position: relative;
       align-items: center;
       flex-direction: column;
+      font-weight: 600;
+      color: var(--text-color);
 
       &-title {
         display: flex;
         align-items: center;
+        font-family: var(--ff-1);
 
         &-txt {
           transition: all 0.2s;
@@ -239,7 +241,7 @@ header {
         width: 110px;
         margin-top: 10px;
         position: absolute;
-        z-index: 2;
+        z-index: 9;
         top: 25px;
         right: 15px;
         border-radius: 10px;
