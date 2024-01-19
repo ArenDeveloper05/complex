@@ -7,7 +7,7 @@ const HeaderMobileNav = ({ scroll }) => {
   return (
     <div
       className="header-mobile-nav"
-      style={{ top: scroll ? "138px" : "190px" }}
+      style={{ top: scroll ? "138px" : "168px" }}
     >
       <HeaderMobileSearch />
 

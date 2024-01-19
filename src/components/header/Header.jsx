@@ -64,7 +64,7 @@ const Header = () => {
   };
 
   return (
-    <header className={scroll ? "header-scrolled" : ""}>
+    <header className={scroll || showMobileNav ? "header-scrolled" : ""}>
       <Container>
         <div
           className={

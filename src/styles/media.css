@@ -660,7 +660,7 @@
 
 /*  */
 
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 1101px) {
   .header-mobile-nav {
     display: none !important;
   }
