@@ -1,0 +1,23 @@
+.whatsapp {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  right: 1%;
+  bottom: 2%;
+  z-index: 999;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+._1qse9,
+._2qp0Z {
+  z-index: 999;
+}
