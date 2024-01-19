@@ -73,7 +73,7 @@ const HomeSlider = () => {
       >
         {slides &&
           slides.map(
-            ({ id, item, title, info, animation_mode, link, img, bgImg }) => {
+            ({ id, title, info, animation_mode, link, img, bgImg }) => {
               return (
                 <SwiperSlide key={id} className="swiper-slide">
                   <Link to={link}>

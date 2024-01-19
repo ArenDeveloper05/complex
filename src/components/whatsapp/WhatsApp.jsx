@@ -1,19 +1,22 @@
-import { Link } from "react-router-dom";
-// import { ReactComponentElement as whatsappIcon } from "../../assets/images/icons/whatsappIcon.png";
+import logo from "../../assets/images/logo.png";
 
-import { WhatsAppWidget } from "react-whatsapp-widget";
-import "react-whatsapp-widget/dist/index.css";
+import WhatsAppWidget from "react-whatsapp-chat-widget";
+import "react-whatsapp-chat-widget/index.css";
 
 import "./WhatsApp.scss";
 
 const WhatsApp = () => {
   return (
-    // <div className="whatsapp">
-    //   <Link to={"/"}>
-    //     <img src={whatsappIcon} alt="whatsapp" title="Whats app" />
-    //   </Link>
-    // </div>
-    <WhatsAppWidget phoneNumber="37495656867" />
+    <WhatsAppWidget
+      headerTitle="Toon Complex"
+      placeholder="Ձեր հաղորդագրությունը"
+      btnTxt="Ուղարկել"
+      phoneNo="37491298089"
+      messageBox={true}
+      chatPersonName="Toon Complex"
+      chatMessage="Բարև ձեզ և շնորհակալություն մեզ հետ կապնվելու համար: Ինչո՞վ կարող ենք ձեզ օգնել?"
+      headerIcon={logo}
+    />
   );
 };
 

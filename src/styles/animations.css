@@ -8,7 +8,7 @@
     transform: translate(-1000px, 0px);
   }
   100% {
-    transform: translate(120px, 0px);
+    transform: translate(0px, 0px);
   }
 }
 
@@ -45,13 +45,13 @@
 
 @keyframes title-animated-1 {
   0% {
-    transform: translate(120px, -2000px);
+    transform: translate(0px, -2000px);
   }
   80% {
-    transform: translate(120px, 100px);
+    transform: translate(0px, 100px);
   }
   100% {
-    transform: translate(120px, 0px);
+    transform: translate(0px, 0px);
   }
 }
 

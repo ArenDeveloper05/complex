@@ -8,7 +8,6 @@
 
   &-map {
     flex-grow: 1;
-    overflow: hidden;
 
     &-links {
       display: flex;
@@ -23,11 +22,17 @@
       height: 600px;
       margin-top: 30px;
       box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 24%);
+      overflow: hidden;
 
       > iframe {
         width: 100%;
         height: 100%;
         transition: 0.7s;
+      }
+      &:hover {
+        > iframe {
+          transform: scale(1.2);
+        }
       }
     }
   }
