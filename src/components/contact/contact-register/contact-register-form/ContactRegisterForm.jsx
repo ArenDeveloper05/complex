@@ -47,7 +47,9 @@ const ContactRegisterForm = () => {
         {({ errors, touched, values, handleChange, handleBlur }) => {
           return (
             <Form>
-              <h1>{t("main.main_register.subscribe")}</h1>
+              <h1 className="animate__animated animate__wobble">
+                {t("main.main_register.subscribe")}
+              </h1>
               <div className="contact-register-form-row">
                 <TextField
                   name="first_name"

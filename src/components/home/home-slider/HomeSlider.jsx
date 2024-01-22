@@ -80,10 +80,12 @@ const HomeSlider = () => {
                     <img src={bgImg} alt="background" className="swiper-bg" />
                     <div className="swiper-slide-container">
                       <p
-                        className={`info ${generateAnimationMode(
+                        className={`info animate__animated ${generateAnimationMode(
                           animation_mode,
                           "info"
-                        )}`}
+                        )}
+                        
+                        `}
                       >
                         {info ? info[language] : ""}
                       </p>
