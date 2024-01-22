@@ -1,4 +1,5 @@
 import { Parallax as ParallaxContainer } from "react-scroll-parallax";
+
 import ParallaxImage from "./parallax-image/ParallaxImage";
 
 import "./Parallax.scss";

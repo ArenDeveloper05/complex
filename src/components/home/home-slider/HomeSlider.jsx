@@ -80,7 +80,7 @@ const HomeSlider = () => {
                     <img src={bgImg} alt="background" className="swiper-bg" />
                     <div className="swiper-slide-container">
                       <p
-                        className={`info animate__animated ${generateAnimationMode(
+                        className={`info ${generateAnimationMode(
                           animation_mode,
                           "info"
                         )}

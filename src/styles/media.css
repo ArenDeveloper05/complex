@@ -288,7 +288,7 @@
 @media only screen and (max-width: 1030px) {
   .parallax {
     flex-direction: column;
-    padding: 32px 10px;
+    justify-content: start !important;
   }
 
   .parallax-desc {

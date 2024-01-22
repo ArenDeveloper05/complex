@@ -20,6 +20,7 @@
 
 :root {
   --global-max--width: 1600px;
+  --global-section-height: 1000px;
   --ff-1: system-ui;
   --ff-2: "Teko", sans-serif;
   --font-size-big: 50px;
@@ -48,7 +49,7 @@
 
 .section-title {
   text-align: center;
-  color: var(--green-dark); //
+  color: var(--green-dark);
   color: var(--text-color);
   font-size: var(--font-size-big);
   font-family: var(--ff-1);
