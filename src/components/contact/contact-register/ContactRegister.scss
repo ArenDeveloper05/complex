@@ -1,7 +1,7 @@
 .contact-register {
   max-width: var(--global-max--width);
   margin: auto;
-  padding: 200px 50px;
+  padding: 40px 50px;
   display: flex;
   align-items: center;
   gap: 64px;
@@ -58,10 +58,12 @@
     }
 
     h1 {
+      transition: 0.3s;
       text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
       margin-bottom: 32px;
       color: var(--green-dark);
-      transition: 0.3s;
       transition-timing-function: ease-in-out;
     }
 
