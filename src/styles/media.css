@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1520px) {
   .home-top-container > .swiper-slide-container > p {
     font-size: 15px !important;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@media only screen and (max-width: 1290px) {
+@media only screen and (max-width: 1360px) {
   .nav-bar-links-link a {
     font-size: 14px !important;
   }
@@ -103,6 +103,20 @@
 
   .section-title {
     font-size: var(--font-size-mid) !important;
+  }
+
+  /* CONTACT REGISTER RESPONSIVE */
+
+  .contact-register {
+    flex-direction: column;
+  }
+
+  .contact-register-map {
+    width: 100%;
+  }
+
+  .contact-register-form {
+    width: 100%;
   }
   /* 
   .nav-bar-links-link a {
@@ -351,9 +365,9 @@
   }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 750px) {
   .footer-inner-top {
-    flex-direction: column !important;
+    flex-direction: column;
   }
 
   .footer-inner-top-webPage-info {
@@ -583,6 +597,7 @@
 
   .header-inner-auth-panel-lang-select-option-icon {
     width: 12px !important;
+    height: 12px;
   }
 
   .header-inner-auth-panel {
@@ -660,12 +675,8 @@
 
 /*  */
 
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 1101px) {
   .header-mobile-nav {
-    display: none !important;
-  }
-
-  .header-mobile-search {
     display: none !important;
   }
 }

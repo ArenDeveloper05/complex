@@ -2,7 +2,10 @@
   "header": {
     "search": "search",
     "sign-in": "sign in",
-    "search-placeholder": "Search"
+    "search-placeholder": "Search",
+    "header_mobile_search": {
+      "input_placeholder": "Search site"
+    }
   },
   "main": {
     "main_top_products": {

@@ -2,7 +2,7 @@ import NavLinks from "./nav-links/NavLinks";
 
 import "./Nav.scss";
 
-const Nav = ({ width, showNav }) => {
+const Nav = ({ showNav }) => {
   return <nav className="nav-bar">{showNav && <NavLinks />}</nav>;
 };
 
