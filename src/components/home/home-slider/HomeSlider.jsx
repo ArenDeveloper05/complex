@@ -83,7 +83,9 @@ const HomeSlider = () => {
                         className={`info ${generateAnimationMode(
                           animation_mode,
                           "info"
-                        )}`}
+                        )}
+                        
+                        `}
                       >
                         {info ? info[language] : ""}
                       </p>

@@ -1,13 +1,15 @@
 .home-offer {
   background-size: cover;
   background-image: url("../../../assets/images/home-offer-bcg.png");
-
+  min-height: var(--global-section-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &-inner {
     padding: 40px 0;
     gap: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
 
     &-desc {
       width: 30%;
@@ -22,8 +24,8 @@
 
     &-image {
       &-mainImg {
-        width: 500px;
-        height: 500px;
+        width: 700px;
+        height: 700px;
 
         > img {
           width: 100%;
