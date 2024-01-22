@@ -11,7 +11,7 @@ const WhatsApp = () => {
       headerTitle="Toon Complex"
       placeholder="Ձեր հաղորդագրությունը"
       btnTxt="Ուղարկել"
-      phoneNo="37491298089"
+      phoneNo="37477668484"
       messageBox={true}
       chatPersonName="Toon Complex"
       chatMessage="Բարև ձեզ և շնորհակալություն մեզ հետ կապնվելու համար: Ինչո՞վ կարող ենք ձեզ օգնել?"
