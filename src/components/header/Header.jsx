@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { LuMenu } from "react-icons/lu";
+import { LuMenu, LuSearch } from "react-icons/lu";
 import { AiOutlineClose } from "react-icons/ai";
 
 import Container from "../common/container/Container";
@@ -8,7 +8,6 @@ import HeaderSearch from "./header-search/HeaderSearch";
 import Nav from "./nav/Nav";
 import HeaderAuthPanel from "./header-auth-panel/HeaderAuthPanel";
 import HeaderMobileNav from "./header-mobile-nav/HeaderMobileNav";
-import HeaderMobileLogo from "./header-mobile-logo/HeaderMobileLogo";
 
 import "./Header.scss";
 
@@ -93,14 +92,15 @@ const Header = () => {
                 <HeaderMobileNav scroll={scroll} />
               </>
             ) : (
-              <LuMenu
-                className="header-inner-mobile-icon"
-                onClick={handleShowMobileNav}
-              />
+              <div style={{ border: "solid", display: "flex" }}>
+                <LuSearch className="header-inner-mobile-icon" />
+                <LuMenu
+                  className="header-inner-mobile-icon"
+                  onClick={handleShowMobileNav}
+                />
+              </div>
             )}
           </div>
-
-          <HeaderMobileLogo />
 
           <HeaderAuthPanel />
         </div>

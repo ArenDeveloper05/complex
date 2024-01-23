@@ -10,7 +10,6 @@ const HeaderMobileNav = ({ scroll }) => {
       style={{ top: scroll ? "138px" : "168px" }}
     >
       <HeaderMobileSearch />
-
       <HeaderMobileNavLinks />
     </div>
   );
