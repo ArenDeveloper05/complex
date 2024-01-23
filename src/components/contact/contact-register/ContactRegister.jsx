@@ -1,6 +1,7 @@
 import { useParallax } from "react-scroll-parallax";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 import ContactRegisterForm from "./contact-register-form/ContactRegisterForm";
 
@@ -15,6 +16,11 @@ const ContactRegister = () => {
   const parallax = useParallax({
     speed: -10,
   });
+
+  const defaultState = {
+    center: [55.751574, 37.573856],
+    zoom: 5,
+  };
 
   return (
     <div className="contact-register">
@@ -38,7 +44,13 @@ const ContactRegister = () => {
         </div>
 
         <div className="contact-register-map-parent">
-          <iframe
+          <YMaps>
+            <Map defaultState={defaultState}>
+              <Placemark geometry={[55.684758, 37.738521]} />
+              <Placemark geometry={[50.684758, 37.738521]} />
+            </Map>
+          </YMaps>
+          {/* <iframe
             src={selectedMap}
             width="600"
             height="450"
@@ -47,7 +59,7 @@ const ContactRegister = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="map"
-          ></iframe>
+          ></iframe> */}
         </div>
       </div>
       <ContactRegisterForm />

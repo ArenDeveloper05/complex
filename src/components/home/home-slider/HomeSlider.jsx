@@ -77,7 +77,7 @@ const HomeSlider = () => {
               return (
                 <SwiperSlide key={id} className="swiper-slide">
                   <Link to={link}>
-                    <img src={bgImg} alt="background" className="swiper-bg" />
+                    {/* <img src={bgImg} alt="background" className="swiper-bg" /> */}
                     <div className="swiper-slide-container">
                       <p
                         className={`info ${generateAnimationMode(
