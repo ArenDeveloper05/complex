@@ -10,11 +10,13 @@ import HeaderAuthPanel from "./header-auth-panel/HeaderAuthPanel";
 import HeaderMobileNav from "./header-mobile-nav/HeaderMobileNav";
 
 import "./Header.scss";
+import HeaderMobileSearch from "./header-mobile-search/HeaderMobileSearch";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(true);
 
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [showMobileSearch, setShowMobileSearch] = useState(true);
 
   const [width, setWidth] = useState(true);
 
@@ -81,7 +83,7 @@ const Header = () => {
             handleWidth={handleWidth}
           />
 
-          <div style={{ display: "flex", order: "1" }}>
+          <div style={{ display: "flex", order: "1", border: "solid cyan" }}>
             {showMobileNav ? (
               <>
                 <AiOutlineClose
@@ -92,13 +94,31 @@ const Header = () => {
                 <HeaderMobileNav scroll={scroll} />
               </>
             ) : (
-              <div style={{ border: "solid", display: "flex" }}>
-                <LuSearch className="header-inner-mobile-icon" />
+              <div style={{ display: "flex" }}>
                 <LuMenu
                   className="header-inner-mobile-icon"
                   onClick={handleShowMobileNav}
                 />
               </div>
+            )}
+            {showMobileSearch ? (
+              <LuSearch
+                className="header-inner-mobile-icon"
+                onClick={() => {
+                  setShowMobileSearch(false);
+                }}
+              />
+            ) : (
+              <>
+                <AiOutlineClose
+                  className="header-inner-mobile-icon"
+                  onClick={() => {
+                    setShowMobileSearch(true);
+                  }}
+                />
+
+                <HeaderMobileSearch />
+              </>
             )}
           </div>
 

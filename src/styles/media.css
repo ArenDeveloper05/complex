@@ -312,17 +312,13 @@
     font-size: var(--font-size-small) !important;
   }
 
-  .header-inner-auth-panel {
+  /* .header-inner-auth-panel {
     width: 240px !important;
-  }
+  } */
 
-  .header-inner-auth-panel-signIn {
+  /* .header-inner-auth-panel-lang {
     width: 50% !important;
-  }
-
-  .header-inner-auth-panel-lang {
-    width: 50% !important;
-  }
+  } */
 
   /*  */
 

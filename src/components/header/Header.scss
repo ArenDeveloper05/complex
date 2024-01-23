@@ -159,48 +159,17 @@ header {
   }
 
   &-auth-panel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     cursor: pointer;
-
-    &-contact {
-      position: relative;
-
-      &:hover ul {
-        height: 300px;
-        opacity: 1;
-      }
-
-      &-icon {
-        width: 42px;
-        height: 39px;
-
-        > img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          filter: drop-shadow(2px 2px);
-        }
-      }
-
-      &-list {
-        position: absolute;
-        right: -10px;
-        top: 60px;
-        width: 300px;
-        transition: 0.5s;
-        height: 0px;
-        background-color: white;
-        opacity: 0;
-        box-shadow: 5px 6px 10px #00000052;
-      }
-    }
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid blue;
 
     &-lang {
       display: flex;
       position: relative;
       align-items: center;
+      border: solid green;
       flex-direction: column;
       font-weight: 600;
       color: var(--text-color);
@@ -243,7 +212,7 @@ header {
         position: absolute;
         z-index: 9;
         top: 25px;
-        right: 15px;
+        left: 15px;
         border-radius: 10px;
         list-style-type: none;
         background-color: #fff;
