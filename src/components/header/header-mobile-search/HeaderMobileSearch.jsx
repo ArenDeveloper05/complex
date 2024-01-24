@@ -4,7 +4,7 @@ import { IoIosSearch } from "react-icons/io";
 import "./HeaderMobileSearch.scss";
 import { useTranslation } from "react-i18next";
 
-const HeaderMobileSearch = () => {
+const HeaderMobileSearch = ({ scroll }) => {
   const [mobileInputVal, setMobileInputVal] = useState("");
 
   const { t } = useTranslation();
@@ -14,7 +14,10 @@ const HeaderMobileSearch = () => {
   };
 
   return (
-    <div className="header-mobile-search">
+    <div
+      className="header-mobile-search"
+      style={{ top: scroll ? "138px" : "192px" }}
+    >
       <form>
         <button>
           <IoIosSearch />

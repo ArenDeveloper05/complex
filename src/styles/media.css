@@ -283,6 +283,12 @@
     width: 80% !important;
     transform: translateY(-100px) !important;
   }
+
+  /* LANGUAGE SELECT */
+
+  .header-inner-auth-panel-lang-select {
+    right: -70px !important;
+  }
 }
 
 @media only screen and (max-width: 1030px) {

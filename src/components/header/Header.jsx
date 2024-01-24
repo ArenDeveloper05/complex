@@ -73,16 +73,13 @@ const Header = () => {
           }
         >
           <HeaderLogo scroll={scroll} />
-
           <Nav width={width} showNav={showNav} />
-
           <HeaderSearch
             showNav={showNav}
             handleChangeShowNav={handleChangeShowNav}
             width={width}
             handleWidth={handleWidth}
           />
-
           <div style={{ display: "flex", order: "1", border: "solid cyan" }}>
             {showMobileNav ? (
               <>
@@ -117,7 +114,7 @@ const Header = () => {
                   }}
                 />
 
-                <HeaderMobileSearch />
+                <HeaderMobileSearch scroll={scroll} />
               </>
             )}
           </div>

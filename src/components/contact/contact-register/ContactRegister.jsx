@@ -1,5 +1,5 @@
 import { useParallax } from "react-scroll-parallax";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
@@ -8,33 +8,51 @@ import ContactRegisterForm from "./contact-register-form/ContactRegisterForm";
 import "./ContactRegister.scss";
 
 const ContactRegister = () => {
-  const [selectedMap, setSelectedMap] = useState(
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1149.0428190369068!2d44.567120000424936!3d40.18195873732741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abcae005e23b3%3A0x2d57c7e8a020e1ec!2zNTAgR2Fsc2hveWFuIFN0LCDUtdaA1ofVodW2IDAwNzk!5e0!3m2!1shy!2sam!4v1705407984403!5m2!1shy!2sam"
+  // 1
+  // const [zoom, setZoom] = React.useState(9);
+  // const [center, setCenter] = useState([55.75, 37.57]);
+  // 1
+
+  // const mapState = React.useMemo(() => ({ center, zoom }), [zoom]); 1
+
+  // 2
+  const [same, setSame] = useState({
+    zoom: 8,
+    center: [40.179826, 44.513358],
+  });
+
+  const mapState = React.useMemo(
+    () => ({ center: same.center, zoom: same.zoom }),
+    [same]
   );
+  // 2
+
   const mapsData = useSelector((state) => state.contact.mapsData);
 
   const parallax = useParallax({
     speed: -10,
   });
 
-  const defaultState = {
-    center: [55.751574, 37.573856],
-    zoom: 5,
-  };
-
   return (
     <div className="contact-register">
       <div className="contact-register-map" ref={parallax.ref}>
         <div className="contact-register-map-links">
           {mapsData &&
-            mapsData.map(({ id, title, mapLink }) => {
+            mapsData.map(({ id, title, mapLink, mapCode, zoom }) => {
               return (
                 <p
                   key={id}
+                  style={{ border: "solid red" }}
                   onClick={() => {
-                    if (mapLink !== selectedMap) {
-                      setSelectedMap(mapLink);
-                    }
+                    // setCenter(mapCode); 1
+                    // setZoom(zoom); 1
+
+                    // 2
+                    setSame({
+                      zoom: zoom,
+                      center: mapCode,
+                    });
+                    // 2
                   }}
                 >
                   {title}
@@ -44,22 +62,16 @@ const ContactRegister = () => {
         </div>
 
         <div className="contact-register-map-parent">
-          <YMaps>
-            <Map defaultState={defaultState}>
-              <Placemark geometry={[55.684758, 37.738521]} />
-              <Placemark geometry={[50.684758, 37.738521]} />
+          <YMaps className="contact-register-map-parent-ymaps">
+            <Map
+              state={mapState}
+              className="contact-register-map-parent-ymaps-map"
+            >
+              <Placemark geometry={[40.179826, 44.513358]} />
+              <Placemark geometry={[55.730357, 37.619115]} />
+              <Placemark geometry={[38.853314, -77.052702]} />
             </Map>
           </YMaps>
-          {/* <iframe
-            src={selectedMap}
-            width="600"
-            height="450"
-            style={{ border: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="map"
-          ></iframe> */}
         </div>
       </div>
       <ContactRegisterForm />
