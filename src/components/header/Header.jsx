@@ -80,7 +80,13 @@ const Header = () => {
             width={width}
             handleWidth={handleWidth}
           />
-          <div style={{ display: "flex", order: "1", border: "solid cyan" }}>
+          <div
+            style={{
+              display: "flex",
+              order: "1",
+              gap: "10px",
+            }}
+          >
             {showMobileNav ? (
               <>
                 <AiOutlineClose

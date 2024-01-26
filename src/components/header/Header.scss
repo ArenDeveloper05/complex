@@ -141,7 +141,6 @@ header {
     font-size: 28px;
     cursor: pointer;
     color: #3a3939;
-    margin-right: 10px;
     transition: all 0.2s;
 
     &:hover {
@@ -163,13 +162,11 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    border: solid blue;
 
     &-lang {
       display: flex;
       position: relative;
       align-items: center;
-      border: solid green;
       flex-direction: column;
       font-weight: 600;
       color: var(--text-color);

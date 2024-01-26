@@ -1,6 +1,4 @@
-import HeaderAuthPanelLang from "../header-auth-panel/header-auth-panel-lang/HeaderAuthPanelLang";
-import HeaderAuthPanel from "../header-auth-panel/HeaderAuthPanel";
-import HeaderMobileSearch from "../header-mobile-search/HeaderMobileSearch";
+import HeaderMobileNavLangs from "./header-mobile-nav-langs/HeaderMobileNavLangs";
 import HeaderMobileNavLinks from "./header-mobile-nav-links/HeaderMobileNavLinks";
 
 import "./HeaderMobileNav.scss";
@@ -9,10 +7,10 @@ const HeaderMobileNav = ({ scroll }) => {
   return (
     <div
       className="header-mobile-nav"
-      style={{ top: scroll ? "138px" : "168px" }}
+      style={{ top: scroll ? "138px" : "192px" }}
     >
-      {/* <HeaderMobileSearch /> */}
-      <HeaderAuthPanel />
+      <HeaderMobileNavLangs />
+
       <HeaderMobileNavLinks />
     </div>
   );

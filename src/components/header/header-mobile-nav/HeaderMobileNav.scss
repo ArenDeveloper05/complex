@@ -6,12 +6,56 @@
   padding: 30px 50px;
   position: absolute;
   left: 0;
-  border: solid;
   background-color: white;
 
+  &-langs {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-name: mobile_langs_anim;
+
+    &-lang {
+      gap: 5px;
+      display: flex;
+      cursor: pointer;
+      padding: 10px 0;
+      align-items: center;
+      transition: all 0.2s;
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:hover {
+        color: var(--green-dark);
+      }
+    }
+
+    @keyframes mobile_langs_anim {
+      from {
+        opacity: 0.3;
+        transform: translate(-130px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
+
   &-links {
-    border: solid red;
-    margin-top: 100px;
+    margin-top: 30px;
     animation-duration: 0.3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
