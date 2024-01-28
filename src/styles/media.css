@@ -108,6 +108,7 @@
   /* CONTACT REGISTER RESPONSIVE */
 
   .contact-register {
+    padding: 95px 40px;
     flex-direction: column;
   }
 
@@ -115,8 +116,12 @@
     width: 100%;
   }
 
-  .contact-register-form {
+  .contact-register-address {
     width: 100%;
+  }
+
+  .contact-register-message button {
+    width: 180px;
   }
 
   /* FOOTER */
@@ -244,6 +249,12 @@
     width: 80% !important;
     transform: translateY(-100px) !important;
   }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 125px;
+  }
 }
 
 @media only screen and (max-width: 1030px) {
@@ -292,6 +303,12 @@
     width: 450px;
     height: 450px;
   }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 145px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -305,6 +322,12 @@
 
   .home-offer-inner-desc-txt {
     text-align: center;
+  }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 165px;
   }
 }
 
@@ -405,6 +428,12 @@
     width: 100% !important;
     height: auto;
   }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 185px;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -415,6 +444,8 @@
 }
 
 @media only screen and (max-width: 500px) {
+  /* HEADER */
+
   .header-inner-logo {
     width: 80% !important;
   }
@@ -423,6 +454,14 @@
     width: 100% !important;
     object-fit: contain !important;
   }
+
+  /* CONTACT */
+
+  .contact-register-message button {
+    width: 100%;
+  }
+
+  /* FOOTER */
 
   .footer-inner-bottom-desc-txt {
     font-size: 14px !important;
