@@ -9,9 +9,9 @@ const HeaderMobileNav = ({ scroll }) => {
       className="header-mobile-nav"
       style={{ top: scroll ? "138px" : "192px" }}
     >
-      <HeaderMobileNavLangs />
-
       <HeaderMobileNavLinks />
+
+      <HeaderMobileNavLangs />
     </div>
   );
 };

@@ -10,8 +10,7 @@
   animation-iteration-count: 1;
   animation-name: mobile_search;
   animation-timing-function: linear;
-  box-shadow: 0px 0px 10px 0px black;
-
+  overflow: hidden;
   > form {
     display: flex;
     padding: 10px;
