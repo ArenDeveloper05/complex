@@ -5,10 +5,10 @@
 
 @keyframes info-animated-1 {
   0% {
-    transform: translate(-1000px, 0px);
+    transform: translate(-1000px, 140px);
   }
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(0px, 140px);
   }
 }
 
@@ -45,13 +45,13 @@
 
 @keyframes title-animated-1 {
   0% {
-    transform: translate(0px, -2000px);
+    transform: translate(-500px, -2000px);
   }
   80% {
-    transform: translate(0px, 100px);
+    transform: translate(-500px, 300px);
   }
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(-500px, 250px);
   }
 }
 
@@ -149,13 +149,3 @@
     transform: translate(-60px, -50px);
   }
 }
-
-/* SLIDER BACKGROUND */
-/* @keyframes swiper-bg {
-  0% {
-    transform: scaleY(1);
-  }
-  100% {
-    transform: scaleY(1.3);
-  }
-} */

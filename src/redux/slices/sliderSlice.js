@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import sliderBG2 from "../../assets/images/slider/slider2.jpg";
+import sliderBG from "../../assets/images/slider/bg-slider.webp";
 import homeSliderAirConditioner from "../../assets/images/homeSliderAirConditioner.png";
 import homeSliderGasBoiler from "../../assets/images/homeSliderGasBoiler.png";
 import homeSliderSolarConverter from "../../assets/images/homeSliderSolarConverter.png";
@@ -9,7 +9,7 @@ const initialState = {
     {
       id: 1,
       img: homeSliderAirConditioner,
-      bgImg: sliderBG2,
+      bgImg: sliderBG,
       title: {
         am: "SMART WIFI DRY+",
         ru: "",
@@ -30,7 +30,7 @@ const initialState = {
     {
       id: 2,
       img: homeSliderGasBoiler,
-      bgImg: sliderBG2,
+      bgImg: sliderBG,
       title: {
         am: "SMART WIFI DRY+",
         ru: "",
@@ -42,16 +42,16 @@ const initialState = {
         en: "",
       },
       animation_mode: {
-        title: 2,
-        info: 2,
-        img: 2,
+        title: 1,
+        info: 1,
+        img: 1,
       },
       link: "",
     },
     {
       id: 3,
       img: homeSliderSolarConverter,
-      bgImg: sliderBG2,
+      bgImg: sliderBG,
       title: {
         am: "SMART WIFI DRY+",
         ru: "",
@@ -63,9 +63,9 @@ const initialState = {
         en: "",
       },
       animation_mode: {
-        title: 3,
-        info: 3,
-        img: 3,
+        title: 1,
+        info: 1,
+        img: 1,
       },
       link: "",
     },

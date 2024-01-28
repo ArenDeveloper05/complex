@@ -77,7 +77,14 @@ const HomeSlider = () => {
               return (
                 <SwiperSlide key={id} className="swiper-slide">
                   <Link to={link}>
-                    {/* <img src={bgImg} alt="background" className="swiper-bg" /> */}
+                    <img src={bgImg} alt="background" className="swiper-bg" />
+                    {/* <img
+                      src={
+                        "https://static.vecteezy.com/system/resources/previews/005/909/594/original/abstract-guilloche-pattern-complex-gradient-lines-texture-element-for-design-project-certificate-diploma-official-document-official-document-vector.jpg"
+                      }
+                      alt="background"
+                      className="swiper-bg"
+                    /> */}
                     <div className="swiper-slide-container">
                       <p
                         className={`info ${generateAnimationMode(
@@ -99,7 +106,10 @@ const HomeSlider = () => {
                       </h1>
                       <Atropos
                         shadowScale={0}
-                        className={generateAnimationMode(animation_mode, "img")}
+                        className={`product-img ${generateAnimationMode(
+                          animation_mode,
+                          "img"
+                        )}`}
                       >
                         <img src={img} alt="img" />
                       </Atropos>

@@ -233,16 +233,16 @@ export const animationModesConfig = {
   title: {
     1: "title-animated-1",
     2: "title-animated-2",
-    3: "title-animated-1",
+    3: "title-animated-3",
   },
   info: {
     1: "info-animated-1",
     2: "info-animated-2",
-    3: "info-animated-1",
+    3: "info-animated-3",
   },
   img: {
     1: "img-animated-1",
     2: "img-animated-2",
-    3: "img-animated-1",
+    3: "img-animated-3",
   },
 };
