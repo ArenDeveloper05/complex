@@ -332,10 +332,6 @@
 }
 
 @media only screen and (max-width: 750px) {
-  .footer-inner-top {
-    flex-direction: column;
-  }
-
   .footer-inner-top-webPage-info {
     width: 100% !important;
   }
@@ -400,6 +396,26 @@
 
   .home-counter-container-box-info > p {
     font-size: 26px;
+  }
+
+  /* HOME TOP */
+
+  .swiper-slide-productsContainer-desc {
+    width: 100% !important;
+    height: 130px;
+    font-size: 14px !important;
+    padding: 15px !important;
+  }
+
+  .swiper-slide-productsContainer {
+    width: 80% !important;
+    height: 80% !important;
+  }
+
+  .swiper-slide {
+    padding: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 }
 

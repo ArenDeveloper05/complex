@@ -7,6 +7,15 @@
   z-index: 999;
   cursor: pointer;
   transition-duration: 0.25s;
+
+  &_widget_wrapper {
+    animation-duration: 5s;
+    border-radius: 50%;
+    animation-iteration-count: 1;
+    animation-name: whatsapp_anim;
+    animation-timing-function: linear;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -14,6 +23,63 @@
   }
   &:hover {
     transform: scale(1.1);
+  }
+
+  @keyframes whatsapp_anim {
+    0% {
+      right: 98%;
+      bottom: 2%;
+      transform: scale(1);
+      box-shadow: 1px 1px 1px 1px var(--green-light);
+    }
+    15% {
+      right: 88%;
+      bottom: 4%;
+      transform: scale(1.2);
+      box-shadow: 1px 1px 30px 1px var(--green-light);
+    }
+    25% {
+      right: 78%;
+      bottom: 6%;
+      transform: scale(1);
+      box-shadow: 1px 1px 3px 1px var(--green-light);
+    }
+    35% {
+      right: 68%;
+      bottom: 4%;
+      transform: scale(1.2);
+      box-shadow: 1px 1px 30px 1px var(--green-light);
+    }
+    55% {
+      right: 60%;
+      bottom: 8%;
+      transform: scale(1);
+      box-shadow: 1px 1px 3px 1px var(--green-light);
+    }
+    65% {
+      right: 45%;
+      bottom: 4%;
+      transform: scale(1.2);
+      box-shadow: 1px 1px 30px 1px var(--green-light);
+    }
+    75% {
+      right: 35%;
+      bottom: 8%;
+      transform: scale(1);
+      box-shadow: 1px 1px 3px 1px var(--green-light);
+    }
+    85% {
+      right: 20%;
+      bottom: 8%;
+      transform: scale(1);
+      box-shadow: 1px 1px 30px 1px var(--green-light);
+    }
+    100% {
+      right: 10%;
+      bottom: 4%;
+      transform: scale(1);
+      box-shadow: 1px 1px 3px 1px var(--green-light);
+    }
   }
 }
 
