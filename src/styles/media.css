@@ -108,6 +108,7 @@
   /* CONTACT REGISTER RESPONSIVE */
 
   .contact-register {
+    padding: 95px 40px;
     flex-direction: column;
   }
 
@@ -115,8 +116,12 @@
     width: 100%;
   }
 
-  .contact-register-form {
+  .contact-register-address {
     width: 100%;
+  }
+
+  .contact-register-message button {
+    width: 180px;
   }
 
   /* FOOTER */
@@ -415,6 +420,8 @@
 }
 
 @media only screen and (max-width: 500px) {
+  /* HEADER */
+
   .header-inner-logo {
     width: 80% !important;
   }
@@ -423,6 +430,14 @@
     width: 100% !important;
     object-fit: contain !important;
   }
+
+  /* CONTACT */
+
+  .contact-register-message button {
+    width: 100%;
+  }
+
+  /* FOOTER */
 
   .footer-inner-bottom-desc-txt {
     font-size: 14px !important;

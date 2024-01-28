@@ -10,6 +10,13 @@ import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
 
+const inputStyles = {
+  width: "100%",
+  backgroundColor: "#f4f5f8",
+  border: "none",
+  outline: "none",
+};
+
 const ContactRegister = () => {
   // 1
   // const [zoom, setZoom] = React.useState(9);
@@ -45,31 +52,6 @@ const ContactRegister = () => {
   return (
     <div className="contact-register">
       <div className="contact-register-map" ref={parallax.ref}>
-        {/* <div className="contact-register-map-links">
-          {mapsData &&
-            mapsData.map(({ id, title, mapLink, mapCode, zoom }) => {
-              return (
-                <p
-                  key={id}
-                  style={{ border: "solid red" }}
-                  onClick={() => {
-                    // setCenter(mapCode); 1
-                    // setZoom(zoom); 1
-
-                    // 2
-                    setSame({
-                      zoom: zoom,
-                      center: mapCode,
-                    });
-                    // 2
-                  }}
-                >
-                  {title}
-                </p>
-              );
-            })}
-        </div> */}
-
         <div className="contact-register-map-parent">
           <YMaps className="contact-register-map-parent-ymaps">
             <Map
@@ -132,46 +114,51 @@ const ContactRegister = () => {
               console.log(values);
             }}
           >
-            {({ errors, values, handleChange, handleBlur, touched }) => {
-              console.log(touched, "tach");
-              // console.log(errors, "errs");
+            {({ errors, values, handleChange, handleBlur }) => {
               return (
                 <Form>
-                  <div>
+                  <div className="contact-register-message-input-prnt">
                     <TextField
                       name="name"
                       label="name"
                       value={values.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
+                      sx={inputStyles}
                     />
-                    {touched.name ? <p>{errors.name}</p> : null}
+                    {errors.name ? <p>{errors.name}</p> : null}
                   </div>
 
-                  <div>
+                  <div className="contact-register-message-input-prnt">
                     <TextField
                       name="surname"
                       label="surname"
                       value={values.surname}
                       onChange={handleChange}
+                      sx={inputStyles}
                     />
 
-                    {touched.surname ? <p>{errors.surname}</p> : null}
+                    {errors.surname ? <p>{errors.surname}</p> : null}
                   </div>
 
-                  <div>
+                  <div className="contact-register-message-input-prnt">
                     <TextField
                       name="email"
                       label="email"
                       value={values.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
+                      sx={inputStyles}
                     />
 
-                    {touched.email ? <p>{errors.email}</p> : null}
+                    {errors.email ? <p>{errors.email}</p> : null}
                   </div>
 
-                  <Button type="submit" variant="outlined">
+                  <Button
+                    type="submit"
+                    variant="outlined"
+                    className="contact-register-message-btn"
+                  >
                     send
                   </Button>
                 </Form>

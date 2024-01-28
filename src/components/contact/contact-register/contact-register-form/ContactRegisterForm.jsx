@@ -45,6 +45,7 @@ const ContactRegisterForm = () => {
         }}
       >
         {({ errors, touched, values, handleChange, handleBlur }) => {
+          console.log(errors, "errrrr");
           return (
             <Form>
               <h1 className="animate__animated animate__wobble">
