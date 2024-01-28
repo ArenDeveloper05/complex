@@ -7,7 +7,7 @@ import "./ContactRegister.scss";
 import ContactRegisterForm from "./contact-register-form/ContactRegisterForm";
 
 import * as Yup from "yup";
-import { Form, Formik } from "formik";
+import { Field, Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
 
 const inputStyles = {
@@ -108,6 +108,7 @@ const ContactRegister = () => {
               name: "",
               surname: "",
               email: "",
+              file: null,
             }}
             validationSchema={registerSchema}
             onSubmit={(values) => {
@@ -152,6 +153,16 @@ const ContactRegister = () => {
                     />
 
                     {errors.email ? <p>{errors.email}</p> : null}
+                  </div>
+
+                  <div className="contact-register-message-input-prnt">
+                    <Field
+                      name="file"
+                      type="file"
+                      value={values.file}
+                      onChange={handleChange}
+                    />
+                    {errors.file ? <p>{errors.file}</p> : null}
                   </div>
 
                   <Button

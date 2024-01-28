@@ -249,6 +249,12 @@
     width: 80% !important;
     transform: translateY(-100px) !important;
   }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 125px;
+  }
 }
 
 @media only screen and (max-width: 1030px) {
@@ -297,6 +303,12 @@
     width: 450px;
     height: 450px;
   }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 145px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -310,6 +322,12 @@
 
   .home-offer-inner-desc-txt {
     text-align: center;
+  }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 165px;
   }
 }
 
@@ -409,6 +427,12 @@
   .home-offer-inner-image-mainImg {
     width: 100% !important;
     height: auto;
+  }
+
+  /* CONTACT */
+
+  .contact-register {
+    padding-top: 185px;
   }
 }
 
