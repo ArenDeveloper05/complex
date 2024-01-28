@@ -9,12 +9,10 @@ import ContactRegisterForm from "./contact-register-form/ContactRegisterForm";
 import * as Yup from "yup";
 import { Field, Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const inputStyles = {
   width: "100%",
-  backgroundColor: "#f4f5f8",
-  border: "none",
-  outline: "none",
 };
 
 const ContactRegister = () => {
@@ -43,10 +41,12 @@ const ContactRegister = () => {
     speed: -10,
   });
 
-  const registerSchema = Yup.object().shape({
-    name: Yup.string().required(),
-    surname: Yup.string().required(),
-    email: Yup.string().email().required(),
+  const { t } = useTranslation();
+
+  const messageSchema = Yup.object().shape({
+    name: Yup.string().required(t("validations.required")),
+    surname: Yup.string().required(t("validations.required")),
+    email: Yup.string().email().required(t("validations.required")),
   });
 
   return (
@@ -110,7 +110,7 @@ const ContactRegister = () => {
               email: "",
               file: null,
             }}
-            validationSchema={registerSchema}
+            validationSchema={messageSchema}
             onSubmit={(values) => {
               console.log(values);
             }}
