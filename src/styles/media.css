@@ -110,6 +110,14 @@
   .contact-register-form {
     width: 100%;
   }
+
+  .contact-register-address {
+    width: 100%;
+  }
+
+  .contact-register-address-links-link-btn-box {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1160px) {
@@ -309,6 +317,11 @@
   .footer-inner-top-contact,
   .footer-inner-top-newsletter {
     width: 80%;
+  }
+
+  .contact-register {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
