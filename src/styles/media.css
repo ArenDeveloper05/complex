@@ -113,10 +113,6 @@
 }
 
 @media only screen and (max-width: 1160px) {
-  .header-mobile-nav {
-    display: none !important;
-  }
-
   .nav-bar {
     display: none !important;
   }
