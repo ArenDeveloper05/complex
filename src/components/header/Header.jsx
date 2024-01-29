@@ -87,23 +87,6 @@ const Header = () => {
               gap: "10px",
             }}
           >
-            {showMobileNav ? (
-              <>
-                <AiOutlineClose
-                  className="header-inner-mobile-icon"
-                  onClick={handleShowMobileNav}
-                />
-
-                <HeaderMobileNav scroll={scroll} />
-              </>
-            ) : (
-              <div style={{ display: "flex" }}>
-                <LuMenu
-                  className="header-inner-mobile-icon"
-                  onClick={handleShowMobileNav}
-                />
-              </div>
-            )}
             {showMobileSearch ? (
               <LuSearch
                 className="header-inner-mobile-icon"
@@ -122,6 +105,23 @@ const Header = () => {
 
                 <HeaderMobileSearch scroll={scroll} />
               </>
+            )}
+            {showMobileNav ? (
+              <>
+                <AiOutlineClose
+                  className="header-inner-mobile-icon"
+                  onClick={handleShowMobileNav}
+                />
+
+                <HeaderMobileNav scroll={scroll} />
+              </>
+            ) : (
+              <div style={{ display: "flex" }}>
+                <LuMenu
+                  className="header-inner-mobile-icon"
+                  onClick={handleShowMobileNav}
+                />
+              </div>
             )}
           </div>
 
