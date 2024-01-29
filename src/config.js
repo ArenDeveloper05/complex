@@ -1,10 +1,5 @@
 // footer icons
-import {
-  FaSquareFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaPinterestP,
-} from "react-icons/fa6";
+import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 
 // footer contact icons
@@ -90,21 +85,11 @@ export const footerNetworksConfig = [
   },
   {
     id: 2,
-    icon: FaTwitter,
-    link: "/",
-  },
-  {
-    id: 3,
     icon: FaInstagram,
     link: "/",
   },
   {
-    id: 4,
-    icon: FaPinterestP,
-    link: "/",
-  },
-  {
-    id: 5,
+    id: 3,
     icon: PiTelegramLogoDuotone,
     link: "/",
   },

@@ -1,7 +1,7 @@
 header {
   width: 100%;
-  // position: fixed;
-  position: sticky;
+  position: fixed;
+  // position: sticky;
   transition: all 0.2s;
   // left: 0;
   top: 0;
@@ -27,7 +27,7 @@ header {
 
   > a {
     .header-inner-logo {
-      transition: 0.5s;
+      transition: 0.25s;
 
       > img {
         height: 100%;

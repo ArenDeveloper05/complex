@@ -26,10 +26,6 @@
     font-size: 30px !important;
   }
 
-  /* .swiper-slide-container > div {
-    transform: scale(0.8) !important;
-  } */
-
   .swiper-slide-container > div img {
     width: 100%;
     height: 100%;
@@ -114,95 +110,13 @@
   .contact-register-form {
     width: 100%;
   }
-
-  /* FOOTER */
-
-  .footer-inner-top-webPage-info {
-    width: 23% !important;
-  }
-
-  .footer-inner-top-webPage-info-desc p {
-    font-size: 14px !important;
-  }
-
-  .footer-inner-top-webPage-info-networks {
-    flex-wrap: wrap !important;
-    justify-content: space-between !important;
-  }
-
-  .footer-inner-top-explore {
-    width: 23% !important;
-    margin-left: 10px !important;
-  }
-
-  .footer-inner-top-explore-title {
-    font-size: 20px !important;
-  }
-
-  .footer-inner-top-explore-links-link {
-    font-size: 14px !important;
-    margin-left: 4px !important;
-  }
-
-  .footer-inner-top-contact {
-    width: 23% !important;
-    margin-left: 10px !important;
-  }
-
-  .footer-inner-top-contact-title {
-    font-size: 20px !important;
-  }
-
-  .footer-inner-top-contact-links-address p {
-    font-size: 14px !important;
-    margin-left: 4px !important;
-  }
-
-  .footer-inner-top-contact-links-address svg {
-    font-size: 34px !important;
-  }
-
-  .footer-inner-top-contact-links-phone a {
-    font-size: 14px !important;
-    margin-left: 4px !important;
-  }
-
-  .footer-inner-top-contact-links-phone svg {
-    font-size: 17px !important;
-  }
-
-  .footer-inner-top-contact-links-email a {
-    font-size: 14px !important;
-    margin-left: 4px !important;
-  }
-
-  .footer-inner-top-contact-links-email svg {
-    font-size: 15px !important;
-  }
-
-  .footer-inner-top-newsletter {
-    width: 23% !important;
-    margin-left: 10px !important;
-  }
-
-  .footer-inner-top-newsletter-title {
-    font-size: 20px !important;
-  }
-
-  .footer-inner-top-newsletter form input {
-    padding: 20px 10px !important;
-  }
-
-  .footer-inner-top-newsletter form button {
-    right: 8px !important;
-  }
-
-  .footer-inner-bottom-desc-txt {
-    font-size: 16px !important;
-  }
 }
 
 @media only screen and (max-width: 1160px) {
+  .header-mobile-nav {
+    display: none !important;
+  }
+
   .nav-bar {
     display: none !important;
   }
@@ -305,45 +219,6 @@
 }
 
 @media only screen and (max-width: 750px) {
-  .footer-inner-top {
-    flex-direction: column;
-  }
-
-  .footer-inner-top-webPage-info {
-    width: 100% !important;
-  }
-
-  .footer-inner-top-webPage-info-logo {
-    width: 200px !important;
-  }
-
-  .footer-inner-top-webPage-info-networks {
-    width: 260px !important;
-    flex-wrap: wrap !important;
-  }
-
-  .footer-inner-top-explore {
-    width: 260px !important;
-    margin-left: 0 !important;
-    margin-top: 20px !important;
-  }
-
-  .footer-inner-top-explore-links {
-    flex-wrap: nowrap !important;
-    flex-direction: column !important;
-  }
-
-  .footer-inner-top-contact {
-    width: 260px !important;
-    margin-left: 0 !important;
-    margin-top: 20px !important;
-  }
-
-  .footer-inner-top-newsletter {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: 20px !important;
-  }
 }
 
 @media only screen and (max-width: 645px) {
@@ -351,9 +226,9 @@
     width: 100%;
   }
 
-  .home-slider {
+  /* .home-slider {
     height: 600px;
-  }
+  } */
 
   .home-register {
     padding: 10px;
@@ -392,7 +267,7 @@
   }
 
   .home-slider
-    > .swiper
+    > .swiper1
     > .swiper-wrapper
     > .swiper-slide
     > a
@@ -427,6 +302,18 @@
     width: 100% !important;
     height: auto;
   }
+
+  .footer-inner-top {
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .footer-inner-top-webPage-info,
+  .footer-inner-top-explore,
+  .footer-inner-top-contact,
+  .footer-inner-top-newsletter {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -446,9 +333,9 @@
     object-fit: contain !important;
   }
 
-  .footer-inner-bottom-desc-txt {
+  /* .footer-inner-bottom-desc-txt {
     font-size: 14px !important;
-  }
+  } */
 }
 
 @media only screen and (max-width: 480px) {
@@ -563,28 +450,6 @@
     font-size: 12px !important;
     margin-left: 4px !important;
   }
-
-  .footer-inner-top-webPage-info-logo {
-    width: 100% !important;
-  }
-
-  .footer-inner-top-webPage-info-networks {
-    width: 100% !important;
-  }
-
-  .footer-inner-top-explore {
-    width: 100% !important;
-  }
-
-  .footer-inner-top-contact {
-    width: 100% !important;
-  }
 }
 
 /*  */
-
-@media only screen and (min-width: 1160px) {
-  .header-mobile-nav {
-    display: none !important;
-  }
-}
