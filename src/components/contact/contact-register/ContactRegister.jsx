@@ -100,7 +100,7 @@ const ContactRegister = () => {
               console.log(values);
             }}
           >
-            {({ errors, values, handleChange, handleBlur }) => {
+            {({ errors, values, touched, handleChange, handleBlur }) => {
               return (
                 <Form>
                   <div className="contact-register-message-input-prnt">
@@ -112,7 +112,7 @@ const ContactRegister = () => {
                       onBlur={handleBlur}
                       sx={inputStyles}
                     />
-                    {errors.name ? <p>{errors.name}</p> : null}
+                    {errors.name && touched.name ? <p>{errors.name}</p> : null}
                   </div>
 
                   <div className="contact-register-message-input-prnt">
@@ -124,7 +124,9 @@ const ContactRegister = () => {
                       sx={inputStyles}
                     />
 
-                    {errors.surname ? <p>{errors.surname}</p> : null}
+                    {errors.surname && touched.surname ? (
+                      <p>{errors.surname}</p>
+                    ) : null}
                   </div>
 
                   <div className="contact-register-message-input-prnt">
@@ -137,7 +139,9 @@ const ContactRegister = () => {
                       sx={inputStyles}
                     />
 
-                    {errors.email ? <p>{errors.email}</p> : null}
+                    {errors.email && touched.email ? (
+                      <p>{errors.email}</p>
+                    ) : null}
                   </div>
 
                   <div className="contact-register-message-input-prnt">
