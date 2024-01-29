@@ -11,6 +11,8 @@
   animation-name: mobile_search;
   animation-timing-function: linear;
   overflow: hidden;
+  z-index: 999;
+
   > form {
     display: flex;
     padding: 10px;
