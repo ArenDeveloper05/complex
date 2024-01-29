@@ -1,10 +1,9 @@
 import { useParallax } from "react-scroll-parallax";
 import { useSelector } from "react-redux";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
-import React, { useState } from "react";
+import { useMemo, useState } from "react";
 
 import "./ContactRegister.scss";
-import ContactRegisterForm from "./contact-register-form/ContactRegisterForm";
 
 import * as Yup from "yup";
 import { Field, Form, Formik } from "formik";
@@ -16,24 +15,15 @@ const inputStyles = {
 };
 
 const ContactRegister = () => {
-  // 1
-  // const [zoom, setZoom] = React.useState(9);
-  // const [center, setCenter] = useState([55.75, 37.57]);
-  // 1
-
-  // const mapState = React.useMemo(() => ({ center, zoom }), [zoom]); 1
-
-  // 2
   const [same, setSame] = useState({
-    zoom: 8,
+    zoom: 12,
     center: [40.179826, 44.513358],
   });
 
-  const mapState = React.useMemo(
+  const mapState = useMemo(
     () => ({ center: same.center, zoom: same.zoom }),
     [same]
   );
-  // 2
 
   const mapsData = useSelector((state) => state.contact.mapsData);
 
@@ -58,9 +48,10 @@ const ContactRegister = () => {
               state={mapState}
               className="contact-register-map-parent-ymaps-map"
             >
-              <Placemark geometry={[40.179826, 44.513358]} />
-              <Placemark geometry={[55.730357, 37.619115]} />
-              <Placemark geometry={[38.853314, -77.052702]} />
+              {mapsData &&
+                mapsData.map(({ id, mapCode }) => {
+                  return <Placemark geometry={mapCode} key={id} />;
+                })}
             </Map>
           </YMaps>
         </div>
@@ -72,24 +63,12 @@ const ContactRegister = () => {
             mapsData.map(({ id, title, mapCode, zoom, phone }) => {
               return (
                 <div className="contact-register-address-links-link" key={id}>
-                  <a
-                    href={`tel:${phone}`}
-                    className="contact-register-address-links-link-phone"
-                  >
-                    +374 {phone}
-                  </a>
-
                   <button
                     onClick={() => {
-                      // setCenter(mapCode); 1
-                      // setZoom(zoom); 1
-
-                      // 2
                       setSame({
                         zoom: zoom,
                         center: mapCode,
                       });
-                      // 2
                     }}
                     className="contact-register-address-links-link-btn"
                   >
@@ -97,6 +76,12 @@ const ContactRegister = () => {
                       {title}
                     </span>
                   </button>
+                  <a
+                    href={`tel:${phone}`}
+                    className="contact-register-address-links-link-phone"
+                  >
+                    +374 {phone}
+                  </a>
                 </div>
               );
             })}
