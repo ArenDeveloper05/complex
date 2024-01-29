@@ -468,6 +468,7 @@
 
   .swiper-slide-productsContainer-desc {
     height: 130px;
+    margin: 40px auto !important;
   }
 
   .home-top-container {
