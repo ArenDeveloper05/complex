@@ -14,6 +14,7 @@
     animation-iteration-count: 1;
     animation-name: whatsapp_anim;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
 
   img {
@@ -74,10 +75,10 @@
       transform: scale(1);
       box-shadow: 1px 1px 30px 1px var(--green-light);
     }
-    100% {
+    90% {
       right: 10%;
       bottom: 4%;
-      transform: scale(1);
+      transform: scale(1.8);
       box-shadow: 1px 1px 3px 1px var(--green-light);
     }
   }
