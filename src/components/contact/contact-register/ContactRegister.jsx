@@ -12,6 +12,8 @@ import { useTranslation } from "react-i18next";
 
 const inputStyles = {
   width: "100%",
+  color: "#002421",
+  backgroundColor: "#f4f5f8",
 };
 
 const ContactRegister = () => {
@@ -93,7 +95,7 @@ const ContactRegister = () => {
               name: "",
               surname: "",
               email: "",
-              file: null,
+              file: "",
             }}
             validationSchema={messageSchema}
             onSubmit={(values) => {
@@ -106,7 +108,7 @@ const ContactRegister = () => {
                   <div className="contact-register-message-input-prnt">
                     <TextField
                       name="name"
-                      label="name"
+                      label={t("main.main_contact.message_name_placeholder")}
                       value={values.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -118,7 +120,7 @@ const ContactRegister = () => {
                   <div className="contact-register-message-input-prnt">
                     <TextField
                       name="surname"
-                      label="surname"
+                      label={t("main.main_contact.message_surname_placeholder")}
                       value={values.surname}
                       onChange={handleChange}
                       sx={inputStyles}
@@ -132,7 +134,7 @@ const ContactRegister = () => {
                   <div className="contact-register-message-input-prnt">
                     <TextField
                       name="email"
-                      label="email"
+                      label={t("main.main_contact.message_email_placeholder")}
                       value={values.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -147,11 +149,12 @@ const ContactRegister = () => {
                   <div className="contact-register-message-input-prnt">
                     <Field
                       name="file"
+                      label="barev"
                       type="file"
                       value={values.file}
                       onChange={handleChange}
                     />
-                    {errors.file ? <p>{errors.file}</p> : null}
+                    {errors.file && touched.file ? <p>{errors.file}</p> : null}
                   </div>
 
                   <Button
@@ -159,7 +162,7 @@ const ContactRegister = () => {
                     variant="outlined"
                     className="contact-register-message-btn"
                   >
-                    send
+                    {t("main.main_contact.message_btn")}
                   </Button>
                 </Form>
               );

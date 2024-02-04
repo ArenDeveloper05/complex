@@ -320,9 +320,15 @@
     width: 80%;
   }
 
+  /* CONTACTR REGISTER */
+
   .contact-register {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    /* padding-left: 20px !important; */
+    /* padding-right: 20px !important; */
+  }
+
+  .contact-register-map-parent {
+    height: 450px;
   }
 }
 

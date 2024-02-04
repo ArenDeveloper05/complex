@@ -28,6 +28,12 @@
     "main_offer": {
       "title": "Mission",
       "text": "Climate is an invisible and integral part of human life. Using modern materials, energy-saving and information technologies, Ballu creates its own ecosystem in which people become climate leaders."
+    },
+    "main_contact": {
+      "message_name_placeholder": "Name",
+      "message_surname_placeholder": "Surname",
+      "message_email_placeholder": "Email",
+      "message_btn": "Send"
     }
   },
   "footer": {
