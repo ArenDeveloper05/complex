@@ -123,6 +123,7 @@ const ContactRegister = () => {
                       label={t("main.main_contact.message_surname_placeholder")}
                       value={values.surname}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       sx={inputStyles}
                     />
 
