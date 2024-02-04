@@ -6,7 +6,8 @@ import rotateImg2 from "../../../../../assets/images/rotate-img-2.png";
 const HomeOfferInnerImage = () => {
   return (
     <div className="home-offer-inner-image">
-      <div className="home-offer-inner-image-mainImg">
+      <img src={img} alt="img" className="home-offer-inner-image-mainImg-img" />
+      {/* <div className="home-offer-inner-image-mainImg">
         <img
           src={img}
           alt="img"
@@ -22,7 +23,7 @@ const HomeOfferInnerImage = () => {
           alt=""
           className="home-offer-inner-image-mainImg-secondRotateImg"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
