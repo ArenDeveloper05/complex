@@ -149,11 +149,6 @@
   .home-offer-inner-desc {
     width: 100%;
   }
-
-  .home-offer-inner-image {
-    /* width: 70%; */
-    /* height: 70%; */
-  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -179,7 +174,7 @@
 @media only screen and (max-width: 1030px) {
   .parallax {
     flex-direction: column;
-    justify-content: start !important;
+    justify-content: flex-start !important;
   }
 
   .parallax-desc {
@@ -323,12 +318,16 @@
   /* CONTACTR REGISTER */
 
   .contact-register {
-    /* padding-left: 20px !important; */
-    /* padding-right: 20px !important; */
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   .contact-register-map-parent {
     height: 450px;
+  }
+
+  .contact-register-message {
+    padding: 0;
   }
 }
 
