@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useParallax } from "react-scroll-parallax";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
@@ -14,25 +14,32 @@ const ContactRegisterMap = ({ mapsData, same, setSame }) => {
     speed: -10,
   });
 
-  function normalizeZoom() {
-    if (window.innerWidth <= 600) {
-      setSame((prev) => {
-        return {
-          ...prev,
-          zoom: 11,
-        };
-      });
+  const isChanged = useRef(false);
+
+  function handleResize() {
+    if (window.innerWidth <= 600 && !isChanged.current) {
+      normalizeZoom();
+      isChanged.current = true;
     }
   }
 
+  function normalizeZoom() {
+    setSame((prev) => {
+      return {
+        ...prev,
+        zoom: 11,
+      };
+    });
+  }
+
   useEffect(() => {
-    normalizeZoom();
+    handleResize();
   }, []);
 
   useEffect(() => {
-    window.addEventListener("resize", normalizeZoom);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", normalizeZoom);
+      window.removeEventListener("resize", handleResize);
     };
   });
 
