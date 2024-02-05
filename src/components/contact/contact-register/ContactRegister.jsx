@@ -16,7 +16,7 @@ const ContactRegister = () => {
 
   return (
     <div className="contact-register">
-      <ContactRegisterMap mapsData={mapsData} same={same} />
+      <ContactRegisterMap mapsData={mapsData} same={same} setSame={setSame} />
 
       <ContactRegisterAddress
         same={same}
