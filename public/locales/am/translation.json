@@ -32,6 +32,7 @@
     "main_contact": {
       "message_name_placeholder": "Անուն",
       "message_surname_placeholder": "Ազգանուն",
+      "message_message_placeholder": "Նամակ",
       "message_email_placeholder": "էլ․հասցե",
       "message_btn": "Ուղարկել"
     }

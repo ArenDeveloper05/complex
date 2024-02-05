@@ -3,12 +3,17 @@ import { useSelector } from "react-redux";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import { useMemo, useState } from "react";
 
-import "./ContactRegister.scss";
+import { FaLocationDot } from "react-icons/fa6";
+import { BsFillTelephoneInboundFill } from "react-icons/bs";
 
 import * as Yup from "yup";
 import { Field, Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
+
+import logo from "../../../assets/images/logo.png";
+
+import "./ContactRegister.scss";
 
 const inputStyles = {
   width: "100%",
@@ -38,6 +43,7 @@ const ContactRegister = () => {
   const messageSchema = Yup.object().shape({
     name: Yup.string().required(t("validations.required")),
     surname: Yup.string().required(t("validations.required")),
+    message: Yup.string().required(t("validations.required")),
     email: Yup.string().email().required(t("validations.required")),
   });
 
@@ -52,7 +58,18 @@ const ContactRegister = () => {
             >
               {mapsData &&
                 mapsData.map(({ id, mapCode }) => {
-                  return <Placemark geometry={mapCode} key={id} />;
+                  return (
+                    <Placemark
+                      geometry={mapCode}
+                      key={id}
+                      options={{
+                        iconLayout: "default#image",
+                        iconImageHref: logo,
+                        iconImageSize: [110, 60],
+                        iconImageOffset: [-17, -41],
+                      }}
+                    />
+                  );
                 })}
             </Map>
           </YMaps>
@@ -74,6 +91,7 @@ const ContactRegister = () => {
                     }}
                     className="contact-register-address-links-link-btn"
                   >
+                    <FaLocationDot />
                     <span className="contact-register-address-links-link-btn-box">
                       {title}
                     </span>
@@ -82,7 +100,8 @@ const ContactRegister = () => {
                     href={`tel:${phone}`}
                     className="contact-register-address-links-link-phone"
                   >
-                    +374 {phone}
+                    <BsFillTelephoneInboundFill />
+                    <span>+374 {phone}</span>
                   </a>
                 </div>
               );
@@ -94,6 +113,7 @@ const ContactRegister = () => {
             initialValues={{
               name: "",
               surname: "",
+              message: "",
               email: "",
               file: "",
             }}
@@ -144,6 +164,20 @@ const ContactRegister = () => {
 
                     {errors.email && touched.email ? (
                       <p>{errors.email}</p>
+                    ) : null}
+                  </div>
+                  <div className="contact-register-message-input-prnt">
+                    <TextField
+                      name="message"
+                      label={t("main.main_contact.message_message_placeholder")}
+                      value={values.message}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      sx={inputStyles}
+                    />
+
+                    {errors.message && touched.message ? (
+                      <p>{errors.message}</p>
                     ) : null}
                   </div>
 

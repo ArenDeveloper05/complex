@@ -1,7 +1,7 @@
 .home-counter {
   width: 100%;
   background: var(--thm-black);
-  padding: 20px 0;
+  padding: 10px 0;
 
   &-container {
     max-width: var(--global-max--width);
@@ -26,7 +26,7 @@
           font-family: var(--ff-2);
           font-weight: 500;
           color: white;
-          font-size: 44px;
+          font-size: 36px;
         }
       }
 
@@ -41,7 +41,7 @@
 
         & > p {
           font-family: var(--ff-2);
-          font-size: 24px;
+          font-size: 22px;
           color: white;
           letter-spacing: 2px;
           text-transform: uppercase;

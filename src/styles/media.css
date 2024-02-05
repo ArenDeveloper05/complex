@@ -70,7 +70,6 @@
 
   .home-counter {
     height: auto;
-    padding: 70px 0px;
   }
 
   .home-counter-container {
@@ -315,15 +314,15 @@
     width: 80%;
   }
 
-  /* CONTACTR REGISTER */
+  /* CONTACT REGISTER */
 
   .contact-register {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .contact-register-map-parent {
-    height: 450px;
+    height: 400px;
   }
 
   .contact-register-message {
@@ -351,15 +350,23 @@
     width: 100% !important;
     object-fit: contain !important;
   }
-
-  /* .footer-inner-bottom-desc-txt {
-    font-size: 14px !important;
-  } */
 }
 
 @media only screen and (max-width: 480px) {
+  .home-counter {
+    padding: 20px 0;
+  }
+
   .home-counter-container-box {
     width: 100%;
+  }
+
+  .home-counter-container-box-content > span {
+    font-size: 30px !important;
+  }
+
+  .home-counter-container-box-info > p {
+    font-size: 16px !important;
   }
 }
 

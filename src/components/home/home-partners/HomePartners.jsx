@@ -41,23 +41,23 @@ const HomePartners = () => {
         }}
         breakpoints={{
           330: {
-            slidesPerView: 2,
-          },
-          600: {
             slidesPerView: 3,
           },
-          800: {
+          600: {
             slidesPerView: 4,
           },
-          900: {
+          800: {
             slidesPerView: 6,
+          },
+          900: {
+            slidesPerView: 10,
           },
         }}
       >
         {partnersList &&
           partnersList.map(({ id, img }) => {
             return (
-              <SwiperSlide key={id}>
+              <SwiperSlide key={id} className="partner">
                 <img src={img ? img : ""} alt="swiper-item" />
               </SwiperSlide>
             );

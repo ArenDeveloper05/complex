@@ -32,6 +32,7 @@
     "main_contact": {
       "message_name_placeholder": "Имя",
       "message_surname_placeholder": "Фамилия",
+      "message_message_placeholder": "Сообщение",
       "message_email_placeholder": "Эл. почта",
       "message_btn": "Отправить"
     }

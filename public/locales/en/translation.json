@@ -32,6 +32,7 @@
     "main_contact": {
       "message_name_placeholder": "Name",
       "message_surname_placeholder": "Surname",
+      "message_message_placeholder": "Message",
       "message_email_placeholder": "Email",
       "message_btn": "Send"
     }
