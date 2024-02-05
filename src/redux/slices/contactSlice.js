@@ -5,14 +5,14 @@ const initialState = {
     {
       id: 1,
       title: "Դավիթ Բեկի 99",
-      zoom: 16,
+      zoom: 14,
       mapCode: [40.168096, 44.545591],
       phone: "33259559",
     },
     {
       id: 2,
       title: "Արշակունյաց 56/1",
-      zoom: 16,
+      zoom: 15,
       mapCode: [40.145111, 44.496314],
       phone: "33 33 33 33",
     },
