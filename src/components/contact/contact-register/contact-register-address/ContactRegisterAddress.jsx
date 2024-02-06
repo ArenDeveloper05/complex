@@ -32,6 +32,8 @@ const ContactRegisterAddress = ({ same, setSame, mapsData }) => {
               <div className="contact-register-address-links-link" key={id}>
                 <button
                   onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+
                     if (id !== same.id) {
                       setSame({
                         id: id,
