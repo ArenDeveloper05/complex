@@ -33,7 +33,6 @@ const ContactRegisterAddress = ({ same, setSame, mapsData }) => {
                 <button
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
-
                     if (id !== same.id) {
                       setSame({
                         id: id,
