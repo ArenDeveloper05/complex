@@ -1,12 +1,11 @@
 .home-slider {
   width: 100%;
-  height: calc(100vh - 190px);
+  height: 100vh;
   overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 190px;
 
   & > .swiper {
     width: 100%;
