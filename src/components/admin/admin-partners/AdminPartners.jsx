@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import { getPartners } from "../../../api/api";
 
 import { useDispatch } from "react-redux";
-import { barev } from "../../../redux/slices/adminSlice";
+import { changePartnersData } from "../../../redux/slices/adminSlice";
+import { notifyError, notifySuccess } from "../../../utils/helpers/toast/toast";
+import { ToastContainer } from "react-toastify";
 
 import AdminPartnersForm from "./admin-partners-form/AdminPartnersForm";
 import AdminPartnersList from "./admin-partners-list/AdminPartnersList";
@@ -10,31 +12,29 @@ import AdminPartnersList from "./admin-partners-list/AdminPartnersList";
 const AdminPartners = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    getPartnersData();
-  }, []);
-
   const getPartnersData = async () => {
     try {
       const {
         data: { partners },
       } = await getPartners();
-      dispatch(
-        barev({
-          type: "changeState",
-          payload: partners,
-        })
-      );
+      dispatch(changePartnersData(partners));
+      notifySuccess("Something went wrong");
     } catch (error) {
       console.log(error.message);
+      notifyError("Something went wrong");
     }
   };
+
+  useEffect(() => {
+    getPartnersData();
+  }, []);
 
   return (
     <div className="admin-content-partners">
       <AdminPartnersForm getPartnersData={getPartnersData} />
 
       <AdminPartnersList getPartnersData={getPartnersData} />
+      <ToastContainer />
     </div>
   );
 };

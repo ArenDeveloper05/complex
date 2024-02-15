@@ -26,7 +26,7 @@ export const getPartners = async () => {
 
 // POST
 
-export const addPartners = async (item) => {
+export const addPartner = async (item) => {
   return await apiForImages.post("/partner", item);
 };
 

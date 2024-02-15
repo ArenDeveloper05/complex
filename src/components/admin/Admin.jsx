@@ -1,7 +1,7 @@
-import "./Admin.scss";
-
 import { useState } from "react";
 import { adminConfig } from "./adminConfig";
+
+import "./Admin.scss";
 
 const Admin = () => {
   const [active, setActive] = useState(1);

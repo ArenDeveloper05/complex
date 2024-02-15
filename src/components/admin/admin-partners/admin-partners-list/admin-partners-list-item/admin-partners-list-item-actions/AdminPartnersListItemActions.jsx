@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import AdminPartnersListItemBtn from "../admin-partners-list-item-btn/AdminPartnersListItemBtn";
 import AdminPartnersListItemActionsModal from "./admin-partners-list-item-actions-modal/AdminPartnersListItemActionsModal";
 
@@ -8,6 +9,8 @@ const AdminPartnersListItemActions = ({ getPartnersData, item }) => {
   const handleDeleteModal = () => {
     setDeleteModal((prev) => !prev);
   };
+
+  const handleEdit = () => {};
 
   return (
     <div className="admin-content-partners-list-item-actions">

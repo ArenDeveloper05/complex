@@ -3,7 +3,8 @@ import { Field, Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
 
 import { AiOutlinePlus } from "react-icons/ai";
-import { addPartners } from "../../../../api/api";
+import { addPartner } from "../../../../api/api";
+import { generateFormData } from "../../../../utils/helpers/helpers";
 
 const inputStyles = {
   width: "100%",
@@ -20,9 +21,9 @@ const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
 };
 
 const AdminPartnersForm = ({ getPartnersData }) => {
-  const addPartner = async (item) => {
+  const addPartnerFunction = async (item) => {
     try {
-      const { data } = await addPartners(item);
+      await addPartner(item);
       getPartnersData();
     } catch (error) {
       console.log(error.message);
@@ -45,13 +46,10 @@ const AdminPartnersForm = ({ getPartnersData }) => {
           website_url: "",
           icon: "",
         }}
-        onSubmit={(values, { resetForm }) => {
-          const formDa = new FormData();
-          formDa.append("icon", values.icon);
-          formDa.append("name", values.name);
-          formDa.append("description", values.desc);
-          formDa.append("website_url", values.website_url);
-          addPartner(formDa);
+        onSubmit={({ icon, name, desc, website_url }, { resetForm }) => {
+          addPartnerFunction(
+            generateFormData({ icon, name, description: desc, website_url })
+          );
           resetForm();
         }}
         validationSchema={partnersSchema}
