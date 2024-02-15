@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import sliderBG from "../../assets/images/slider/design.png";
+import sliderBG from "../../assets/images/slider/design.jpg";
 import homeSliderAirConditioner from "../../assets/images/homeSliderAirConditioner.png";
 import homeSliderGasBoiler from "../../assets/images/homeSliderGasBoiler.png";
 import homeSliderSolarConverter from "../../assets/images/homeSliderSolarConverter.png";
