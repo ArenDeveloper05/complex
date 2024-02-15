@@ -4,8 +4,9 @@ import { BsFillTelephoneInboundFill } from "react-icons/bs";
 import * as Yup from "yup";
 import { Field, Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
-
 import { useTranslation } from "react-i18next";
+
+import * as emailjs from "emailjs-com";
 
 const inputStyles = {
   width: "100%",
@@ -72,6 +73,19 @@ const ContactRegisterAddress = ({ same, setSame, mapsData }) => {
           validationSchema={messageSchema}
           onSubmit={(values) => {
             console.log(values);
+            emailjs
+              .send(
+                // process.env.REACT_APP_FORMIK_SERVICE_ID,
+                "service_hestll9",
+                // process.env.REACT_APP_FORMIK_TEMPLATE_ID,
+                "template_m4wl6b9",
+                values,
+                { user_id: "TeZjnc3xT1BqKav-J" }
+                // process.env.REACT_APP_FORMIK_PUBLIC_KEY
+              )
+              .then(() => {
+                console.log("email sent");
+              });
           }}
         >
           {({ errors, values, touched, handleChange, handleBlur }) => {
