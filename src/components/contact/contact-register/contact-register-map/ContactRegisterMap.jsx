@@ -3,8 +3,11 @@ import { useParallax } from "react-scroll-parallax";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 import logo from "../../../../assets/images/logo.png";
+import { useSelector } from "react-redux";
 
-const ContactRegisterMap = ({ mapsData, same, setSame }) => {
+const ContactRegisterMap = ({ same, setSame }) => {
+  const mapsData = useSelector((state) => state.contact.mapsData);
+
   const mapState = useMemo(
     () => ({ center: same.center, zoom: same.zoom }),
     [same]

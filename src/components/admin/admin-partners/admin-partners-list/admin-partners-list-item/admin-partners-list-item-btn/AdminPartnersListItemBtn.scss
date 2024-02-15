@@ -1,0 +1,55 @@
+.btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  position: relative;
+  padding: 13px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  color: var(--orange-light);
+  transition: border 300ms, color 300ms;
+  border: var(--green-dark) solid 0.15em;
+
+  & > p {
+    z-index: 1;
+  }
+
+  &:hover {
+    color: #212121;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    opacity: 50%;
+    border-radius: 50%;
+    background: var(--green-dark);
+    transition: transform 500ms, background 300ms;
+  }
+
+  &::before {
+    left: 0;
+    transform: translateX(-8em);
+  }
+
+  &::after {
+    right: 0;
+    transform: translateX(8em);
+  }
+
+  &:hover:before {
+    transform: translateX(-1em);
+  }
+
+  &:hover:after {
+    transform: translateX(1em);
+  }
+}

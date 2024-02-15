@@ -6,6 +6,7 @@ import { Field, Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const inputStyles = {
   width: "100%",
@@ -13,8 +14,9 @@ const inputStyles = {
   backgroundColor: "#f4f5f8",
 };
 
-const ContactRegisterAddress = ({ same, setSame, mapsData }) => {
+const ContactRegisterAddress = ({ same, setSame }) => {
   const { t } = useTranslation();
+  const mapsData = useSelector((state) => state.contact.mapsData);
 
   const messageSchema = Yup.object().shape({
     name: Yup.string().required(t("validations.required")),
@@ -54,7 +56,7 @@ const ContactRegisterAddress = ({ same, setSame, mapsData }) => {
                   className="contact-register-address-links-link-phone"
                 >
                   <BsFillTelephoneInboundFill />
-                  <span>+374 {phone}</span>
+                  <span>{phone}</span>
                 </a>
               </div>
             );
@@ -135,7 +137,6 @@ const ContactRegisterAddress = ({ same, setSame, mapsData }) => {
                 <div className="contact-register-message-input-prnt">
                   <Field
                     name="file"
-                    label="barev"
                     type="file"
                     value={values.file}
                     onChange={handleChange}

@@ -12,17 +12,11 @@ const ContactRegister = () => {
     center: [40.189829, 44.559399],
   });
 
-  const mapsData = useSelector((state) => state.contact.mapsData);
-
   return (
     <div className="contact-register">
-      <ContactRegisterMap mapsData={mapsData} same={same} setSame={setSame} />
+      <ContactRegisterMap same={same} setSame={setSame} />
 
-      <ContactRegisterAddress
-        same={same}
-        setSame={setSame}
-        mapsData={mapsData}
-      />
+      <ContactRegisterAddress same={same} setSame={setSame} />
     </div>
   );
 };
