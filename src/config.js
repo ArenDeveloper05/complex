@@ -16,6 +16,7 @@ export const navConfig = [
       en: "About us",
     },
     link: "/",
+    hasChildren: false,
   },
   {
     id: 2,
@@ -25,6 +26,8 @@ export const navConfig = [
       en: "Products",
     },
     link: "/",
+
+    hasChildren: true,
   },
   {
     id: 3,
@@ -34,6 +37,7 @@ export const navConfig = [
       en: "Services",
     },
     link: "/",
+    hasChildren: false,
   },
 
   {
@@ -44,6 +48,7 @@ export const navConfig = [
       en: "News",
     },
     link: "/",
+    hasChildren: false,
   },
   {
     id: 7,
@@ -53,6 +58,7 @@ export const navConfig = [
       en: "Contact",
     },
     link: ROUTER.CONTACT_PAGE_ROUTE,
+    hasChildren: false,
   },
 ];
 
