@@ -21,7 +21,11 @@ const NavLinksLink = ({ item }) => {
         >
           {item.title[language]}
         </Link>
-        {item.hasChildren && <NavTree data={data} />}
+        {item.hasChildren && (
+          <div className="tree-background">
+            <NavTree data={data} />{" "}
+          </div>
+        )}
       </li>
     </>
   );

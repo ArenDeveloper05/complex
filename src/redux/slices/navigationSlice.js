@@ -9,7 +9,7 @@ const initialState = {
         {
           id: 1,
           title: "Գազի կաթսաներ",
-          children: [{ id: 3, title: "Գազի կաթսաներ", children: [] }],
+          children: [{ id: 1, title: "Գազի կաթսաներ", children: [] }],
         },
         { id: 2, title: "Գազի կաթսաներ", children: [] },
         {
@@ -25,6 +25,29 @@ const initialState = {
       children: [
         { id: 1, title: "Գազի կաթսաներ", children: [] },
         { id: 2, title: "Գազի կաթսաներ", children: [] },
+      ],
+    },
+    {
+      id: 3,
+      title: "Գազի կաթսաներ",
+      children: [
+        {
+          id: 1,
+          title: "Գազի կաթսաներ",
+          children: [
+            {
+              id: 1,
+              title: "Գազի կաթսաներ",
+              children: [{ id: 1, title: "Գազի կաթսաներ", children: [] }],
+            },
+          ],
+        },
+        { id: 2, title: "Գազի կաթսաներ", children: [] },
+        {
+          id: 3,
+          title: "Գազի կաթսաներ",
+          children: [],
+        },
       ],
     },
   ],
