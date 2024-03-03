@@ -27,9 +27,15 @@ export const getPartners = async () => {
 // POST
 
 export const addPartner = async (item) => {
+  console.log(item, "in get item");
   return await apiForImages.post("/partner", item);
 };
 
+export const editPartners = async (id, element) => {
+  console.log(id, "testId");
+  console.log(element, "testEl");
+  return await api.post(`/partner/${id}`, element);
+};
 // PUT
 
 // DELETE

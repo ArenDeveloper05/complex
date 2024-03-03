@@ -1,0 +1,35 @@
+.form {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+
+  & > form {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+    & > .field {
+      & > p {
+        color: red;
+      }
+
+      & > input[type="file"] {
+      }
+
+      & > div {
+        border-radius: 10px;
+      }
+    }
+
+    label {
+      text-transform: capitalize;
+      font-size: 18px;
+      color: var(--orange-dark) !important;
+    }
+
+    fieldset {
+      border: none;
+      outline: none;
+    }
+  }
+}

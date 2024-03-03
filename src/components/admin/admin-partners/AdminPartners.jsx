@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { getPartners } from "../../../api/api";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changePartnersData } from "../../../redux/slices/adminSlice";
 import { notifyError, notifySuccess } from "../../../utils/helpers/toast/toast";
 import { ToastContainer } from "react-toastify";
@@ -18,7 +18,7 @@ const AdminPartners = () => {
         data: { partners },
       } = await getPartners();
       dispatch(changePartnersData(partners));
-      notifySuccess("Something went wrong");
+      notifySuccess("Successfully");
     } catch (error) {
       console.log(error.message);
       notifyError("Something went wrong");

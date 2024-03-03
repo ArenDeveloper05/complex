@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  partnersData: [{ id: 1, name: "barev", icon: "", website_url: "asd" }],
+  partnersData: [],
 };
 
 const adminSlice = createSlice({
@@ -9,10 +9,10 @@ const adminSlice = createSlice({
   initialState,
   reducers: {
     changePartnersData: (state, { payload }) => {
-      state = {
+      return (state = {
         ...state,
         partnersData: payload,
-      };
+      });
     },
   },
 });
