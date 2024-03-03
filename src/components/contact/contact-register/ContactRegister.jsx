@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
-import "./ContactRegister.scss";
 import ContactRegisterMap from "./contact-register-map/ContactRegisterMap";
 import ContactRegisterAddress from "./contact-register-address/ContactRegisterAddress";
+
+import "./ContactRegister.scss";
 
 const ContactRegister = () => {
   const [same, setSame] = useState({

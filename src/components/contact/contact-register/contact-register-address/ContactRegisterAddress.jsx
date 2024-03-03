@@ -6,8 +6,9 @@ import { Field, Form, Formik } from "formik";
 import { Button, TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { useRef } from "react";
 
-import * as emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const inputStyles = {
   width: "100%",
@@ -25,6 +26,8 @@ const ContactRegisterAddress = ({ same, setSame }) => {
     message: Yup.string().required(t("validations.required")),
     email: Yup.string().email().required(t("validations.required")),
   });
+
+  const form = useRef();
 
   return (
     <div className="contact-register-address">
@@ -76,15 +79,9 @@ const ContactRegisterAddress = ({ same, setSame }) => {
           onSubmit={(values) => {
             console.log(values);
             emailjs
-              .send(
-                // process.env.REACT_APP_FORMIK_SERVICE_ID,
-                "service_hestll9",
-                // process.env.REACT_APP_FORMIK_TEMPLATE_ID,
-                "template_m4wl6b9",
-                values,
-                { user_id: "TeZjnc3xT1BqKav-J" }
-                // process.env.REACT_APP_FORMIK_PUBLIC_KEY
-              )
+              .sendForm("service_gy3nlc6", "template_ypytqf1", form.current, {
+                publicKey: "l6rTJV2xckLCOian9",
+              })
               .then(() => {
                 console.log("email sent");
               });
@@ -92,7 +89,7 @@ const ContactRegisterAddress = ({ same, setSame }) => {
         >
           {({ errors, values, touched, handleChange, handleBlur }) => {
             return (
-              <Form>
+              <Form ref={form}>
                 <div className="contact-register-message-input-prnt">
                   <TextField
                     name="name"

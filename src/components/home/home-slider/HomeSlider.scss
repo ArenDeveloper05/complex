@@ -48,22 +48,16 @@
             gap: 25px;
             overflow: hidden;
             // border: solid;
+            padding-left: 100px;
+            padding-bottom: 40px;
+
             .info {
               font-family: "MyRaid";
               font-weight: 300;
               font-size: 40px;
-              color: #5c5c5c;
+              color: white;
               white-space: pre-wrap;
               text-align: right;
-            }
-
-            .info-animated-2 {
-              text-align: left;
-              transform-origin: left;
-            }
-
-            .info-animated-3 {
-              text-align: center;
             }
 
             .title {

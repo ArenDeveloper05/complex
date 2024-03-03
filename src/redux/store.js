@@ -5,6 +5,7 @@ import countReducer from "./slices/countSlice";
 import sliderReducer from "./slices/sliderSlice";
 import contactReducer from "./slices/contactSlice";
 import adminReducer from "./slices/adminSlice";
+import navigationReducer from "./slices/navigationSlice";
 
 const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ const store = configureStore({
     slider: sliderReducer,
     contact: contactReducer,
     admin: adminReducer,
+    navigation: navigationReducer,
   },
 });
 
