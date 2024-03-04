@@ -58,7 +58,7 @@ const AdminPartnersForm = ({ getPartnersData }) => {
           icon: "",
         }}
         btnProps={{
-          txt: "avelacru",
+          txt: "Ավելացնել",
           type: "submit",
         }}
         fieldsData={[
