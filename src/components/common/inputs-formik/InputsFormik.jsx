@@ -23,34 +23,18 @@ const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
 };
 
 const InputsFormik = ({
-  item,
   formikFunction,
-  inputsValues,
-  functionArgument,
+  initialValues,
   btnProps,
   validationSchema,
   fieldsData,
 }) => {
-  console.log(item);
-
   return (
     <div className="form">
       <Formik
-        initialValues={{
-          name: inputsValues.name,
-          desc: inputsValues.desc,
-          website_url: inputsValues.website_url,
-          icon: inputsValues.icon,
-        }}
-        onSubmit={({ icon, name, desc, website_url }, { resetForm }) => {
-          console.log({ icon, name, description: desc, website_url });
-
-          formikFunction({
-            icon: typeof icon === "string" ? null : icon,
-            name,
-            description: desc,
-            website_url,
-          });
+        initialValues={initialValues}
+        onSubmit={(values, { resetForm }) => {
+          formikFunction(values);
 
           resetForm({ values: "" });
         }}
@@ -59,64 +43,35 @@ const InputsFormik = ({
         {({ errors, touched, values, handleChange, handleBlur }) => {
           return (
             <Form>
-              {/* {fieldsData &&
+              {fieldsData &&
                 fieldsData.map(({ id, name, label, type }) => {
                   return (
                     <div className="field" key={id}>
-                      <TextField
-                        name={name}
-                        label={label}
-                        value={values.name}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        sx={inputStyles}
-                      />
-                      {errors.name && touched.name ? <p>wrong</p> : null}
+                      {type === "text" ? (
+                        <>
+                          <TextField
+                            name={name}
+                            label={label}
+                            value={values[name]}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            sx={inputStyles}
+                          />
+                          {errors[name] && touched[name] ? <p>wrong</p> : null}
+                        </>
+                      ) : (
+                        <>
+                          <Field
+                            type="file"
+                            name={name}
+                            component={FileInputField}
+                          />
+                          {errors[name] && touched[name] ? <p>wrong</p> : null}
+                        </>
+                      )}
                     </div>
                   );
-                })} */}
-              <div className="field">
-                <TextField
-                  name="name"
-                  label="Գործընկեր"
-                  value={values.name}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  sx={inputStyles}
-                />
-                {errors.name && touched.name ? <p>wrong</p> : null}
-              </div>
-
-              <div className="field">
-                <TextField
-                  name="website_url"
-                  label="Կայքի լինկ"
-                  value={values.website_url}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  sx={inputStyles}
-                />
-                {errors.website_url && touched.website_url ? (
-                  <p>wrong</p>
-                ) : null}
-              </div>
-
-              <div className="field">
-                <TextField
-                  name="desc"
-                  label="Նկարագրություն"
-                  value={values.desc}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  sx={inputStyles}
-                />
-                {errors.desc && touched.desc ? <p>wrong</p> : null}
-              </div>
-
-              <div className="field">
-                <Field type="file" name="icon" component={FileInputField} />
-                {errors.icon && touched.icon ? <p>wrong</p> : null}
-              </div>
+                })}
 
               <FormikBtn txt={btnProps.txt} type={btnProps.type} />
             </Form>

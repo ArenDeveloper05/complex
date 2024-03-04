@@ -8,7 +8,7 @@ import {
 
 import AdminPartnersListItemBtn from "../../admin-partners-list-item-btn/AdminPartnersListItemBtn";
 
-const AdminPartnersListItemActionsModal = ({ item, handleDeleteModal }) => {
+const ActionsModal = ({ item, handleDeleteModal }) => {
   const { getPartnersData } = useContext(AdminPartnersContext);
 
   const deletePartner = async (partnerId) => {
@@ -46,4 +46,4 @@ const AdminPartnersListItemActionsModal = ({ item, handleDeleteModal }) => {
   );
 };
 
-export default AdminPartnersListItemActionsModal;
+export default ActionsModal;

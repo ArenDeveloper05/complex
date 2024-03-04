@@ -23,7 +23,7 @@ const NavLinksLink = ({ item }) => {
         </Link>
         {item.hasChildren && (
           <div className="tree-background">
-            <NavTree data={data} />{" "}
+            <NavTree data={data} />
           </div>
         )}
       </li>

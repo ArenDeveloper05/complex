@@ -27,6 +27,8 @@ const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
 
 const AdminPartnersForm = ({ getPartnersData }) => {
   const addPartnerFunction = async (item) => {
+    console.log("item to add");
+    console.log(item);
     try {
       await addPartner(item);
       getPartnersData();
@@ -39,7 +41,7 @@ const AdminPartnersForm = ({ getPartnersData }) => {
 
   const partnersSchema = Yup.object().shape({
     name: Yup.string().required(),
-    desc: Yup.string().required(),
+    description: Yup.string().required(),
     website_url: Yup.string().required(),
     icon: Yup.mixed().required(),
   });
@@ -49,9 +51,9 @@ const AdminPartnersForm = ({ getPartnersData }) => {
       <InputsFormik
         formikFunction={addPartnerFunction}
         validationSchema={partnersSchema}
-        inputsValues={{
+        initialValues={{
           name: "",
-          desc: "",
+          description: "",
           website_url: "",
           icon: "",
         }}
@@ -65,6 +67,24 @@ const AdminPartnersForm = ({ getPartnersData }) => {
             name: "name",
             label: "Գործընկեր",
             type: "text",
+          },
+          {
+            id: 2,
+            name: "website_url",
+            label: "Կայքի լինկ",
+            type: "text",
+          },
+          {
+            id: 3,
+            name: "description",
+            label: "Նկարագրություն",
+            type: "text",
+          },
+          {
+            id: 4,
+            name: "icon",
+            label: "",
+            type: "file",
           },
         ]}
       />

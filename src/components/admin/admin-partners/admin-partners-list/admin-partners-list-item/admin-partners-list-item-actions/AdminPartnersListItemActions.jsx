@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import AdminPartnersListItemBtn from "../admin-partners-list-item-btn/AdminPartnersListItemBtn";
-import AdminPartnersListItemActionsModal from "./admin-partners-list-item-actions-modal/AdminPartnersListItemActionsModal";
-import AdminPartnersListItemActionsEditModal from "./admin-partners-list-item-actions-editModal/AdminPartnersListItemActionsEditModal";
+import ActionsModal from "./actions-modal/ActionsModal";
+import EditModal from "./edit-modal/EditModal";
 
 const AdminPartnersListItemActions = ({ item }) => {
   const [deleteModal, setDeleteModal] = useState(false);
@@ -23,12 +23,7 @@ const AdminPartnersListItemActions = ({ item }) => {
         onClickFunction={handleEditModal}
       />
 
-      {editModal && (
-        <AdminPartnersListItemActionsEditModal
-          item={item}
-          closeFunction={handleEditModal}
-        />
-      )}
+      {editModal && <EditModal item={item} closeFunction={handleEditModal} />}
 
       <AdminPartnersListItemBtn
         txt="delete"
@@ -36,10 +31,7 @@ const AdminPartnersListItemActions = ({ item }) => {
       />
 
       {deleteModal && (
-        <AdminPartnersListItemActionsModal
-          item={item}
-          handleDeleteModal={handleDeleteModal}
-        />
+        <ActionsModal item={item} handleDeleteModal={handleDeleteModal} />
       )}
     </div>
   );
