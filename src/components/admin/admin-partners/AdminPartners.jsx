@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { createContext, useEffect } from "react";
 import { getPartners } from "../../../api/api";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -9,6 +9,8 @@ import { ToastContainer } from "react-toastify";
 import AdminPartnersForm from "./admin-partners-form/AdminPartnersForm";
 import AdminPartnersList from "./admin-partners-list/AdminPartnersList";
 
+export const AdminPartnersContext = createContext();
+
 const AdminPartners = () => {
   const dispatch = useDispatch();
 
@@ -18,7 +20,6 @@ const AdminPartners = () => {
         data: { partners },
       } = await getPartners();
       dispatch(changePartnersData(partners));
-      notifySuccess("Successfully");
     } catch (error) {
       console.log(error.message);
       notifyError("Something went wrong");
@@ -31,9 +32,10 @@ const AdminPartners = () => {
 
   return (
     <div className="admin-content-partners">
-      <AdminPartnersForm getPartnersData={getPartnersData} />
-
-      <AdminPartnersList getPartnersData={getPartnersData} />
+      <AdminPartnersContext.Provider value={{ getPartnersData }}>
+        <AdminPartnersForm getPartnersData={getPartnersData} />
+        <AdminPartnersList />
+      </AdminPartnersContext.Provider>
       <ToastContainer />
     </div>
   );

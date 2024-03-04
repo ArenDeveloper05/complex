@@ -4,7 +4,7 @@ import AdminPartnersListItemBtn from "../admin-partners-list-item-btn/AdminPartn
 import AdminPartnersListItemActionsModal from "./admin-partners-list-item-actions-modal/AdminPartnersListItemActionsModal";
 import AdminPartnersListItemActionsEditModal from "./admin-partners-list-item-actions-editModal/AdminPartnersListItemActionsEditModal";
 
-const AdminPartnersListItemActions = ({ getPartnersData, item }) => {
+const AdminPartnersListItemActions = ({ item }) => {
   const [deleteModal, setDeleteModal] = useState(false);
   const [editModal, setEditModal] = useState(false);
 
@@ -38,7 +38,6 @@ const AdminPartnersListItemActions = ({ getPartnersData, item }) => {
       {deleteModal && (
         <AdminPartnersListItemActionsModal
           item={item}
-          getPartnersData={getPartnersData}
           handleDeleteModal={handleDeleteModal}
         />
       )}

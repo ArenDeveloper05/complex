@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import AdminPartnersListItem from "./admin-partners-list-item/AdminPartnersListItem";
 
-const AdminPartnersList = ({ getPartnersData }) => {
+const AdminPartnersList = () => {
   const partnersData = useSelector((state) => state.admin.partnersData);
 
   return (
@@ -9,13 +9,7 @@ const AdminPartnersList = ({ getPartnersData }) => {
       {partnersData &&
         partnersData.length !== 0 &&
         partnersData.map((item) => {
-          return (
-            <AdminPartnersListItem
-              key={item.id}
-              item={item}
-              getPartnersData={getPartnersData}
-            />
-          );
+          return <AdminPartnersListItem key={item.id} item={item} />;
         })}
     </div>
   );

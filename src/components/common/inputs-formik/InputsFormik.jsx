@@ -28,15 +28,10 @@ const InputsFormik = ({
   inputsValues,
   functionArgument,
   btnProps,
+  validationSchema,
+  fieldsData,
 }) => {
   console.log(item);
-
-  const partnersSchema = Yup.object().shape({
-    name: Yup.string().required(),
-    desc: Yup.string().required(),
-    website_url: Yup.string().required(),
-    icon: Yup.mixed().required(),
-  });
 
   return (
     <div className="form">
@@ -48,20 +43,42 @@ const InputsFormik = ({
           icon: inputsValues.icon,
         }}
         onSubmit={({ icon, name, desc, website_url }, { resetForm }) => {
-          formikFunction(
-            generateFormData({ icon, name, description: desc, website_url })
-          );
-          resetForm();
+          console.log({ icon, name, description: desc, website_url });
+
+          formikFunction({
+            icon: typeof icon === "string" ? null : icon,
+            name,
+            description: desc,
+            website_url,
+          });
+
+          resetForm({ values: "" });
         }}
-        validationSchema={partnersSchema}
+        validationSchema={validationSchema}
       >
         {({ errors, touched, values, handleChange, handleBlur }) => {
           return (
             <Form>
+              {/* {fieldsData &&
+                fieldsData.map(({ id, name, label, type }) => {
+                  return (
+                    <div className="field" key={id}>
+                      <TextField
+                        name={name}
+                        label={label}
+                        value={values.name}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        sx={inputStyles}
+                      />
+                      {errors.name && touched.name ? <p>wrong</p> : null}
+                    </div>
+                  );
+                })} */}
               <div className="field">
                 <TextField
                   name="name"
-                  label="gorcynker"
+                  label="Գործընկեր"
                   value={values.name}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -73,7 +90,7 @@ const InputsFormik = ({
               <div className="field">
                 <TextField
                   name="website_url"
-                  label="kayqi link"
+                  label="Կայքի լինկ"
                   value={values.website_url}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -87,7 +104,7 @@ const InputsFormik = ({
               <div className="field">
                 <TextField
                   name="desc"
-                  label="nkaragrutyun"
+                  label="Նկարագրություն"
                   value={values.desc}
                   onChange={handleChange}
                   onBlur={handleBlur}

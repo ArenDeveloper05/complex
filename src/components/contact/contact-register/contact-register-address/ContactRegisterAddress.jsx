@@ -9,6 +9,10 @@ import { useSelector } from "react-redux";
 import { useRef } from "react";
 
 import emailjs from "@emailjs/browser";
+import {
+  notifyError,
+  notifySuccess,
+} from "../../../../utils/helpers/toast/toast";
 
 const inputStyles = {
   width: "100%",
@@ -76,14 +80,17 @@ const ContactRegisterAddress = ({ same, setSame }) => {
             file: "",
           }}
           validationSchema={messageSchema}
-          onSubmit={(values) => {
-            console.log(values);
+          onSubmit={(values, { resetForm }) => {
             emailjs
               .sendForm("service_gy3nlc6", "template_ypytqf1", form.current, {
                 publicKey: "l6rTJV2xckLCOian9",
               })
               .then(() => {
-                console.log("email sent");
+                notifySuccess("Նամակը հաջողությամբ ուղարկվեց");
+                resetForm({ values: "" });
+              })
+              .catch((err) => {
+                notifyError("Սխալ կատարվեց");
               });
           }}
         >

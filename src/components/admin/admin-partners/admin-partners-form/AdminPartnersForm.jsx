@@ -6,6 +6,10 @@ import { addPartner } from "../../../../api/api";
 import { generateFormData } from "../../../../utils/helpers/helpers";
 import FormikBtn from "../../../common/formik-btn/FormikBtn";
 import InputsFormik from "../../../common/inputs-formik/InputsFormik";
+import {
+  notifyError,
+  notifySuccess,
+} from "../../../../utils/helpers/toast/toast";
 
 const inputStyles = {
   width: "100%",
@@ -26,8 +30,10 @@ const AdminPartnersForm = ({ getPartnersData }) => {
     try {
       await addPartner(item);
       getPartnersData();
+      notifySuccess("Գործընկերը հաջողությամբ ավելացվեց");
     } catch (error) {
       console.log(error.message);
+      notifyError("Սխալ կատարվեց");
     }
   };
 
@@ -40,74 +46,9 @@ const AdminPartnersForm = ({ getPartnersData }) => {
 
   return (
     <div className="admin-content-partners-form">
-      {/* <Formik
-        initialValues={{
-          name: "",
-          desc: "",
-          website_url: "",
-          icon: "",
-        }}
-        onSubmit={({ icon, name, desc, website_url }, { resetForm }) => {
-          addPartnerFunction(
-            generateFormData({ icon, name, description: desc, website_url })
-          );
-          resetForm();
-        }}
-        validationSchema={partnersSchema}
-      >
-        {({ errors, touched, values, handleChange, handleBlur }) => {
-          return (
-            <Form>
-              <div className="field">
-                <TextField
-                  name="name"
-                  label="gorcynker"
-                  value={values.name}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  sx={inputStyles}
-                />
-                {errors.name && touched.name ? <p>wrong</p> : null}
-              </div>
-
-              <div className="field">
-                <TextField
-                  name="website_url"
-                  label="kayqi link"
-                  value={values.website_url}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  sx={inputStyles}
-                />
-                {errors.website_url && touched.website_url ? (
-                  <p>wrong</p>
-                ) : null}
-              </div>
-
-              <div className="field">
-                <TextField
-                  name="desc"
-                  label="nkaragrutyun"
-                  value={values.desc}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  sx={inputStyles}
-                />
-                {errors.desc && touched.desc ? <p>wrong</p> : null}
-              </div>
-
-              <div className="field">
-                <Field type="file" name="icon" component={FileInputField} />
-                {errors.icon && touched.icon ? <p>wrong</p> : null}
-              </div>
-
-              <FormikBtn txt="Avelacnel" type="submit" />
-            </Form>
-          );
-        }}
-      </Formik> */}
       <InputsFormik
         formikFunction={addPartnerFunction}
+        validationSchema={partnersSchema}
         inputsValues={{
           name: "",
           desc: "",
@@ -118,6 +59,14 @@ const AdminPartnersForm = ({ getPartnersData }) => {
           txt: "avelacru",
           type: "submit",
         }}
+        fieldsData={[
+          {
+            id: 1,
+            name: "name",
+            label: "Գործընկեր",
+            type: "text",
+          },
+        ]}
       />
     </div>
   );

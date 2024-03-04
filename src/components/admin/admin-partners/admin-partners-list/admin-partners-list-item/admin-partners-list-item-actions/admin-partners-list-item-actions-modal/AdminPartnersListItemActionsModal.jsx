@@ -1,17 +1,24 @@
+import { useContext } from "react";
 import { deletePartners } from "../../../../../../../api/api";
+import { AdminPartnersContext } from "../../../../AdminPartners";
+import {
+  notifyError,
+  notifySuccess,
+} from "../../../../../../../utils/helpers/toast/toast";
+
 import AdminPartnersListItemBtn from "../../admin-partners-list-item-btn/AdminPartnersListItemBtn";
 
-const AdminPartnersListItemActionsModal = ({
-  item,
-  getPartnersData,
-  handleDeleteModal,
-}) => {
+const AdminPartnersListItemActionsModal = ({ item, handleDeleteModal }) => {
+  const { getPartnersData } = useContext(AdminPartnersContext);
+
   const deletePartner = async (partnerId) => {
     try {
-      const { data } = await deletePartners(partnerId);
+      await deletePartners(partnerId);
       getPartnersData();
+      notifySuccess("Գործընկերը հաջողությամբ ջնջվեց");
     } catch (error) {
       console.log(error.message);
+      notifyError("Սխալ կատարվեց");
     }
   };
 

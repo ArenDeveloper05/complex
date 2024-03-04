@@ -1,14 +1,24 @@
+import { useContext } from "react";
 import { editPartners } from "../../../../../../../api/api";
+import { notifySuccess } from "../../../../../../../utils/helpers/toast/toast";
+import { AdminPartnersContext } from "../../../../AdminPartners";
+
 import InputsFormik from "../../../../../../common/inputs-formik/InputsFormik";
 
 const AdminPartnersListItemActionsEditModal = ({ item, closeFunction }) => {
-  const editPartnersFunction = async (partnerId, element) => {
-    console.log(element, "in async");
-    console.log(partnerId, "part id");
+  const { getPartnersData } = useContext(AdminPartnersContext);
+
+  const editPartnersFunction = async (element) => {
+    console.log(item.id);
+    console.log(element);
     try {
-      const { data } = await editPartners(partnerId, element);
+      await editPartners(item.id, element);
+      closeFunction();
+      getPartnersData();
+      notifySuccess("Փոփոխությունը հաջողությամբ կատարվեց");
     } catch (error) {
       console.log(error.message);
+      notifySuccess("Սխալ կատարվեց");
     }
   };
 
@@ -25,7 +35,7 @@ const AdminPartnersListItemActionsEditModal = ({ item, closeFunction }) => {
         functionArgument={item.id}
         formikFunction={editPartnersFunction}
         btnProps={{
-          txt: "popoxel",
+          txt: "Փոխել",
           type: "submit",
         }}
       />

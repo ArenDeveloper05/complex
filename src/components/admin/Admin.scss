@@ -116,6 +116,18 @@
 
           &-desc {
             border: solid rgb(3, 3, 3);
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            > p {
+              font-size: 30px;
+              font-weight: 600;
+              font-family: var(--ff-1);
+            }
+            .base-img {
+              min-width: 100px;
+              max-width: 200px;
+            }
           }
 
           &-actions {

@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { useState } from "react";
 
 import ContactRegisterMap from "./contact-register-map/ContactRegisterMap";

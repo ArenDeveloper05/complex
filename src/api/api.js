@@ -34,7 +34,7 @@ export const addPartner = async (item) => {
 export const editPartners = async (id, element) => {
   console.log(id, "testId");
   console.log(element, "testEl");
-  return await api.post(`/partner/${id}`, element);
+  return await apiForImages.post(`/partners/${id}`, element);
 };
 // PUT
 
