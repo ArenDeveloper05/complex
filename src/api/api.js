@@ -28,7 +28,7 @@ export const getPartners = async () => {
 
 export const addPartner = async (item) => {
   console.log(item, "in get item");
-  return await apiForImages.post("/partner", item);
+  return await apiForImages.post("/partners", item);
 };
 
 export const editPartners = async (id, element) => {
@@ -41,5 +41,5 @@ export const editPartners = async (id, element) => {
 // DELETE
 
 export const deletePartners = async (id) => {
-  return await api.delete(`partner/${id}`);
+  return await api.delete(`partners/${id}`);
 };

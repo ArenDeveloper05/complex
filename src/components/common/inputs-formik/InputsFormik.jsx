@@ -23,12 +23,13 @@ const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
 };
 
 const InputsFormik = ({
+  item,
   formikFunction,
   inputsValues,
   functionArgument,
   btnProps,
 }) => {
-  console.log();
+  console.log(item);
 
   const partnersSchema = Yup.object().shape({
     name: Yup.string().required(),
@@ -47,18 +48,10 @@ const InputsFormik = ({
           icon: inputsValues.icon,
         }}
         onSubmit={({ icon, name, desc, website_url }, { resetForm }) => {
-          //   addPartnerFunction(
-          //     generateFormData({ icon, name, description: desc, website_url })
-          //   );
-          const args = functionArgument
-            ? functionArgument
-            : generateFormData({ icon, name, description: desc, website_url });
-
-          console.log(args);
           formikFunction(
-            args,
             generateFormData({ icon, name, description: desc, website_url })
           );
+          resetForm();
         }}
         validationSchema={partnersSchema}
       >
