@@ -49,7 +49,14 @@ const InputsFormik = ({
       }
     };
 
-    return <input type="file" onChange={handleChange} {...props} />;
+    return (
+      <input
+        type="file"
+        onChange={handleChange}
+        accept=".jpg,.jpeg,.png,.gif"
+        {...props}
+      />
+    );
   };
 
   return (
