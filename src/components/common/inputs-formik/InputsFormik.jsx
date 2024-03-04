@@ -1,11 +1,12 @@
 import * as Yup from "yup";
-import { Field, Form, Formik } from "formik";
-import { Button, TextField } from "@mui/material";
 
-import { addPartner } from "../../../../api/api";
-import { generateFormData } from "../../../../utils/helpers/helpers";
-import FormikBtn from "../../../common/formik-btn/FormikBtn";
-import InputsFormik from "../../../common/inputs-formik/InputsFormik";
+import { Field, Form, Formik } from "formik";
+import { TextField } from "@mui/material";
+import { addPartner } from "../../../api/api";
+
+import "./InputsFormik.scss";
+import FormikBtn from "../formik-btn/FormikBtn";
+import { generateFormData } from "../../../utils/helpers/helpers";
 
 const inputStyles = {
   width: "100%",
@@ -21,15 +22,14 @@ const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
   return <input type="file" onChange={handleChange} {...props} />;
 };
 
-const AdminPartnersForm = ({ getPartnersData }) => {
-  const addPartnerFunction = async (item) => {
-    try {
-      await addPartner(item);
-      getPartnersData();
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+const InputsFormik = ({
+  item,
+  formikFunction,
+  inputsValues,
+  functionArgument,
+  btnProps,
+}) => {
+  console.log(item);
 
   const partnersSchema = Yup.object().shape({
     name: Yup.string().required(),
@@ -39,16 +39,16 @@ const AdminPartnersForm = ({ getPartnersData }) => {
   });
 
   return (
-    <div className="admin-content-partners-form">
-      {/* <Formik
+    <div className="form">
+      <Formik
         initialValues={{
-          name: "",
-          desc: "",
-          website_url: "",
-          icon: "",
+          name: inputsValues.name,
+          desc: inputsValues.desc,
+          website_url: inputsValues.website_url,
+          icon: inputsValues.icon,
         }}
         onSubmit={({ icon, name, desc, website_url }, { resetForm }) => {
-          addPartnerFunction(
+          formikFunction(
             generateFormData({ icon, name, description: desc, website_url })
           );
           resetForm();
@@ -101,26 +101,13 @@ const AdminPartnersForm = ({ getPartnersData }) => {
                 {errors.icon && touched.icon ? <p>wrong</p> : null}
               </div>
 
-              <FormikBtn txt="Avelacnel" type="submit" />
+              <FormikBtn txt={btnProps.txt} type={btnProps.type} />
             </Form>
           );
         }}
-      </Formik> */}
-      <InputsFormik
-        formikFunction={addPartnerFunction}
-        inputsValues={{
-          name: "",
-          desc: "",
-          website_url: "",
-          icon: "",
-        }}
-        btnProps={{
-          txt: "avelacru",
-          type: "submit",
-        }}
-      />
+      </Formik>
     </div>
   );
 };
 
-export default AdminPartnersForm;
+export default InputsFormik;
