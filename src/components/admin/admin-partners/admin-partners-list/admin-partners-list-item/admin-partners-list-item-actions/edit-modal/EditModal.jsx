@@ -72,6 +72,7 @@ const EditModal = ({ item, closeFunction }) => {
             type: "file",
           },
         ]}
+        oldImageSrc={item.icon}
       />
 
       <button onClick={closeFunction}>close</button>

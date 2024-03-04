@@ -1,25 +1,16 @@
-import * as Yup from "yup";
-
+import { useRef, useState } from "react";
 import { Field, Form, Formik } from "formik";
 import { TextField } from "@mui/material";
-import { addPartner } from "../../../api/api";
+
+import FormikBtn from "../formik-btn/FormikBtn";
+import BaseImage from "../base-image/BaseImage";
 
 import "./InputsFormik.scss";
-import FormikBtn from "../formik-btn/FormikBtn";
-import { generateFormData } from "../../../utils/helpers/helpers";
+import SelectImage from "../select-image/SelectImage";
 
 const inputStyles = {
   width: "100%",
   backgroundColor: "#f4f5f8",
-};
-
-const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
-  const handleChange = (event) => {
-    const file = event.target.files[0];
-    setFieldValue(field.name, file); // Update Formik's form state with the selected file
-  };
-
-  return <input type="file" onChange={handleChange} {...props} />;
 };
 
 const InputsFormik = ({
@@ -28,7 +19,39 @@ const InputsFormik = ({
   btnProps,
   validationSchema,
   fieldsData,
+  oldImageSrc,
 }) => {
+  const [selectedImage, setSelectedImage] = useState({
+    src: oldImageSrc,
+    title: "Yntreq nkary",
+  });
+  const imageHasChanged = useRef(false);
+
+  const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
+    const handleChange = (event) => {
+      const file = event.target.files[0];
+      setFieldValue(field.name, file); // Update Formik's form state with the selected file
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          setSelectedImage((prev) => {
+            return {
+              title: file.name,
+              src: reader.result,
+            };
+          });
+          if (!imageHasChanged.current) {
+            imageHasChanged.current = true;
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+
+    return <input type="file" onChange={handleChange} {...props} />;
+  };
+
   return (
     <div className="form">
       <Formik
@@ -61,11 +84,17 @@ const InputsFormik = ({
                         </>
                       ) : (
                         <>
-                          <Field
-                            type="file"
-                            name={name}
-                            component={FileInputField}
+                          <BaseImage
+                            src={selectedImage.src}
+                            normal={imageHasChanged.current ? true : false}
                           />
+                          <SelectImage text={selectedImage.title}>
+                            <Field
+                              type="file"
+                              name={name}
+                              component={FileInputField}
+                            />
+                          </SelectImage>
                           {errors[name] && touched[name] ? <p>wrong</p> : null}
                         </>
                       )}
