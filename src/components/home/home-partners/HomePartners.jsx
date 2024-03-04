@@ -7,8 +7,11 @@ import {
 } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { getPartnersThunk } from "../../../redux/slices/partnersSlice";
+import { generateImage } from "../../../utils/helpers/helpers";
 
 import Lines from "../../common/lines/Lines";
 
@@ -21,7 +24,16 @@ import "swiper/css/scrollbar";
 
 const HomePartners = () => {
   const { t } = useTranslation();
-  const partnersList = useSelector((state) => state.partners.partnersList);
+  const { partnersList, partnersListLoading, partnersListError } = useSelector(
+    (state) => state.partners
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (partnersList.length === 0) {
+      dispatch(getPartnersThunk());
+    }
+  }, []);
 
   return (
     <div className="home-partners">
@@ -55,10 +67,24 @@ const HomePartners = () => {
         }}
       >
         {partnersList &&
-          partnersList.map(({ id, img }) => {
+          partnersList.map(({ id, icon, name, website_url }) => {
             return (
               <SwiperSlide key={id} className="partner">
-                <img src={img ? img : ""} alt="swiper-item" />
+                {website_url.includes("https") ? (
+                  <a href={website_url}>
+                    <img
+                      src={icon ? generateImage(icon) : ""}
+                      alt="swiper-item"
+                      title={name}
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={icon ? generateImage(icon) : ""}
+                    alt="swiper-item"
+                    title={name}
+                  />
+                )}
               </SwiperSlide>
             );
           })}

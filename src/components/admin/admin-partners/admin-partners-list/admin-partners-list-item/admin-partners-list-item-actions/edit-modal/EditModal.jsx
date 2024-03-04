@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { editPartners } from "../../../../../../../api/api";
-import { notifySuccess } from "../../../../../../../utils/helpers/toast/toast";
+import {
+  notifyError,
+  notifySuccess,
+} from "../../../../../../../utils/helpers/toast/toast";
 import { AdminPartnersContext } from "../../../../AdminPartners";
 
 import InputsFormik from "../../../../../../common/inputs-formik/InputsFormik";
@@ -28,7 +31,7 @@ const EditModal = ({ item, closeFunction }) => {
       notifySuccess("Փոփոխությունը հաջողությամբ կատարվեց");
     } catch (error) {
       console.log(error.message);
-      notifySuccess("Սխալ կատարվեց");
+      notifyError("Սխալ կատարվեց");
     }
   };
 

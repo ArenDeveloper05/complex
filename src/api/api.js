@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "http://127.0.0.1:8000/api";
+export const apiUrl = "http://127.0.0.1:8000";
 const token = "";
 
 const api = axios.create({
@@ -21,25 +21,25 @@ const apiForImages = axios.create({
 // GET
 
 export const getPartners = async () => {
-  return await api.get("/partners");
+  return await api.get("/api/partners");
 };
 
 // POST
 
 export const addPartner = async (item) => {
   console.log(item, "in get item");
-  return await apiForImages.post("/partners", item);
+  return await apiForImages.post("/api/partners", item);
 };
 
 export const editPartners = async (id, element) => {
   console.log(id, "testId");
   console.log(element, "testEl");
-  return await apiForImages.post(`/partners/${id}`, element);
+  return await apiForImages.post(`/api/partners/${id}`, element);
 };
 // PUT
 
 // DELETE
 
 export const deletePartners = async (id) => {
-  return await api.delete(`partners/${id}`);
+  return await api.delete(`/api/partners/${id}`);
 };

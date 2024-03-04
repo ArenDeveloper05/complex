@@ -1,3 +1,5 @@
+import { apiUrl } from "../../api/api";
+
 export function objectIsNotEpmty(obj) {
   return Object.keys(obj).length !== 0;
 }
@@ -12,4 +14,8 @@ export function generateFormData(obj) {
     formData.append(key, obj[key]);
   }
   return formData;
+}
+
+export function generateImage(src) {
+  return `${apiUrl}/storage/partners/${src}`;
 }
