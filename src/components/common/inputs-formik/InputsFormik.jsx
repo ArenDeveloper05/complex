@@ -87,7 +87,9 @@ const InputsFormik = ({
                             onBlur={handleBlur}
                             sx={inputStyles}
                           />
-                          {errors[name] && touched[name] ? <p>wrong</p> : null}
+                          {errors[name] && touched[name] ? (
+                            <p>{errors[name]}</p>
+                          ) : null}
                         </>
                       ) : (
                         <>
@@ -102,7 +104,9 @@ const InputsFormik = ({
                               component={FileInputField}
                             />
                           </SelectImage>
-                          {errors[name] && touched[name] ? <p>wrong</p> : null}
+                          {errors[name] && touched[name] ? (
+                            <p>{errors[name]}</p>
+                          ) : null}
                         </>
                       )}
                     </div>
