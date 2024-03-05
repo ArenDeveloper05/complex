@@ -1,0 +1,17 @@
+.mobile-assortment-tree-list {
+  padding: 16px;
+  list-style-type: none;
+
+  &-item {
+    box-shadow: 6px 4px 10px rgb(230, 230, 230);
+    border-top: solid 1px #ababab;
+    border-left: solid 1px #ababab;
+    z-index: 9;
+    background-color: white;
+    padding: 16px;
+    cursor: pointer;
+    > svg {
+      transition: 0.3s;
+    }
+  }
+}

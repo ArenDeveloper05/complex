@@ -7,7 +7,6 @@
   position: absolute;
   left: 0;
   background-color: white;
-  // z-index: 9999;
 
   &-langs {
     gap: 10px;
@@ -68,6 +67,7 @@
       transition: all 0.2s;
       list-style-type: none;
       border-bottom: solid 1px #ababab;
+      padding: 10px 0;
 
       > a {
         color: #5c5c5c;

@@ -1,0 +1,17 @@
+.assortment-tree-list {
+  padding: 16px;
+  list-style-type: none;
+
+  &-item {
+    box-shadow: 6px 4px 10px rgb(179, 178, 178);
+    border-top: solid 1px;
+    border-left: solid 1px;
+    z-index: 9;
+    background-color: white;
+    padding: 16px;
+    cursor: pointer;
+    > svg {
+      transition: 0.3s;
+    }
+  }
+}

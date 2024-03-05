@@ -5,9 +5,10 @@ import HeaderMobileNavLinksLink from "./header-mobile-nav-links-link/HeaderMobil
 const HeaderMobileNavLinks = () => {
   return (
     <ul className="header-mobile-nav-links">
-      {navConfig.map((item) => {
-        return <HeaderMobileNavLinksLink key={item.id} item={item} />;
-      })}
+      {navConfig &&
+        navConfig.map((item) => {
+          return <HeaderMobileNavLinksLink key={item.id} item={item} />;
+        })}
     </ul>
   );
 };
