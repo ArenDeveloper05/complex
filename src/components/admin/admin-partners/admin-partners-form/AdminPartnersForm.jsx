@@ -1,29 +1,10 @@
 import * as Yup from "yup";
-import { Field, Form, Formik } from "formik";
-import { Button, TextField } from "@mui/material";
-
 import { addPartner } from "../../../../api/api";
-import { generateFormData } from "../../../../utils/helpers/helpers";
-import FormikBtn from "../../../common/formik-btn/FormikBtn";
 import InputsFormik from "../../../common/inputs-formik/InputsFormik";
 import {
   notifyError,
   notifySuccess,
 } from "../../../../utils/helpers/toast/toast";
-
-const inputStyles = {
-  width: "100%",
-  backgroundColor: "#f4f5f8",
-};
-
-const FileInputField = ({ field, form: { setFieldValue }, ...props }) => {
-  const handleChange = (event) => {
-    const file = event.target.files[0];
-    setFieldValue(field.name, file); // Update Formik's form state with the selected file
-  };
-
-  return <input type="file" onChange={handleChange} {...props} />;
-};
 
 const AdminPartnersForm = ({ getPartnersData }) => {
   const addPartnerFunction = async (item) => {

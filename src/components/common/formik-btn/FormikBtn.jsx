@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
-import "./FormikBtn.scss";
 import { AiOutlinePlus } from "react-icons/ai";
+
+import "./FormikBtn.scss";
 
 const FormikBtn = ({ txt, type }) => {
   return (

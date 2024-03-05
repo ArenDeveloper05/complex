@@ -23,7 +23,7 @@ const InputsFormik = ({
 }) => {
   const [selectedImage, setSelectedImage] = useState({
     src: oldImageSrc,
-    title: "Yntreq nkary",
+    title: "Ընտրեք նկարը",
   });
   const imageHasChanged = useRef(false);
 
@@ -65,7 +65,6 @@ const InputsFormik = ({
         initialValues={initialValues}
         onSubmit={(values, { resetForm }) => {
           formikFunction(values);
-
           resetForm({ values: "" });
         }}
         validationSchema={validationSchema}

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { MdPlayArrow } from "react-icons/md";
 
+import BaseButton from "../../../common/base-button/BaseButton";
+
 import "./AssortmentTree.scss";
 
 const AssortmentTreeItem = ({ title, children }) => {
@@ -24,6 +26,29 @@ const AssortmentTreeItem = ({ title, children }) => {
       )}
 
       {title}
+      <div className="assortment-tree-list-item-actions">
+        <BaseButton
+          onClick={() => {
+            console.log("edit");
+          }}
+          iconType={"edit"}
+        />
+        {hasChildren ? (
+          <BaseButton
+            onClick={() => {
+              console.log("plus");
+            }}
+            iconType={"plus"}
+          />
+        ) : (
+          <BaseButton
+            onClick={() => {
+              console.log("delete");
+            }}
+            iconType={"delete"}
+          />
+        )}
+      </div>
       {open && hasChildren !== 0 && <AssortmentTree data={children} />}
     </li>
   );
