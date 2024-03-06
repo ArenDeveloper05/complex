@@ -11,29 +11,68 @@ import { useState } from "react";
 const AdminAssortment = () => {
   const data = useSelector((state) => state.navigation.assortment);
   const [modalsOpen, setModalsOpen] = useState({
-    add: false,
-    delete: false,
+    add: {
+      text: "",
+      bool: false,
+      id: null,
+    },
+    delete: {
+      text: "",
+      bool: false,
+      id: null,
+    },
     edit: {
       text: "",
       bool: false,
+      id: null,
     },
   });
 
   return (
     <div className="assortment">
-      <AssortmentTree data={data} />
-      {modalsOpen.add && (
+      <AssortmentTree data={data} setModalsOpen={setModalsOpen} />
+      {modalsOpen.add.bool && (
         <BaseModal
           onClick={() => {
             setModalsOpen((prev) => {
               return {
                 ...prev,
-                add: false,
+                add: {
+                  ...prev.add,
+                  bool: false,
+                },
               };
             });
           }}
         >
-          <AddModal setModalsOpen={setModalsOpen} />
+          <AddModal
+            setModalsOpen={setModalsOpen}
+            stateKey={"add"}
+            text={modalsOpen.add.text}
+            id={modalsOpen.add.id}
+          />
+        </BaseModal>
+      )}
+      {modalsOpen.edit.bool && (
+        <BaseModal
+          onClick={() => {
+            setModalsOpen((prev) => {
+              return {
+                ...prev,
+                edit: {
+                  ...prev.edit,
+                  bool: false,
+                },
+              };
+            });
+          }}
+        >
+          <AddModal
+            setModalsOpen={setModalsOpen}
+            stateKey={"edit"}
+            text={modalsOpen.edit.text}
+            id={modalsOpen.edit.id}
+          />
         </BaseModal>
       )}
       <div
@@ -41,7 +80,10 @@ const AdminAssortment = () => {
           setModalsOpen((prev) => {
             return {
               ...prev,
-              add: true,
+              add: {
+                ...prev.add,
+                bool: true,
+              },
             };
           });
         }}

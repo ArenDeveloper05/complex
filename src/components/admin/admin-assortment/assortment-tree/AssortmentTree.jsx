@@ -5,7 +5,7 @@ import BaseButton from "../../../common/base-button/BaseButton";
 
 import "./AssortmentTree.scss";
 
-const AssortmentTreeItem = ({ title, children }) => {
+const AssortmentTreeItem = ({ id, title, children, setModalsOpen }) => {
   const [open, setOpen] = useState(false);
   const hasChildren = children && children.length !== 0;
 
@@ -30,6 +30,16 @@ const AssortmentTreeItem = ({ title, children }) => {
         <BaseButton
           onClick={() => {
             console.log("edit");
+            setModalsOpen((prev) => {
+              return {
+                ...prev,
+                edit: {
+                  text: title,
+                  id: id,
+                  bool: true,
+                },
+              };
+            });
           }}
           iconType={"edit"}
         />
@@ -37,6 +47,15 @@ const AssortmentTreeItem = ({ title, children }) => {
           <BaseButton
             onClick={() => {
               console.log("plus");
+              setModalsOpen((prev) => {
+                return {
+                  ...prev,
+                  add: {
+                    id: id,
+                    bool: true,
+                  },
+                };
+              });
             }}
             iconType={"plus"}
           />
@@ -54,7 +73,7 @@ const AssortmentTreeItem = ({ title, children }) => {
   );
 };
 
-const AssortmentTree = ({ data }) => {
+const AssortmentTree = ({ data, setModalsOpen }) => {
   return (
     <ul className="assortment-tree-list">
       {data &&
@@ -66,6 +85,7 @@ const AssortmentTree = ({ data }) => {
               key={id}
               title={title}
               children={children}
+              setModalsOpen={setModalsOpen}
             />
           );
         })}

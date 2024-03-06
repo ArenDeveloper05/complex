@@ -9,8 +9,11 @@ const addSchema = Yup.object().shape({
   name: Yup.string().required(),
 });
 
-const AddModal = ({ setModalsOpen }) => {
+const AddModal = ({ setModalsOpen, stateKey, text, id }) => {
   const addAssortmentFunction = async (values) => {
+    console.log(id);
+    console.log(text);
+
     try {
       console.log(values, "adding assortment");
     } catch (error) {
@@ -19,7 +22,7 @@ const AddModal = ({ setModalsOpen }) => {
       setModalsOpen((prev) => {
         return {
           ...prev,
-          add: false,
+          [stateKey]: false,
         };
       });
     }
@@ -33,7 +36,7 @@ const AddModal = ({ setModalsOpen }) => {
       }}
     >
       <InputsFormik
-        initialValues={{ name: "" }}
+        initialValues={{ name: stateKey === "edit" ? text : "" }}
         fieldsData={[{ id: 1, name: "name", label: "Անուն", type: "text" }]}
         btnProps={{ txt: "Ավելացնել", type: "submit" }}
         formikFunction={addAssortmentFunction}
