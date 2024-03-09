@@ -36,6 +36,17 @@ export const editPartners = async (id, element) => {
   console.log(element, "testEl");
   return await apiForImages.post(`/api/partners/${id}`, element);
 };
+
+export const sendAdminValues = async (loginValues) => {
+  return await api.post("/api", loginValues);
+};
+
+export const addAssortment = async (data) => {
+  return await api.post(`/menu`, data, {
+    withCredentials: true,
+  });
+};
+
 // PUT
 
 // DELETE

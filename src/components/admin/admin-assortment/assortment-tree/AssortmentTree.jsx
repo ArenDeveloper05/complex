@@ -68,7 +68,9 @@ const AssortmentTreeItem = ({ id, title, children, setModalsOpen }) => {
           />
         )}
       </div>
-      {open && hasChildren !== 0 && <AssortmentTree data={children} />}
+      {open && hasChildren !== 0 && (
+        <AssortmentTree data={children} setModalsOpen={setModalsOpen} />
+      )}
     </li>
   );
 };

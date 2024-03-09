@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import InputsFormik from "../../../common/inputs-formik/InputsFormik";
 
 import "./AddModal.scss";
+import { addAssortment } from "../../../../api/api";
 
 const addSchema = Yup.object().shape({
   name: Yup.string().required(),
@@ -16,6 +17,11 @@ const AddModal = ({ setModalsOpen, stateKey, text, id }) => {
 
     try {
       console.log(values, "adding assortment");
+      await addAssortment({
+        parent_id: 0,
+        title: values.name,
+        clickable: false,
+      });
     } catch (error) {
       notifyError("Սխալ կատարվեց");
     } finally {

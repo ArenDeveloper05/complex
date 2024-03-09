@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 import AssortmentTree from "./assortment-tree/AssortmentTree";
 import FormikBtn from "../../common/formik-btn/FormikBtn";
@@ -6,7 +7,6 @@ import AddModal from "./add-modal/AddModal";
 import BaseModal from "../../common/base-modal/BaseModal";
 
 import "./AdminAssortment.scss";
-import { useState } from "react";
 
 const AdminAssortment = () => {
   const data = useSelector((state) => state.navigation.assortment);

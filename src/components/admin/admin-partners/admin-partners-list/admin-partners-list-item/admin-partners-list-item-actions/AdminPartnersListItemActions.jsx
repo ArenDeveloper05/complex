@@ -3,6 +3,7 @@ import { useState } from "react";
 import AdminPartnersListItemBtn from "../admin-partners-list-item-btn/AdminPartnersListItemBtn";
 import ActionsModal from "./actions-modal/ActionsModal";
 import EditModal from "./edit-modal/EditModal";
+import BaseModal from "../../../../../common/base-modal/BaseModal";
 
 const AdminPartnersListItemActions = ({ item }) => {
   const [deleteModal, setDeleteModal] = useState(false);
@@ -23,7 +24,15 @@ const AdminPartnersListItemActions = ({ item }) => {
         onClickFunction={handleEditModal}
       />
 
-      {editModal && <EditModal item={item} closeFunction={handleEditModal} />}
+      {editModal && (
+        <BaseModal
+          onClick={() => {
+            handleEditModal();
+          }}
+        >
+          <EditModal item={item} closeFunction={handleEditModal} />
+        </BaseModal>
+      )}
 
       <AdminPartnersListItemBtn
         txt="delete"
@@ -31,7 +40,13 @@ const AdminPartnersListItemActions = ({ item }) => {
       />
 
       {deleteModal && (
-        <ActionsModal item={item} handleDeleteModal={handleDeleteModal} />
+        <BaseModal
+          onClick={() => {
+            handleDeleteModal();
+          }}
+        >
+          <ActionsModal item={item} handleDeleteModal={handleDeleteModal} />
+        </BaseModal>
       )}
     </div>
   );
